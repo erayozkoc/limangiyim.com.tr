@@ -1,0 +1,6 @@
+# Liman Giyim — robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.limangiyim.com.tr/sitemap.xml
