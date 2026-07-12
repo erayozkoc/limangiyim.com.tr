@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T"></script>
+  <!-- Google tag (gtag.js) — performans icin sayfa yuklendikten sonra calisir -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-Z3DKKLD43T');
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T';
+      document.head.appendChild(s);
+    });
   </script>
 
   <!-- ==== SEO: Temel ==== -->
@@ -70,7 +74,7 @@
     "logo": "https://www.limangiyim.com.tr/logo-amblem.png",
     "description": "Denizcilik liseleri ve üniversitelerin denizcilik bölümleri için üniforma, kep, apolet ve kurumsal giyim üreticisi.",
     "telephone": "+90-537-437-52-80",
-    "email": "info@limangiyim.com.tr",
+    "email": "limanuniforma@gmail.com",
     "priceRange": "₺₺",
     "areaServed": { "@type": "Country", "name": "Türkiye" },
     "address": {
@@ -134,10 +138,45 @@
     ]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="/fonts/jakarta-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/jakarta-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-700-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    /* Yerel (self-hosted) yazı tipleri — Google Fonts'a dış istek yok */
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      font-style: normal;
+      font-weight: 200 800;
+      font-display: swap;
+      src: url(/fonts/jakarta-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      font-style: normal;
+      font-weight: 200 800;
+      font-display: swap;
+      src: url(/fonts/jakarta-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(/fonts/playfair-700-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(/fonts/playfair-700-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
     :root {
       --navy: #0b2545;
       --navy-2: #13315c;
@@ -453,8 +492,8 @@
   <header>
     <div class="container nav">
       <a class="brand" href="/" aria-label="Liman Giyim ana sayfa">
-        <img src="logo-amblem.png" alt="" class="brand-mark" width="30" height="41">
-        <img src="logo-yazi.png" alt="Liman Giyim" class="brand-word" width="167" height="22">
+        <img src="/logo-amblem.webp" alt="" class="brand-mark" width="30" height="41">
+        <img src="/logo-yazi.webp" alt="Liman Giyim" class="brand-word" width="167" height="22">
       </a>
       <nav class="nav-desktop" aria-label="Ana menü">
         <ul class="nav-links">
@@ -481,7 +520,7 @@
   <main>
   <!-- ============ HERO ============ -->
   <div class="hero">
-    <img class="anchor-mark" src="logo-amblem.png" alt="" aria-hidden="true" width="340" height="465" fetchpriority="high">
+    <img class="anchor-mark" src="/logo-amblem.webp" alt="" aria-hidden="true" width="340" height="465" fetchpriority="high">
     <div class="container hero-inner">
       <span class="eyebrow">Denizcilik Giyiminde Uzman</span>
       <h1>Denizcilik Okullarının <em>Üniforma Tedarikçisi</em></h1>
@@ -610,15 +649,15 @@
           <h2>İletişim</h2>
           <div class="c-item">
             <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span>
-            <div><b>Yetkili</b><span class="v">Oğuz Usta</span></div>
+            <div><b>Yetkili</b><span class="v">Oğuz Usta · <a href="tel:+905374375280">0 (537) 437 52 80</a></span></div>
           </div>
           <div class="c-item">
-            <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></span>
-            <div><b>Telefon</b><a href="tel:+905374375280">0 (537) 437 52 80</a></div>
+            <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span>
+            <div><b>Yetkili</b><span class="v">Burak Mehmet Ceran · <a href="tel:+905326675842">0 (532) 667 58 42</a></span></div>
           </div>
           <div class="c-item">
             <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></span>
-            <div><b>E-posta</b><a href="mailto:info@limangiyim.com.tr">info@limangiyim.com.tr</a></div>
+            <div><b>E-posta</b><a href="mailto:limanuniforma@gmail.com">limanuniforma@gmail.com</a></div>
           </div>
           <div class="c-item">
             <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
@@ -644,7 +683,7 @@
   <footer>
     <div class="container">
       <span><b>Liman Giyim</b> — Denizcilik okulları üniforma tedarikçisi</span>
-      <span>İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul · <a href="tel:+905374375280">0 (537) 437 52 80</a> · <a href="mailto:info@limangiyim.com.tr">info@limangiyim.com.tr</a></span>
+      <span>İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul · <a href="tel:+905374375280">0 (537) 437 52 80</a> · <a href="mailto:limanuniforma@gmail.com">limanuniforma@gmail.com</a></span>
       <span>© 2026 Tüm hakları saklıdır. · <a href="/gizlilik">Gizlilik &amp; KVKK</a></span>
     </div>
   </footer>

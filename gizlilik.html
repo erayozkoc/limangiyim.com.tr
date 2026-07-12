@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T"></script>
+  <!-- Google tag (gtag.js) — performans icin sayfa yuklendikten sonra calisir -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-Z3DKKLD43T');
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T';
+      document.head.appendChild(s);
+    });
   </script>
   <title>Gizlilik ve KVKK Aydınlatma Metni | Liman Üniforma</title>
   <meta name="description" content="Liman Giyim (Liman Üniforma) kişisel verilerin korunması ve gizlilik politikası — KVKK aydınlatma metni.">
@@ -21,10 +25,41 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* Yerel (self-hosted) yazı tipleri — Google Fonts'a dış istek yok */
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      font-style: normal;
+      font-weight: 200 800;
+      font-display: swap;
+      src: url(/fonts/jakarta-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      font-style: normal;
+      font-weight: 200 800;
+      font-display: swap;
+      src: url(/fonts/jakarta-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(/fonts/playfair-700-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(/fonts/playfair-700-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
     :root {
       --navy: #0b2545;
       --navy-2: #13315c;
@@ -134,8 +169,8 @@
   <header>
     <div class="container nav">
       <a class="brand" href="/" aria-label="Liman Giyim ana sayfa">
-        <img src="logo-amblem.png" alt="" class="brand-mark" width="30" height="41">
-        <img src="logo-yazi.png" alt="Liman Giyim" class="brand-word" width="167" height="22">
+        <img src="/logo-amblem.webp" alt="" class="brand-mark" width="30" height="41">
+        <img src="/logo-yazi.webp" alt="Liman Giyim" class="brand-word" width="167" height="22">
       </a>
       <nav class="nav-desktop" aria-label="Ana menü">
         <ul class="nav-links">
@@ -173,7 +208,7 @@
           <li><b>İlgili kişi:</b> Oğuz Usta</li>
           <li><b>Adres:</b> İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul</li>
           <li><b>Telefon:</b> <a href="tel:+905374375280">0 (537) 437 52 80</a></li>
-          <li><b>E-posta:</b> <a href="mailto:info@limangiyim.com.tr">info@limangiyim.com.tr</a></li>
+          <li><b>E-posta:</b> <a href="mailto:limanuniforma@gmail.com">limanuniforma@gmail.com</a></li>
         </ul>
 
         <h2>2. Hangi Verileri, Nasıl Topluyoruz?</h2>
@@ -208,7 +243,7 @@
   <footer>
     <div class="container">
       <span><b>Liman Giyim</b> — Denizcilik okulları üniforma tedarikçisi</span>
-      <span>İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul · <a href="tel:+905374375280">0 (537) 437 52 80</a> · <a href="mailto:info@limangiyim.com.tr">info@limangiyim.com.tr</a></span>
+      <span>İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul · <a href="tel:+905374375280">0 (537) 437 52 80</a> · <a href="mailto:limanuniforma@gmail.com">limanuniforma@gmail.com</a></span>
       <span>© 2026 Tüm hakları saklıdır. · <a href="/gizlilik">Gizlilik &amp; KVKK</a></span>
     </div>
   </footer>

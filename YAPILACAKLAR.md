@@ -41,7 +41,8 @@
 - [x] **Firma sahibi / yetkili adı** — Oğuz Usta (iletişim kartına işlendi)
 - [x] **Telefon / WhatsApp numarası** — 0 (537) 437 52 80 (sitede 5 yerde güncellendi: telefon linkleri, WhatsApp linkleri, Google şeması)
 - [x] **Adres** — İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul (karta + şemaya işlendi)
-- [ ] **E-posta doğrulama** — `info@limangiyim.com.tr` varsayıldı; farklıysa bildir
+- [x] **E-posta** — `limanuniforma@gmail.com` olarak güncellendi (site, şema, llms.txt) — 12 Tem 2026
+- [x] **İkinci yetkili** — Burak Mehmet Ceran · 0 (532) 667 58 42 iletişim kartına eklendi (WhatsApp/ana telefon mevcut numarada kaldı) — 12 Tem 2026
 - [ ] **Gerçek okul isimleri** — ⚠️ ÖNEMLİ: Referanslar bölümündeki 3 kart şu an UYDURMA isim
       ("Denizcilik Anadolu Lisesi" vb. gerçek kurum değil). Site bu haliyle yayına çıkarsa
       okul idareleri sahte referans olarak algılayabilir — güven zedeler, işin tersine döner.
@@ -57,7 +58,7 @@
 - [ ] **Domain'i satın al**: `limangiyim.com.tr` (.com.tr tescili için vergi levhası/şirket belgesi gerekebilir)
 - [ ] **Hosting al** — basit statik/paylaşımlı hosting yeterli (site tek HTML dosyası)
 - [ ] **SSL aktif et** — çoğu hostingde ücretsiz/otomatik; site `https://` ile açılmalı
-- [ ] **13 dosyayı sunucuya yükle**: `index.html`, `gizlilik.html`, `404.html`, `.htaccess`, `robots.txt`, `sitemap.xml`, `llms.txt`, `og-image.jpg`, `logo-amblem.png`, `logo-yazi.png`, `favicon.png`, `favicon-32.png`, `apple-touch-icon.png`
+- [ ] **Dosyaları sunucuya yükle**: `index.html`, `gizlilik.html`, `404.html`, `.htaccess`, `robots.txt`, `sitemap.xml`, `llms.txt`, `og-image.jpg`, `logo-amblem.png`, `logo-yazi.png`, `logo-amblem.webp`, `logo-yazi.webp`, `favicon.ico`, `favicon.png`, `favicon-32.png`, `apple-touch-icon.png` + `fonts/` klasörü (4 woff2 dosyası)
 - [ ] **www yönlendirmesi** — `.htaccess` bunu otomatik yapıyor (Apache hostingde); farklı sunucuysa hosting panelinden kök domain → www yönlendirmesi kur
 
 ## 3️⃣ Google Kayıtları (SEN — hesap sahipliği gerektirir, adım adım yönlendiririm)

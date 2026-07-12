@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T"></script>
+  <!-- Google tag (gtag.js) — performans icin sayfa yuklendikten sonra calisir -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-Z3DKKLD43T');
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T';
+      document.head.appendChild(s);
+    });
   </script>
   <title>Sayfa Bulunamadı | Liman Üniforma</title>
   <meta name="robots" content="noindex">
