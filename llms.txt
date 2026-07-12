@@ -7,7 +7,7 @@ Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğ
 ## Sayfalar
 
 - [Ana Sayfa](https://www.limangiyim.com.tr/): Ürünler, hakkımızda, sıkça sorulan sorular ve iletişim bilgileri
-- [Gizlilik ve KVKK Aydınlatma Metni](https://www.limangiyim.com.tr/gizlilik.html): Kişisel verilerin korunması ve çerez politikası
+- [Gizlilik ve KVKK Aydınlatma Metni](https://www.limangiyim.com.tr/gizlilik): Kişisel verilerin korunması ve çerez politikası
 
 ## Ürünler
 
