@@ -78,12 +78,12 @@
       "@type": "OfferCatalog",
       "name": "Denizcilik Okulu Üniforma Ürünleri",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Yazlık Üniformalar", "description": "Klasik denizci beyazı takımlar; ter tutmayan, dayanıklı kumaşlarla." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Kışlık Üniformalar", "description": "Lacivert takımlar, kabanlar ve montlar; yoğun kullanıma dayanıklı." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Kep ve Şapkalar", "description": "Okul armasına uygun, standartlara tam uyumlu denizci kepleri." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Apolet ve Aksesuarlar", "description": "Apoletler, düğmeler, kravatlar, fularlar ve tüm tamamlayıcı parçalar." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "İş Tulumları", "description": "Atölye ve gemi stajları için dayanıklı iş tulumları ve teknik giyim." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Okula Özel Üretim", "description": "Okulun arması, renkleri ve yönetmeliğine göre özel tasarım ve üretim." } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yazlık Üniformalar", "description": "Klasik denizci beyazı takımlar; ter tutmayan, dayanıklı kumaşlarla." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kışlık Üniformalar", "description": "Lacivert takımlar, kabanlar ve montlar; yoğun kullanıma dayanıklı." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kep ve Şapkalar", "description": "Okul armasına uygun, standartlara tam uyumlu denizci kepleri." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Apolet ve Aksesuarlar", "description": "Apoletler, düğmeler, kravatlar, fularlar ve tüm tamamlayıcı parçalar." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "İş Tulumları", "description": "Atölye ve gemi stajları için dayanıklı iş tulumları ve teknik giyim." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Okula Özel Üretim", "description": "Okulun arması, renkleri ve yönetmeliğine göre özel tasarım ve üretim." } }
       ]
     }
   }
@@ -299,9 +299,11 @@
       display: flex; align-items: center; justify-content: center;
     }
     .c-item .ci svg { width: 19px; height: 19px; }
+    .c-item > div { min-width: 0; }
     .c-item b { display: block; color: var(--navy); font-size: 0.86rem; }
-    .c-item a, .c-item .v { color: var(--muted); font-size: 0.93rem; text-decoration: none; }
-    .c-item a:hover { color: var(--gold-hover); }
+    .c-item a, .c-item .v { color: var(--muted); font-size: 0.93rem; text-decoration: none; overflow-wrap: anywhere; }
+    .c-item a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 2px; transition: color 0.2s, text-decoration-color 0.2s; }
+    .c-item a:hover, .c-item a:focus-visible { color: var(--gold-hover); text-decoration-color: currentColor; }
     .contact-right {
       background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%);
       color: #fff; padding: 48px 42px;
@@ -320,7 +322,7 @@
     footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 26px 0; font-size: 0.84rem; }
     footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     footer b { color: #fff; }
-    footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    footer a { color: rgba(255,255,255,0.8); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 2px; }
     footer a:hover { color: var(--gold); }
 
     /* ---------- WhatsApp butonu (iletişim kartı içi) ---------- */
@@ -377,6 +379,7 @@
       .nav-links a { font-size: 0.78rem; padding: 7px 9px; }
       .hero-ctas { flex-direction: column; }
       .hero-ctas .btn { width: 100%; }
+      footer .container { padding-right: 90px; }
     }
   </style>
 </head>
@@ -405,7 +408,7 @@
   <main>
   <!-- ============ HERO ============ -->
   <div class="hero">
-    <img class="anchor-mark" src="logo-amblem.png" alt="" aria-hidden="true" width="517" height="707">
+    <img class="anchor-mark" src="logo-amblem.png" alt="" aria-hidden="true" width="340" height="465" fetchpriority="high">
     <div class="container hero-inner">
       <span class="eyebrow">Denizcilik Giyiminde Uzman</span>
       <h1>Denizcilik Okullarının <em>Üniforma Tedarikçisi</em></h1>
