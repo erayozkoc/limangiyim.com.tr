@@ -10,6 +10,19 @@
   # kök domain -> www
   RewriteCond %{HTTP_HOST} ^limangiyim\.com\.tr$ [NC]
   RewriteRule ^(.*)$ https://www.limangiyim.com.tr/$1 [L,R=301]
+
+  # /index veya /index.html istenirse köke (/) yönlendir
+  RewriteRule ^index(\.html)?$ / [R=301,L]
+
+  # diğer sayfalar: .html uzantılı adres istenirse uzantısız adrese yönlendir
+  RewriteCond %{REQUEST_FILENAME} \.html$
+  RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+  # uzantısız adres istenince, varsa karşılık gelen .html dosyasını sun
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.+)$ $1.html [L]
 </IfModule>
 
 # ---- 404 sayfası ----
