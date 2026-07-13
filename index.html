@@ -20,7 +20,7 @@
 
   <!-- ==== SEO: Temel ==== -->
   <title>Denizcilik Okulu Üniforması | Liman Üniforma</title>
-  <meta name="description" content="Denizcilik liseleri ve üniversitelerin denizcilik fakülteleri için üniforma, kep, apolet ve kurumsal giyim üretimi. Okula özel dikim, yerinde ölçü, zamanında teslimat.">
+  <meta name="description" content="Denizcilik liseleri ve fakülteleri için üniforma, kep ve apolet üretimi. Okula özel dikim, yerinde ölçü. Referanslarımız arasında Piri Reis Üniversitesi var.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.limangiyim.com.tr/">
   <meta name="geo.region" content="TR-34">
@@ -33,7 +33,7 @@
 
   <!-- ==== SEO: Open Graph (Facebook, WhatsApp paylaşımları) ==== -->
   <meta property="og:title" content="Liman Üniforma — Denizcilik Okulları Üniforma Tedarikçisi">
-  <meta property="og:description" content="Denizcilik liseleri ve üniversiteler için üniforma, kep, apolet ve kurumsal giyim. Okula özel dikim, yerinde ölçü.">
+  <meta property="og:description" content="Denizcilik liseleri ve üniversiteler için üniforma, kep, apolet. Okula özel dikim, yerinde ölçü. Referans: Piri Reis Üniversitesi.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.limangiyim.com.tr/">
   <meta property="og:site_name" content="Liman Üniforma">
@@ -46,7 +46,7 @@
   <!-- ==== SEO: Twitter/X kartı ==== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Liman Üniforma — Denizcilik Okulları Üniforma Tedarikçisi">
-  <meta name="twitter:description" content="Denizcilik liseleri ve üniversiteler için üniforma, kep, apolet ve kurumsal giyim.">
+  <meta name="twitter:description" content="Denizcilik okulları için üniforma, kep, apolet. Referans: Piri Reis Üniversitesi.">
   <meta name="twitter:image" content="https://www.limangiyim.com.tr/og-image.jpg">
 
   <!-- ==== SEO: Yapılandırılmış veri (Google zengin sonuçlar) ==== -->
@@ -72,7 +72,7 @@
     "url": "https://www.limangiyim.com.tr/",
     "image": "https://www.limangiyim.com.tr/og-image.jpg",
     "logo": "https://www.limangiyim.com.tr/logo-amblem.png",
-    "description": "Denizcilik liseleri ve üniversitelerin denizcilik bölümleri için üniforma, kep, apolet ve kurumsal giyim üreticisi.",
+    "description": "Denizcilik liseleri ve üniversitelerin denizcilik bölümleri için üniforma, kep, apolet ve kurumsal giyim üreticisi. Referansları arasında Piri Reis Üniversitesi ve Piri Reis Denizcilik Mesleki ve Teknik Anadolu Lisesi bulunur.",
     "telephone": "+90-537-437-52-80",
     "email": "limanuniforma@gmail.com",
     "priceRange": "₺₺",
@@ -90,7 +90,7 @@
       "opens": "09:00",
       "closes": "17:00"
     },
-    "knowsAbout": ["denizcilik üniforması", "okul üniforması", "denizcilik lisesi üniforması", "denizcilik fakültesi üniforması", "denizci kepi", "apolet"],
+    "knowsAbout": ["denizcilik üniforması", "okul üniforması", "denizcilik lisesi üniforması", "denizcilik fakültesi üniforması", "denizci kepi", "apolet", "Piri Reis Üniversitesi üniforması"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Denizcilik Okulu Üniforma Ürünleri",
@@ -113,7 +113,7 @@
       {
         "@type": "Question",
         "name": "Hangi okullar için üniforma üretiyorsunuz?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Denizcilik liseleri, üniversitelerin denizcilik/deniz bilimleri fakülteleri ve meslek yüksekokulları için okul yönetmeliğine uygun üniforma üretiyoruz." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Denizcilik liseleri, üniversitelerin denizcilik/deniz bilimleri fakülteleri ve meslek yüksekokulları için okul yönetmeliğine uygun üniforma üretiyoruz. Referanslarımız arasında Piri Reis Üniversitesi ve Piri Reis Denizcilik Mesleki ve Teknik Anadolu Lisesi bulunmaktadır." }
       },
       {
         "@type": "Question",
@@ -306,8 +306,24 @@
     #referanslar { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); }
     #referanslar .sec-head h2 { color: #fff; }
     #referanslar .sec-head p { color: rgba(255,255,255,0.72); }
-    .refs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .refs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 680px; margin: 0 auto; }
+    .refs .ref {
+      padding: 20px 22px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .refs .ref b { line-height: 1.35; }
+    .refs .ref small { margin-top: 4px; }
+    .refs-note {
+      text-align: center; margin: 38px 0 18px;
+      color: rgba(255,255,255,0.55); font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .refs-alt { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .refs-alt .ref { padding: 20px 18px; }
+    .refs-alt .ref b { font-size: 0.93rem; font-weight: 600; color: rgba(255,255,255,0.85); }
+    .refs-alt .ref small { color: rgba(212,168,67,0.75); }
     .ref {
+      display: block; text-decoration: none;
       background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.16);
       border-radius: 10px; padding: 30px 26px; text-align: center;
       transition: transform 0.2s, border-color 0.2s;
@@ -417,7 +433,7 @@
     @media (max-width: 820px) {
       html { scroll-padding-top: 76px; }
       .container { padding: 0 20px; }
-      .cards, .refs { grid-template-columns: 1fr; gap: 14px; }
+      .cards, .refs, .refs-alt { grid-template-columns: 1fr; gap: 14px; }
       section { padding: 60px 0; }
       .sec-head { margin-bottom: 36px; }
       .hero { padding: 60px 0 120px; }
@@ -598,13 +614,17 @@
     <div class="container">
       <div class="sec-head reveal">
         <h2>Referanslarımız</h2>
-        <p>Türkiye'nin dört bir yanındaki denizcilik okullarıyla çalışıyoruz.</p>
+        <p>Türkiye'nin köklü denizcilik okullarının üniforma tedarikçisiyiz.</p>
       </div>
       <div class="refs">
-        <!-- TODO: Gerçek okul isimleriyle güncellenecek -->
-        <div class="ref reveal"><b>Denizcilik Anadolu Lisesi</b><small>Lise Üniformaları</small></div>
-        <div class="ref reveal"><b>Üniversite Denizcilik Fakültesi</b><small>Fakülte Üniformaları</small></div>
-        <div class="ref reveal"><b>Denizcilik Meslek Yüksekokulu</b><small>MYO Üniformaları</small></div>
+        <a class="ref reveal" href="https://pirireis.edu.tr/" target="_blank" rel="noopener"><b>Piri Reis Üniversitesi</b><small>Üniversite Üniformaları</small></a>
+        <a class="ref reveal" href="https://pirireisdenizcilik.meb.k12.tr/" target="_blank" rel="noopener"><b>Piri Reis Denizcilik Mesleki ve Teknik Anadolu Lisesi</b><small>Lise Üniformaları</small></a>
+      </div>
+      <p class="refs-note reveal">Türkiye genelinde hizmet verdiğimiz kurumlar</p>
+      <div class="refs-alt">
+        <div class="ref reveal"><b>Denizcilik Anadolu Liseleri</b><small>Lise Üniformaları</small></div>
+        <div class="ref reveal"><b>Üniversite Denizcilik Fakülteleri</b><small>Fakülte Üniformaları</small></div>
+        <div class="ref reveal"><b>Denizcilik Meslek Yüksekokulları</b><small>MYO Üniformaları</small></div>
       </div>
     </div>
   </section>
@@ -619,7 +639,7 @@
       <div class="faq" style="max-width:760px;margin:0 auto;">
         <details class="faq-item reveal">
           <summary>Hangi okullar için üniforma üretiyorsunuz?</summary>
-          <p>Denizcilik liseleri, üniversitelerin denizcilik/deniz bilimleri fakülteleri ve meslek yüksekokulları için okul yönetmeliğine uygun üniforma üretiyoruz.</p>
+          <p>Denizcilik liseleri, üniversitelerin denizcilik/deniz bilimleri fakülteleri ve meslek yüksekokulları için okul yönetmeliğine uygun üniforma üretiyoruz. Referanslarımız arasında Piri Reis Üniversitesi ve Piri Reis Denizcilik Mesleki ve Teknik Anadolu Lisesi bulunmaktadır.</p>
         </details>
         <details class="faq-item reveal">
           <summary>Okula özel tasarım ve arma işlemesi yapıyor musunuz?</summary>
