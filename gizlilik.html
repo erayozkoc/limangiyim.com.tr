@@ -117,11 +117,26 @@
     a { color: var(--gold-hover); }
 
     /* ---------- Footer (ana sayfayla aynı) ---------- */
-    footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 26px 0; font-size: 0.84rem; }
-    footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 44px 0 0; font-size: 0.88rem; }
     footer b { color: #fff; }
-    footer a { color: rgba(255,255,255,0.8); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 2px; }
+    footer p, footer li { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
+    footer a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; }
     footer a:hover { color: var(--gold); }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 36px; padding-bottom: 34px; }
+    .footer-brand { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 14px; text-decoration: none; }
+    .footer-brand img { filter: brightness(0) invert(1); opacity: 0.92; }
+    .footer-brand .fb-mark { height: 38px; width: auto; display: block; }
+    .footer-brand .fb-word { height: 20px; width: auto; display: block; }
+    .footer-col h4 {
+      color: var(--gold); font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 13px;
+    }
+    .footer-col p { margin: 0 0 8px; line-height: 1.65; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin: 8px 0; line-height: 1.5; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding: 16px 0; font-size: 0.8rem; }
+    .fb-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom a { text-decoration: underline; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 2px; }
 
     /* ---------- Mobil ---------- */
     @media (max-width: 820px) {
@@ -148,6 +163,7 @@
       .nav-mobile .nav-links li:last-child { margin-right: auto; }
       .nav-mobile .nav-links a { display: block; padding: 10px 11px; white-space: nowrap; }
       main { padding: 44px 0 70px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 26px; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 18px; }
@@ -158,8 +174,8 @@
       .nav-mobile .nav-links a { font-size: 0.82rem; padding: 10px 10px; }
       main { padding: 36px 0 60px; }
       p, li { font-size: 0.93rem; }
-      footer { font-size: 0.82rem; padding: 24px 0; }
-      footer .container { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+      footer { font-size: 0.84rem; padding-top: 36px; }
+      .fb-inner { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
     }
   </style>
 </head>
@@ -241,10 +257,37 @@
 
   <!-- ============ FOOTER ============ -->
   <footer>
-    <div class="container">
-      <span><b>Liman Giyim</b> — Denizcilik okulları üniforma tedarikçisi</span>
-      <span>İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul · <a href="tel:+905374375280">0 (537) 437 52 80</a> · <a href="mailto:limanuniforma@gmail.com">limanuniforma@gmail.com</a></span>
-      <span>© 2026 Tüm hakları saklıdır. · <a href="/gizlilik">Gizlilik &amp; KVKK</a></span>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a class="footer-brand" href="/" aria-label="Liman Giyim ana sayfa">
+          <img src="/logo-amblem.webp" alt="" class="fb-mark" width="30" height="41" loading="lazy">
+          <img src="/logo-yazi.webp" alt="Liman Giyim" class="fb-word" width="167" height="22" loading="lazy">
+        </a>
+        <p>Denizcilik okullarının üniforma tedarikçisi. Tuzla / İstanbul merkezli; Türkiye genelindeki denizcilik liseleri, fakülteleri ve meslek yüksekokullarına hizmet veriyoruz.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Rehberler</h4>
+        <ul>
+          <li><a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
+          <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte &amp; MYO Üniformaları</a></li>
+          <li><a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>İletişim</h4>
+        <ul>
+          <li>İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul</li>
+          <li><a href="tel:+905374375280">0 (537) 437 52 80</a></li>
+          <li><a href="mailto:limanuniforma@gmail.com">limanuniforma@gmail.com</a></li>
+          <li>Hafta içi 09.00 – 17.00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container fb-inner">
+        <span>© 2026 Liman Giyim — Tüm hakları saklıdır.</span>
+        <span><a href="/gizlilik">Gizlilik &amp; KVKK</a></span>
+      </div>
     </div>
   </footer>
 
