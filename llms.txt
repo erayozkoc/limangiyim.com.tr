@@ -7,6 +7,9 @@ Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğ
 ## Sayfalar
 
 - [Ana Sayfa](https://www.limangiyim.com.tr/): Ürünler, hakkımızda, sıkça sorulan sorular ve iletişim bilgileri
+- [Denizcilik Lisesi Üniformaları](https://www.limangiyim.com.tr/denizcilik-lisesi-uniformalari): Lise üniforması parçaları, yönetmelik uyumu, ölçü ve sipariş süreci rehberi
+- [Denizcilik Fakültesi ve MYO Üniformaları](https://www.limangiyim.com.tr/denizcilik-fakultesi-uniformalari): Üniversite üniformaları ve gemi stajı giyimi rehberi
+- [Denizci Kepi ve Apolet](https://www.limangiyim.com.tr/denizci-kepi-ve-apolet): Kep, apolet ve tamamlayıcı aksesuarlar rehberi
 - [Gizlilik ve KVKK Aydınlatma Metni](https://www.limangiyim.com.tr/gizlilik): Kişisel verilerin korunması ve çerez politikası
 
 ## Ürünler
