@@ -7,12 +7,14 @@ Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğ
 ## Sayfalar
 
 - [Ana Sayfa](https://www.limangiyim.com.tr/): Ürünler, hakkımızda, sıkça sorulan sorular ve iletişim bilgileri
+- [Rehberler](https://www.limangiyim.com.tr/rehberler): Tüm üniforma rehberlerinin listelendiği sayfa
 - [Denizcilik Lisesi Üniformaları](https://www.limangiyim.com.tr/denizcilik-lisesi-uniformalari): Lise üniforması parçaları, yönetmelik uyumu, ölçü ve sipariş süreci rehberi
 - [Denizcilik Fakültesi ve MYO Üniformaları](https://www.limangiyim.com.tr/denizcilik-fakultesi-uniformalari): Üniversite üniformaları ve gemi stajı giyimi rehberi
 - [Denizci Kepi ve Apolet](https://www.limangiyim.com.tr/denizci-kepi-ve-apolet): Kep, apolet ve tamamlayıcı aksesuarlar rehberi
 - [Denizci Kıyafetleri](https://www.limangiyim.com.tr/denizci-kiyafetleri): Yazlık ve kışlık denizci kıyafetleri, parçalar ve tedarik rehberi
 - [Denizci Üniforma Fiyatları](https://www.limangiyim.com.tr/denizci-uniforma-fiyatlari): Fiyatı belirleyen faktörler ve teklif alma rehberi
-- [Toplu Üniforma Dikimi](https://www.limangiyim.com.tr/toplu-uniforma-dikimi): Okullar ve kurumlar için toplu üniforma üretim süreci- [Gizlilik ve KVKK Aydınlatma Metni](https://www.limangiyim.com.tr/gizlilik): Kişisel verilerin korunması ve çerez politikası
+- [Toplu Üniforma Dikimi](https://www.limangiyim.com.tr/toplu-uniforma-dikimi): Okullar ve kurumlar için toplu üniforma üretim süreci
+- [Gizlilik ve KVKK Aydınlatma Metni](https://www.limangiyim.com.tr/gizlilik): Kişisel verilerin korunması ve çerez politikası
 
 ## Ürünler
 

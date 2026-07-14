@@ -54,6 +54,22 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Toplu Üniforma Dikimi ve Okul Üniforması Üretimi",
+    "description": "Okullar için toplu üniforma dikimi: okula özel arma ve yönetmelik uyumu, yerinde ölçü alımı, kayıt dönemine yetişen teslimat.",
+    "image": "https://www.limangiyim.com.tr/og-image.jpg",
+    "author": { "@type": "Organization", "name": "Liman Üniforma", "url": "https://www.limangiyim.com.tr/" },
+    "publisher": { "@type": "Organization", "name": "Liman Üniforma", "logo": { "@type": "ImageObject", "url": "https://www.limangiyim.com.tr/logo-amblem.png" } },
+    "datePublished": "2026-07-14",
+    "dateModified": "2026-07-14",
+    "mainEntityOfPage": "https://www.limangiyim.com.tr/toplu-uniforma-dikimi",
+    "inLanguage": "tr"
+  }
+  </script>
+
   <style>
     /* Yerel (self-hosted) yazı tipleri — Google Fonts'a dış istek yok */
     @font-face {
@@ -124,7 +140,18 @@
       padding: 8px 14px; border-radius: 8px; transition: color 0.2s, background 0.2s;
     }
     .nav-links a:hover { color: var(--navy); background: var(--bg); }
-    .nav-cta { display: none; }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+      color: #fff; border: 1px solid rgba(212,168,67,0.55);
+      font-weight: 700; font-size: 0.85rem;
+      padding: 9px 17px; border-radius: 8px; text-decoration: none;
+      box-shadow: 0 3px 10px rgba(11,37,69,0.25);
+      transition: transform 0.15s, filter 0.2s;
+    }
+    .nav-cta svg { width: 14px; height: 14px; color: var(--gold); }
+    .nav-cta:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .nav-cta:active { background: var(--navy-2); }
     .nav-mobile { display: none; }
 
     /* ---------- İçerik ---------- */
@@ -140,6 +167,11 @@
       background: var(--gold); margin-top: 14px;
     }
     .lead { color: var(--muted); font-size: 1.0rem; margin: 18px 0 6px; }
+    .crumbs { font-size: 0.82rem; color: var(--muted); margin-bottom: 18px; }
+    .crumbs a { color: var(--muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--gold-hover); }
+    .crumbs .sep { margin: 0 6px; color: var(--gold); }
+    .crumbs .here { color: var(--navy); font-weight: 600; }
     h2 { color: var(--navy); font-size: 1.12rem; font-weight: 700; margin: 32px 0 10px; }
     p, li { color: #3d4a5c; font-size: 0.95rem; }
     p { margin: 10px 0; }
@@ -184,6 +216,7 @@
       color: var(--gold); font-size: 0.78rem; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 13px;
     }
+    .footer-col h4 a { color: var(--gold); }
     .footer-col p { margin: 0 0 8px; line-height: 1.65; }
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
     .footer-col li { margin: 8px 0; line-height: 1.5; }
@@ -196,16 +229,6 @@
       .container { padding: 0 20px; }
       .nav { padding-top: 13px; padding-bottom: 13px; }
       .nav-desktop { display: none; }
-      .nav-cta {
-        display: inline-flex; align-items: center; gap: 7px;
-        background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
-        color: #fff; border: 1px solid rgba(212,168,67,0.55);
-        font-weight: 700; font-size: 0.85rem;
-        padding: 9px 17px; border-radius: 8px; text-decoration: none;
-        box-shadow: 0 3px 10px rgba(11,37,69,0.25);
-      }
-      .nav-cta svg { width: 14px; height: 14px; color: var(--gold); }
-      .nav-cta:active { background: var(--navy-2); }
       .nav-mobile { display: block; background: #fff; border-bottom: 1px solid var(--line); }
       .nav-mobile .nav-links {
         gap: 0; overflow-x: auto; padding: 2px 12px;
@@ -247,7 +270,7 @@
           <li><a href="/#urunler">Ürünler</a></li>
           <li><a href="/#referanslar">Referanslar</a></li>
           <li><a href="/#sss">S.S.S.</a></li>
-          <li><a href="/#iletisim">İletişim</a></li>
+          <li><a href="/rehberler">Rehberler</a></li>
         </ul>
       </nav>
       <a class="nav-cta" href="/#iletisim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>İletişim</a>
@@ -260,6 +283,7 @@
       <li><a href="/#urunler">Ürünler</a></li>
       <li><a href="/#referanslar">Referanslar</a></li>
       <li><a href="/#sss">S.S.S.</a></li>
+      <li><a href="/rehberler">Rehberler</a></li>
     </ul>
   </nav>
 
@@ -267,6 +291,9 @@
   <main>
     <div class="container">
       <article class="doc">
+        <nav class="crumbs" aria-label="Sayfa yolu">
+          <a href="/">Ana Sayfa</a><span class="sep">›</span><span class="here">Toplu Üniforma Dikimi</span>
+        </nav>
         <h1>Toplu Üniforma Dikimi</h1>
         <p class="lead">Okul idareleri, aile birlikleri ve kurumlar için toplu üniforma üretimi: süreç nasıl işler, neye dikkat edilmeli?</p>
 
@@ -310,6 +337,7 @@
         <div class="guides">
           <h2>Diğer rehberler</h2>
           <ul>
+            <li>→ <a href="/rehberler">Tüm rehberler</a></li>
             <li>→ <a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
             <li>→ <a href="/denizcilik-fakultesi-uniformalari">Denizcilik Fakültesi ve MYO Üniformaları</a></li>
             <li>→ <a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet</a></li>
@@ -333,7 +361,7 @@
         <p>Denizcilik okullarının üniforma tedarikçisi. Tuzla / İstanbul merkezli; Türkiye genelindeki denizcilik liseleri, fakülteleri ve meslek yüksekokullarına hizmet veriyoruz.</p>
       </div>
       <div class="footer-col">
-        <h4>Rehberler</h4>
+        <h4><a href="/rehberler">Rehberler</a></h4>
         <ul>
           <li><a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
           <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte &amp; MYO Üniformaları</a></li>
