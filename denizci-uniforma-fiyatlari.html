@@ -70,6 +70,25 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Denizci üniforma fiyatı neye göre değişir?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Parça listesi, kumaş kalitesi, arma işlemesi, sipariş adedi ve ölçü/beden dağılımına göre değişir; sabit bir tarife yoktur." }
+      },
+      {
+        "@type": "Question",
+        "name": "Fiyat teklifi almak için ne göndermeliyim?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Okulun adını, ihtiyaç duyulan parçaları, yaklaşık adedi ve teslim tarihini iletmeniz yeterlidir; bu bilgilerle size en kısa sürede özel teklif hazırlanır." }
+      }
+    ]
+  }
+  </script>
+
   <style>
     /* Yerel (self-hosted) yazı tipleri — Google Fonts'a dış istek yok */
     @font-face {
@@ -194,6 +213,14 @@
     }
     .cta-box .btn:hover { background: var(--gold-hover); }
     .cta-box .btn.ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+
+    /* ---------- Mini S.S.S. ---------- */
+    .faq-mini { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 15px 18px; margin: 10px 0; }
+    .faq-mini summary { cursor: pointer; font-weight: 700; color: var(--navy); font-size: 0.95rem; list-style: none; }
+    .faq-mini summary::-webkit-details-marker { display: none; }
+    .faq-mini summary::after { content: "+"; float: right; color: var(--gold); font-weight: 800; }
+    .faq-mini[open] summary::after { content: "–"; }
+    .faq-mini p { margin-top: 10px; }
 
     /* ---------- Diğer rehberler ---------- */
     .guides { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); }
@@ -330,6 +357,16 @@
           <a class="btn" href="https://wa.me/905374375280?text=Merhaba%2C%20%C3%BCniforma%20i%C3%A7in%20fiyat%20teklifi%20almak%20istiyorum" target="_blank" rel="noopener">WhatsApp'tan Teklif İsteyin</a>
           <a class="btn ghost" href="tel:+905374375280">0 (537) 437 52 80</a>
         </div>
+
+        <h2>Sık Sorulan Sorular</h2>
+        <details class="faq-mini">
+          <summary>Denizci üniforma fiyatı neye göre değişir?</summary>
+          <p>Parça listesi, kumaş kalitesi, arma işlemesi, sipariş adedi ve ölçü/beden dağılımına göre değişir; sabit bir tarife yoktur.</p>
+        </details>
+        <details class="faq-mini">
+          <summary>Fiyat teklifi almak için ne göndermeliyim?</summary>
+          <p>Okulun adını, ihtiyaç duyulan parçaları, yaklaşık adedi ve teslim tarihini iletmeniz yeterlidir; bu bilgilerle size en kısa sürede özel teklif hazırlanır.</p>
+        </details>
 
         <div class="guides">
           <h2>Diğer rehberler</h2>

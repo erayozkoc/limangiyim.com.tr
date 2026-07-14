@@ -70,6 +70,25 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Denizci kepi ve apolet üniformadan ayrı satın alınabilir mi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Evet. Kep, apolet, düğme, kravat ve fular gibi parçalar üniformadan bağımsız olarak da tedarik edilebilir." }
+      },
+      {
+        "@type": "Question",
+        "name": "Apolet rengi ve şerit sayısı neye göre belirlenir?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Okulun kıyafet yönetmeliğine göre değişir; şerit sayısı ve renk, öğrencinin sınıfını veya kademesini gösterir." }
+      }
+    ]
+  }
+  </script>
+
   <style>
     /* Yerel (self-hosted) yazı tipleri — Google Fonts'a dış istek yok */
     @font-face {
@@ -194,6 +213,14 @@
     }
     .cta-box .btn:hover { background: var(--gold-hover); }
     .cta-box .btn.ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+
+    /* ---------- Mini S.S.S. ---------- */
+    .faq-mini { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 15px 18px; margin: 10px 0; }
+    .faq-mini summary { cursor: pointer; font-weight: 700; color: var(--navy); font-size: 0.95rem; list-style: none; }
+    .faq-mini summary::-webkit-details-marker { display: none; }
+    .faq-mini summary::after { content: "+"; float: right; color: var(--gold); font-weight: 800; }
+    .faq-mini[open] summary::after { content: "–"; }
+    .faq-mini p { margin-top: 10px; }
 
     /* ---------- Diğer rehberler ---------- */
     .guides { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); }
@@ -331,6 +358,16 @@
           <a class="btn" href="https://wa.me/905374375280?text=Merhaba%2C%20denizci%20kepi%20ve%20apolet%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
           <a class="btn ghost" href="tel:+905374375280">0 (537) 437 52 80</a>
         </div>
+
+        <h2>Sık Sorulan Sorular</h2>
+        <details class="faq-mini">
+          <summary>Denizci kepi ve apolet üniformadan ayrı satın alınabilir mi?</summary>
+          <p>Evet. Kep, apolet, düğme, kravat ve fular gibi parçalar üniformadan bağımsız olarak da tedarik edilebilir.</p>
+        </details>
+        <details class="faq-mini">
+          <summary>Apolet rengi ve şerit sayısı neye göre belirlenir?</summary>
+          <p>Okulun kıyafet yönetmeliğine göre değişir; şerit sayısı ve renk, öğrencinin sınıfını veya kademesini gösterir.</p>
+        </details>
 
         <div class="guides">
           <h2>Diğer rehberler</h2>
