@@ -127,6 +127,7 @@
       --line: #e6e9ee;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { overflow-x: hidden; overflow-x: clip; }
     body {
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
       background: var(--bg); color: var(--ink); line-height: 1.7;
@@ -147,10 +148,12 @@
     .brand-word { height: 22px; width: auto; display: block; }
     .nav-links { display: flex; gap: 6px; list-style: none; align-items: center; }
     .nav-links a {
-      text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--muted);
+      text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--navy);
       padding: 8px 14px; border-radius: 8px; transition: color 0.2s, background 0.2s;
     }
     .nav-links a:hover { color: var(--navy); background: var(--bg); }
+    /* Bu sayfa Rehberler bölümünde — menüde vurgula */
+    .nav-links a[href="/rehberler"] { color: var(--gold-hover); }
     .nav-cta {
       display: inline-flex; align-items: center; gap: 7px;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
@@ -257,13 +260,16 @@
       .nav-desktop { display: none; }
       .nav-mobile { display: block; background: #fff; border-bottom: 1px solid var(--line); }
       .nav-mobile .nav-links {
-        gap: 0; overflow-x: auto; padding: 2px 12px;
+        gap: 0; overflow-x: auto; padding: 2px 8px;
         -ms-overflow-style: none; scrollbar-width: none;
       }
       .nav-mobile .nav-links::-webkit-scrollbar { display: none; }
       .nav-mobile .nav-links li:first-child { margin-left: auto; }
       .nav-mobile .nav-links li:last-child { margin-right: auto; }
-      .nav-mobile .nav-links a { display: block; padding: 10px 11px; white-space: nowrap; }
+      .nav-mobile .nav-links a {
+        display: block; padding: 10px clamp(4px, 1.7vw, 11px);
+        font-size: clamp(0.72rem, 3vw, 0.95rem); white-space: nowrap;
+      }
       main { padding: 44px 0 70px; }
       .hub-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 26px; }
@@ -274,7 +280,6 @@
       .brand-word { height: 19px; }
       .nav { padding-top: 12px; padding-bottom: 12px; }
       .nav-cta { font-size: 0.82rem; padding: 8px 15px; }
-      .nav-mobile .nav-links a { font-size: 0.82rem; padding: 10px 10px; }
       main { padding: 36px 0 60px; }
       p { font-size: 0.93rem; }
       footer { font-size: 0.84rem; padding-top: 36px; }

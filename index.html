@@ -211,6 +211,7 @@
     a:focus-visible, button:focus-visible, summary:focus-visible {
       outline: 2px solid var(--gold); outline-offset: 2px;
     }
+    html, body { overflow-x: hidden; overflow-x: clip; }
     body {
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
       background: var(--bg); color: var(--ink); line-height: 1.65;
@@ -233,10 +234,15 @@
     .brand-word { height: 22px; width: auto; display: block; }
     .nav-links { display: flex; gap: 6px; list-style: none; align-items: center; }
     .nav-links a {
-      text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--muted);
+      text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--navy);
       padding: 8px 14px; border-radius: 8px; transition: color 0.2s, background 0.2s;
     }
     .nav-links a:hover { color: var(--navy); background: var(--bg); }
+    /* Tıklanan bölümün menü linkini vurgula (JS'siz, :target tabanlı) */
+    body:has(#hakkimizda:target) .nav-links a[href="#hakkimizda"],
+    body:has(#urunler:target) .nav-links a[href="#urunler"],
+    body:has(#referanslar:target) .nav-links a[href="#referanslar"],
+    body:has(#sss:target) .nav-links a[href="#sss"] { color: var(--gold-hover); }
     .nav-cta {
       display: inline-flex; align-items: center; gap: 7px;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
@@ -512,13 +518,16 @@
       .nav-desktop { display: none; }
       .nav-mobile { display: block; background: #fff; border-bottom: 1px solid var(--line); }
       .nav-mobile .nav-links {
-        gap: 0; overflow-x: auto; padding: 2px 12px;
+        gap: 0; overflow-x: auto; padding: 2px 8px;
         -ms-overflow-style: none; scrollbar-width: none;
       }
       .nav-mobile .nav-links::-webkit-scrollbar { display: none; }
       .nav-mobile .nav-links li:first-child { margin-left: auto; }
       .nav-mobile .nav-links li:last-child { margin-right: auto; }
-      .nav-mobile .nav-links a { display: block; padding: 10px 11px; white-space: nowrap; }
+      .nav-mobile .nav-links a {
+        display: block; padding: 10px clamp(4px, 1.7vw, 11px);
+        font-size: clamp(0.72rem, 3vw, 0.95rem); white-space: nowrap;
+      }
     }
     @media (max-width: 480px) {
       .container { padding: 0 18px; }
@@ -527,7 +536,6 @@
       .brand-word { height: 19px; }
       .nav { padding-top: 12px; padding-bottom: 12px; }
       .nav-cta { font-size: 0.82rem; padding: 8px 15px; }
-      .nav-mobile .nav-links a { font-size: 0.82rem; padding: 10px 10px; }
       .hero { padding: 48px 0 110px; }
       .hero .eyebrow { font-size: 0.76rem; margin-bottom: 16px; }
       .hero h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); margin-bottom: 18px; }
