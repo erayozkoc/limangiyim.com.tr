@@ -75,7 +75,8 @@
         { "@type": "ListItem", "position": 3, "name": "Denizci Kepi ve Apolet", "url": "https://www.limangiyim.com.tr/denizci-kepi-ve-apolet" },
         { "@type": "ListItem", "position": 4, "name": "Denizci Kıyafetleri", "url": "https://www.limangiyim.com.tr/denizci-kiyafetleri" },
         { "@type": "ListItem", "position": 5, "name": "Denizci Üniforma Fiyatları", "url": "https://www.limangiyim.com.tr/denizci-uniforma-fiyatlari" },
-        { "@type": "ListItem", "position": 6, "name": "Toplu Üniforma Dikimi", "url": "https://www.limangiyim.com.tr/toplu-uniforma-dikimi" }
+        { "@type": "ListItem", "position": 6, "name": "Toplu Üniforma Dikimi", "url": "https://www.limangiyim.com.tr/toplu-uniforma-dikimi" },
+        { "@type": "ListItem", "position": 7, "name": "Denizcilik Üniforması Nereden Alınır?", "url": "https://www.limangiyim.com.tr/denizcilik-uniformasi-nereden-alinir" }
       ]
     }
   }
@@ -191,6 +192,8 @@
 
     /* ---------- Rehber kartları ---------- */
     .hub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 30px; }
+    /* Tek kalan son kart (tek sayıda kart varsa) satırda ortalanır */
+    .hub-grid > .hub-card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 8px); }
     .hub-card {
       display: block; text-decoration: none;
       background: #fff; border: 1px solid var(--line); border-radius: 10px;
@@ -272,6 +275,7 @@
       }
       main { padding: 44px 0 70px; }
       .hub-grid { grid-template-columns: 1fr; }
+      .hub-grid > .hub-card:last-child:nth-child(odd) { grid-column: auto; justify-self: stretch; width: auto; }
       .footer-grid { grid-template-columns: 1fr; gap: 26px; }
     }
     @media (max-width: 480px) {
@@ -362,6 +366,11 @@
             <p>Okullar ve kurumlar için toplu üniforma üretim süreci adım adım.</p>
             <span class="go">Rehberi okuyun →</span>
           </a>
+          <a class="hub-card" href="/denizcilik-uniformasi-nereden-alinir">
+            <b>Denizcilik Üniforması Nereden Alınır?</b>
+            <p>Hazır ürün mü, okula özel üretim mi? Doğru seçimi yapın.</p>
+            <span class="go">Rehberi okuyun →</span>
+          </a>
         </div>
 
         <div class="cta-box">
@@ -393,6 +402,7 @@
           <li><a href="/denizci-kiyafetleri">Denizci Kıyafetleri</a></li>
           <li><a href="/denizci-uniforma-fiyatlari">Üniforma Fiyatları</a></li>
           <li><a href="/toplu-uniforma-dikimi">Toplu Üniforma Dikimi</a></li>
+          <li><a href="/denizcilik-uniformasi-nereden-alinir">Denizcilik Üniforması Nereden Alınır?</a></li>
         </ul>
       </div>
       <div class="footer-col">
