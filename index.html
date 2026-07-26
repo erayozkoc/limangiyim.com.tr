@@ -690,7 +690,9 @@
       .sec-head { margin-bottom: 36px; }
       .hero { padding: 60px 0 120px; }
       .hero p { font-size: 1.02rem; margin-bottom: 30px; }
-      .hero .anchor-mark { right: -60px; width: 300px; height: auto; opacity: 0.06; }
+      /* height:auto aspect-ratio'yu ezip CLS 0.188'e yol açıyordu:
+         görsel yüklenene kadar yükseklik 0, yüklenince translateY(-55%) kayıyordu. */
+      .hero .anchor-mark { right: -60px; width: 300px; opacity: 0.06; }
       .contact-wrap { grid-template-columns: 1fr; }
       .contact-left { padding: 32px 24px; }
       .contact-right { padding: 32px 24px; }
@@ -883,19 +885,19 @@
         <h3 class="ref-h3">Üniversiteler</h3>
         <ul class="ref-cards">
           <li><a class="ref-card" href="https://pirireis.edu.tr/" target="_blank" rel="noopener" aria-label="Piri Reis Üniversitesi — yeni sekmede açılır">
-            <span class="rc-logo"><img src="logolar/pru.webp" alt="" width="240" height="240" loading="lazy"></span>
+            <span class="rc-logo"><img src="logolar/pru.webp" alt="" width="168" height="168" loading="lazy"></span>
             <b>Piri Reis Üniversitesi</b>          </a></li>
           <li><a class="ref-card" href="https://kyrenia.edu.tr/" target="_blank" rel="noopener" aria-label="Girne Üniversitesi — yeni sekmede açılır">
-            <span class="rc-logo"><img src="logolar/girneuni.webp" alt="" width="240" height="240" loading="lazy"></span>
+            <span class="rc-logo"><img src="logolar/girneuni.webp" alt="" width="168" height="168" loading="lazy"></span>
             <b>Girne Üniversitesi</b>          </a></li>
           <li><a class="ref-card" href="https://www.gau.edu.tr/denizcilik-yuksek-okulu" target="_blank" rel="noopener" aria-label="Girne Amerikan Üniversitesi — yeni sekmede açılır">
-            <span class="rc-logo"><img src="logolar/girneamerikan.webp" alt="" width="240" height="240" loading="lazy"></span>
+            <span class="rc-logo"><img src="logolar/girneamerikan.webp" alt="" width="168" height="168" loading="lazy"></span>
             <b>Girne Amerikan Üniversitesi</b>          </a></li>
           <li><a class="ref-card" href="https://denizcilik.bandirma.edu.tr/" target="_blank" rel="noopener" aria-label="Bandırma Onyedi Eylül Üniversitesi — yeni sekmede açılır">
-            <span class="rc-logo"><img src="logolar/bandirma.webp" alt="" width="240" height="240" loading="lazy"></span>
+            <span class="rc-logo"><img src="logolar/bandirma.webp" alt="" width="168" height="168" loading="lazy"></span>
             <b>Bandırma Onyedi Eylül Üniversitesi</b>          </a></li>
           <li><a class="ref-card" href="https://www.ktu.edu.tr/" target="_blank" rel="noopener" aria-label="Karadeniz Teknik Üniversitesi — yeni sekmede açılır">
-            <span class="rc-logo"><img src="logolar/ktu.webp" alt="" width="240" height="240" loading="lazy"></span>
+            <span class="rc-logo"><img src="logolar/ktu.webp" alt="" width="168" height="168" loading="lazy"></span>
             <b>Karadeniz Teknik Üniversitesi</b>          </a></li>
         </ul>
       </div>
@@ -904,10 +906,10 @@
         <h3 class="ref-h3">Meslek Yüksekokulları</h3>
         <ul class="ref-cards ref-cards--2">
           <li><a class="ref-card" href="https://denizcilikmyo.subu.edu.tr/" target="_blank" rel="noopener" aria-label="Sakarya Denizcilik Meslek Yüksekokulu — yeni sekmede açılır">
-            <span class="rc-logo"><img src="logolar/subu.webp" alt="" width="240" height="240" loading="lazy"></span>
+            <span class="rc-logo"><img src="logolar/subu.webp" alt="" width="168" height="168" loading="lazy"></span>
             <b>Sakarya Denizcilik Meslek Yüksekokulu</b>          </a></li>
           <li><a class="ref-card" href="https://fmyo.odu.edu.tr/" target="_blank" rel="noopener" aria-label="Ordu Fatsa Meslek Yüksekokulu — yeni sekmede açılır">
-            <span class="rc-logo"><img src="logolar/ordu.webp" alt="" width="240" height="240" loading="lazy"></span>
+            <span class="rc-logo"><img src="logolar/ordu.webp" alt="" width="168" height="168" loading="lazy"></span>
             <b>Ordu Fatsa Meslek Yüksekokulu</b>          </a></li>
         </ul>
       </div>
