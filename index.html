@@ -584,6 +584,20 @@
     .c-item a, .c-item .v { color: var(--muted); font-size: 0.93rem; text-decoration: none; overflow-wrap: anywhere; }
     .c-item a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 2px; transition: color 0.2s, text-decoration-color 0.2s; }
     .c-item a:hover, .c-item a:focus-visible { color: var(--gold-hover); text-decoration-color: currentColor; }
+    /* Haritada Gör: gömülü harita yerine Google Maps'e yönlendiren hafif bağlantı */
+    .c-item .map-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 7px; padding: 5px 11px;
+      border: 1px solid var(--line); border-radius: 999px;
+      color: var(--navy); font-size: 0.8rem; font-weight: 600;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+    .c-item .map-link svg { width: 14px; height: 14px; color: var(--gold-hover); }
+    .c-item .map-link:hover, .c-item .map-link:focus-visible {
+      border-color: var(--gold); background: var(--bg); color: var(--navy);
+      text-decoration: none;
+    }
     .contact-right {
       background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%);
       color: #fff; padding: 48px 42px;
@@ -1068,7 +1082,12 @@
           </div>
           <div class="c-item">
             <span class="ci" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><b>Adres</b><span class="v">İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul</span></div>
+            <div><b>Adres</b><span class="v">İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul</span>
+              <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Liman%20%C3%9Cniforma%2C%20%C4%B0stasyon%20Mah.%20Memba%20Sk.%20No%3A18%2C%20Tuzla%2C%20%C4%B0stanbul" target="_blank" rel="noopener">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Haritada Gör
+              </a>
+            </div>
           </div>
         </div>
         <div class="contact-right">
