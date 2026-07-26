@@ -2,7 +2,7 @@
 
 > Denizcilik liseleri ve üniversitelerin denizcilik fakülteleri için okul üniforması, denizci kepi, apolet ve kurumsal giyim üretimi. Okula özel üretim, yerinde ölçü alımı ve zamanında teslimat. Tuzla / İstanbul merkezli, Türkiye genelindeki denizcilik okullarına hizmet verir.
 
-Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğitim kurumlarına özel üniforma tedarikinde uzmanlaşmış bir işletmedir. Her okulun arması, renk kodları ve kıyafet yönetmeliğine uygun özel üretim yapılır. Öğrenci gruplarına okulda yerinde ölçü hizmeti sunulur ve siparişler okul kayıt dönemine yetişecek şekilde teslim edilir.
+Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğitim kurumlarına özel üniforma tedarikinde uzmanlaşmış bir işletmedir. Her okulun arması, renk kodları ve kıyafet yönetmeliğine uygun özel üretim yapılır. Öğrenci gruplarına okulda yerinde ölçü hizmeti sunulur ve siparişler okul kayıt dönemine yetişecek şekilde teslim edilir. Türkiye ve KKTC'de 13 denizcilik kurumuna (5 üniversite, 2 meslek yüksekokulu, 6 denizcilik lisesi) üniforma tedarik edilmektedir.
 
 ## Sayfalar
 
@@ -28,8 +28,33 @@ Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğ
 
 ## Referanslar
 
-- Piri Reis Üniversitesi (Tuzla / İstanbul) — üniversite üniformaları
-- Piri Reis Denizcilik Mesleki ve Teknik Anadolu Lisesi (Tuzla / İstanbul) — lise üniformaları
+Türkiye ve KKTC'de 13 denizcilik kurumuna üniforma tedarik edilmektedir.
+
+### Üniversiteler
+
+- Piri Reis Üniversitesi (İstanbul) — https://pirireis.edu.tr/
+- Girne Üniversitesi (KKTC) — https://kyrenia.edu.tr/
+- Girne Amerikan Üniversitesi (KKTC) — https://www.gau.edu.tr/denizcilik-yuksek-okulu
+- Bandırma Onyedi Eylül Üniversitesi (Balıkesir) — https://denizcilik.bandirma.edu.tr/
+- Karadeniz Teknik Üniversitesi (Trabzon) — https://www.ktu.edu.tr/
+
+### Meslek Yüksekokulları
+
+- Sakarya Denizcilik Meslek Yüksekokulu (Sakarya) — https://denizcilikmyo.subu.edu.tr/
+- Ordu Fatsa Meslek Yüksekokulu (Ordu) — https://fmyo.odu.edu.tr/
+
+### Denizcilik Liseleri
+
+- Piri Reis Denizcilik Mesleki ve Teknik Anadolu Lisesi (İstanbul) — https://pirireisdenizcilik.meb.k12.tr/
+- Hacı Rahime Ulusoy Denizcilik Mesleki ve Teknik Anadolu Lisesi (İstanbul) — https://hrulusoymtal.meb.k12.tr/
+- Kaptanı Derya Mesleki ve Teknik Anadolu Lisesi (İstanbul) — https://kaptanideryadenizcilik.meb.k12.tr/
+- Beykoz Barbaros Hayrettin Paşa Mesleki ve Teknik Anadolu Lisesi (İstanbul) — https://denizcilik.meb.k12.tr/
+- Kumbağ Denizcilik Mesleki ve Teknik Anadolu Lisesi (Tekirdağ) — https://kumbagdenizcilikmtal.meb.k12.tr/
+- Kocaeli Denizcilik Anadolu Lisesi (Kocaeli)
+
+### Hizmet Verilen Şehirler
+
+İstanbul, Tekirdağ, Kocaeli, Sakarya, Balıkesir, Ordu, Trabzon ve KKTC (Girne).
 
 ## İletişim
 
