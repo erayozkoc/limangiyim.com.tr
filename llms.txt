@@ -10,6 +10,7 @@ Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğ
 - [Rehberler](https://www.limangiyim.com.tr/rehberler): Tüm üniforma rehberlerinin listelendiği sayfa
 - [Denizcilik Lisesi Üniformaları](https://www.limangiyim.com.tr/denizcilik-lisesi-uniformalari): Lise üniforması parçaları, yönetmelik uyumu, ölçü ve sipariş süreci rehberi
 - [Denizcilik Fakültesi ve MYO Üniformaları](https://www.limangiyim.com.tr/denizcilik-fakultesi-uniformalari): Üniversite üniformaları ve gemi stajı giyimi rehberi
+- [Deniz ve Liman İşletmeciliği Üniforma Giyer mi?](https://www.limangiyim.com.tr/deniz-ve-liman-isletmeciligi-uniformasi): Bölümde üniforma zorunluluğunun okula göre nasıl değiştiği, gereken parçalar ve Deniz Ulaştırma İşletme Mühendisliği ile farkı
 - [Denizci Kepi ve Apolet](https://www.limangiyim.com.tr/denizci-kepi-ve-apolet): Kep, apolet ve tamamlayıcı aksesuarlar rehberi
 - [Denizci Kıyafetleri](https://www.limangiyim.com.tr/denizci-kiyafetleri): Yazlık ve kışlık denizci kıyafetleri, parçalar ve tedarik rehberi
 - [Denizci Üniforma Fiyatları](https://www.limangiyim.com.tr/denizci-uniforma-fiyatlari): Fiyatı belirleyen faktörler ve teklif alma rehberi
@@ -72,6 +73,12 @@ Evet. Her okulun arması, renk kodları ve kıyafet yönetmeliğine uygun özel 
 
 **Üniforma fiyatları ne kadar?**
 Fiyat; okulun kıyafet yönetmeliğine, seçilen ürün kalemlerine ve öğrenci sayısına göre değişir. Sabit liste fiyatı yoktur, her okul için ayrı teklif hazırlanır. Ücretsiz teklif telefon veya WhatsApp üzerinden alınabilir.
+
+**Deniz ve Liman İşletmeciliği bölümü üniforma giyer mi?**
+Okula göre değişir. Program bir denizcilik fakültesi veya denizcilik meslek yüksekokulu bünyesinde yürütülüyorsa üniformalı öğretim uygulanması yaygındır. Programın işletme, lojistik ve liman yönetimi ağırlıklı açıldığı bazı okullarda üniforma zorunlu tutulmaz. Kesin bilgi için okulun kendi kıyafet yönergesine bakılmalıdır.
+
+**Denizciler neden beyaz giyer?**
+Beyaz kumaş güneş ışığını yansıtır ve açık güvertede serinlik sağlar; ayrıca kirlendiğinde hemen belli olduğu için kıyafet bakımı disiplinini destekler. Kış döneminde bunun tersi mantıkla lacivert kullanılır: koyu renk ısıyı tutar ve günlük kullanımda yıpranmayı daha geç gösterir.
 
 **Kep, apolet ve aksesuarlar ayrı temin edilebilir mi?**
 Evet. Kep, apolet, düğme, kravat ve fular gibi tamamlayıcı parçalar üniformadan bağımsız olarak da tedarik edilebilir.

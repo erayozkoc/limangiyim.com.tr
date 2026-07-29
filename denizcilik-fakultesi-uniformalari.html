@@ -9,18 +9,13 @@
   <link rel="preload" href="/fonts/playfair-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/playfair-700-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Google tag (gtag.js) — performans icin sayfa yuklendikten sonra calisir -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-Z3DKKLD43T');
-    window.addEventListener('load', function () {
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T';
-      document.head.appendChild(s);
-    });
   </script>
   <title>Denizcilik Fakültesi ve MYO Üniformaları | Liman Üniforma</title>
   <meta name="description" content="Denizcilik fakültesi ve meslek yüksekokulu üniforma rehberi: takımlar, kep, apolet ve gemi stajı iş tulumları. Üniversite yönetmeliğine uygun toplu üretim.">
@@ -243,7 +238,7 @@
     footer p, footer li { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
     footer a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; }
     footer a:hover { color: var(--gold); }
-    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 36px; padding-bottom: 34px; }
+    .footer-grid { display: grid; grid-template-columns: 1.15fr 1.7fr 1.15fr; gap: 36px; padding-bottom: 34px; }
     .footer-brand { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 14px; text-decoration: none; }
     .footer-brand img { filter: brightness(0) invert(1); opacity: 0.92; }
     .footer-brand .fb-mark { height: 38px; width: auto; display: block; }
@@ -255,6 +250,10 @@
     .footer-col h4 a { color: var(--gold); }
     .footer-col p { margin: 0 0 8px; line-height: 1.65; }
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    /* Rehber listesi 8 maddeye çıkınca tek sütunda diğer sütunların iki katı
+       yükseklikte kalıyordu; iki sütuna bölünerek footer dengelendi. */
+    .footer-col ul.footer-links { columns: 2; column-gap: 26px; }
+    .footer-col ul.footer-links li { break-inside: avoid; margin-top: 0; }
     .footer-col li { margin: 8px 0; line-height: 1.5; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding: 16px 0; font-size: 0.8rem; }
     .fb-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
@@ -291,6 +290,8 @@
       }
       main { padding: 44px 0 70px; }
       .footer-grid { grid-template-columns: 1fr; gap: 26px; }
+      /* Dar ekranda iki sütun sıkışıyor — tek sütuna dön */
+      .footer-col ul.footer-links { columns: 1; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 18px; }
@@ -367,7 +368,7 @@
         <ul>
           <li><b>Deniz Ulaştırma İşletme Mühendisliği</b> — güverte sınıfı zabit adayları yetiştiren bölüm.</li>
           <li><b>Gemi Makineleri İşletme Mühendisliği</b> — makine sınıfı zabit adayları; günlük üniformaya ek olarak makine dairesi tulumları kullanılır.</li>
-          <li><b>Deniz ve Liman İşletmeciliği</b> — hem meslek yüksekokulu hem fakülte düzeyinde açılan programlar.</li>
+          <li><b><a href="/deniz-ve-liman-isletmeciligi-uniformasi">Deniz ve Liman İşletmeciliği</a></b> — hem meslek yüksekokulu hem fakülte düzeyinde açılan programlar. Üniforma zorunluluğu bu bölümde okula göre değiştiği için ayrı bir rehberde ayrıntılı anlattık.</li>
           <li><b>Gemi adamlığına yönelik önlisans programları</b> — güverte ve makine programlarında üniformanın yanında staj tulumu da kullanılır.</li>
         </ul>
         <p>Üniformalı eğitimin amacı yalnızca biçimsel değildir: öğrenciyi mesleğin kıyafet düzenine ve bakım disiplinine öğrencilik yıllarından itibaren alıştırır. Hangi programda üniforma zorunlu olduğu üniversiteden üniversiteye değişir; kesin bilgi için ilgili fakültenin kendi yönergesine bakılmalıdır.</p>
@@ -404,7 +405,7 @@
         <div class="cta-box">
           <b>Fakülteniz için üniforma teklifi alın</b>
           <p>Öğrenci sayınızı ve ürün listenizi iletin, size özel teklif hazırlayalım.</p>
-          <a class="btn" href="https://wa.me/905374375280?text=Merhaba%2C%20denizcilik%20fak%C3%BCltesi%20%C3%BCniformalar%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
+          <a class="btn" href="https://wa.me/905374375280" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
           <a class="btn ghost" href="tel:+905374375280">0 (537) 437 52 80</a>
         </div>
 
@@ -423,6 +424,7 @@
           <ul>
             <li>→ <a href="/rehberler">Tüm rehberler</a></li>
             <li>→ <a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
+            <li>→ <a href="/deniz-ve-liman-isletmeciligi-uniformasi">Deniz ve Liman İşletmeciliği Üniforma Giyer mi?</a></li>
             <li>→ <a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet Rehberi</a></li>
             <li>→ <a href="/denizci-kiyafetleri">Denizci Kıyafetleri</a></li>
             <li>→ <a href="/denizci-uniforma-fiyatlari">Denizci Üniforma Fiyatları</a></li>
@@ -447,9 +449,10 @@
       </div>
       <div class="footer-col">
         <h4><a href="/rehberler">Rehberler</a></h4>
-        <ul>
+        <ul class="footer-links">
           <li><a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
           <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte &amp; MYO Üniformaları</a></li>
+          <li><a href="/deniz-ve-liman-isletmeciligi-uniformasi">Deniz ve Liman İşletmeciliği</a></li>
           <li><a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet</a></li>
           <li><a href="/denizci-kiyafetleri">Denizci Kıyafetleri</a></li>
           <li><a href="/denizci-uniforma-fiyatlari">Üniforma Fiyatları</a></li>

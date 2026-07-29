@@ -9,18 +9,13 @@
   <link rel="preload" href="/fonts/playfair-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/playfair-700-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Google tag (gtag.js) — performans icin sayfa yuklendikten sonra calisir -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-Z3DKKLD43T');
-    window.addEventListener('load', function () {
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T';
-      document.head.appendChild(s);
-    });
   </script>
   <title>Denizci Kıyafetleri | Liman Üniforma</title>
   <meta name="description" content="Denizci kıyafetleri rehberi: yazlık beyaz ve kışlık lacivert denizci üniforması, öğrenci ve gemi personeli kıyafetleri, parçalar ve toplu tedarik.">
@@ -70,7 +65,7 @@
     "author": { "@type": "Organization", "name": "Liman Üniforma", "url": "https://www.limangiyim.com.tr/" },
     "publisher": { "@type": "Organization", "name": "Liman Üniforma", "logo": { "@type": "ImageObject", "url": "https://www.limangiyim.com.tr/logo-amblem.png" } },
     "datePublished": "2026-07-14",
-    "dateModified": "2026-07-26",
+    "dateModified": "2026-07-29",
     "mainEntityOfPage": "https://www.limangiyim.com.tr/denizci-kiyafetleri",
     "inLanguage": "tr"
   }
@@ -243,7 +238,7 @@
     footer p, footer li { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
     footer a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; }
     footer a:hover { color: var(--gold); }
-    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 36px; padding-bottom: 34px; }
+    .footer-grid { display: grid; grid-template-columns: 1.15fr 1.7fr 1.15fr; gap: 36px; padding-bottom: 34px; }
     .footer-brand { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 14px; text-decoration: none; }
     .footer-brand img { filter: brightness(0) invert(1); opacity: 0.92; }
     .footer-brand .fb-mark { height: 38px; width: auto; display: block; }
@@ -255,6 +250,10 @@
     .footer-col h4 a { color: var(--gold); }
     .footer-col p { margin: 0 0 8px; line-height: 1.65; }
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    /* Rehber listesi 8 maddeye çıkınca tek sütunda diğer sütunların iki katı
+       yükseklikte kalıyordu; iki sütuna bölünerek footer dengelendi. */
+    .footer-col ul.footer-links { columns: 2; column-gap: 26px; }
+    .footer-col ul.footer-links li { break-inside: avoid; margin-top: 0; }
     .footer-col li { margin: 8px 0; line-height: 1.5; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding: 16px 0; font-size: 0.8rem; }
     .fb-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
@@ -291,6 +290,8 @@
       }
       main { padding: 44px 0 70px; }
       .footer-grid { grid-template-columns: 1fr; gap: 26px; }
+      /* Dar ekranda iki sütun sıkışıyor — tek sütuna dön */
+      .footer-col ul.footer-links { columns: 1; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 18px; }
@@ -373,6 +374,21 @@
         <h2>Yazlık ve kışlık denizci üniforması farkı</h2>
         <p>Yazlık üniforma beyaz ve hafif kumaşlardan, kışlık üniforma ise lacivert ve daha kalın kumaşlardan üretilir. Okullar genellikle eylül–mayıs döneminde kışlık, sıcak aylarda ve yaz stajlarında yazlık takım kullandırır. Hangi dönemde hangi takımın giyileceği okulun kıyafet yönetmeliğinde tanımlıdır; iki takımın da kayıt döneminde birlikte hazır olması gerekir.</p>
 
+        <h2>Denizciler neden beyaz giyer?</h2>
+        <p>Denizci beyazı bir moda tercihi değil, işlevden doğmuş bir gelenektir. Beyaz kumaş güneş ışığını yansıtır; sıcak iklimlerde ve açık güvertede çalışan personel için serinlik sağlar. Kapalı, koyu renkli kumaşlar aynı koşullarda ısıyı tutar.</p>
+        <p>İkinci sebep görünürlüktür: beyaz üniforma kirlendiğinde hemen belli olur. Denizcilikte kıyafet bakımı disiplinin bir parçası sayıldığı için bu özellik bir dezavantaj değil, bakım alışkanlığını destekleyen bir yan olarak görülür. Yazlık beyazın yanında <b>kışlık lacivert</b> kullanılmasının sebebi ise aynı mantığın tersidir: koyu renk soğuk koşullarda ısıyı tutar ve günlük kullanımda yıpranmayı daha geç gösterir.</p>
+        <p>Bugün denizcilik okullarında bu ayrım aynen sürer: yaz döneminde beyaz takım, kış döneminde lacivert takım giyilir. Hangi dönemde hangisinin giyileceğini okulun kendi yönergesi belirler.</p>
+
+        <h2>Denizci kıyafetlerinin bakımı ve yıkanması</h2>
+        <p>Üniformanın ömrü büyük ölçüde bakımına bağlıdır. Öğrencilerin ve velilerin en sık sorduğu konular şunlardır:</p>
+        <ul>
+          <li><b>Beyazın grileşmesi:</b> Beyaz takımları renkli çamaşırlarla birlikte yıkamamak en temel kuraldır. Yüksek sıcaklık beyazlarda sararmayı hızlandırabilir; etiket üzerindeki sıcaklık önerisine uyulmalıdır.</li>
+          <li><b>Arma ve nakış:</b> İşlemeli bölgeler ters yüz edilerek yıkandığında nakışın ömrü uzar. Doğrudan ütü, nakış ipliğine zarar verebilir — araya bez konulması önerilir.</li>
+          <li><b>Form koruma:</b> Ceket ve pantolonun askıda saklanması, katlanarak saklamaya göre kesimin bozulmasını geciktirir.</li>
+          <li><b>Kep:</b> Yıkama makinesine girmez. Kep formunu kaybettiğinde eski hâline getirmek zordur; bu yüzden kepler yıl içinde en sık yenilenen parçalardan biridir.</li>
+        </ul>
+        <p>Yıl içinde tek tek parça yenileme ihtiyacı doğduğunda <a href="/denizci-kepi-ve-apolet">kep ve apoletlerin üniformadan bağımsız temin edilebilmesi</a> işi kolaylaştırır.</p>
+
         <h2>Öğrenci denizci kıyafetlerinde nelere dikkat edilmeli?</h2>
         <ul>
           <li><b>Yönetmelik uyumu:</b> Kumaş rengi, arma yerleşimi, apolet tipi ve kep formu okulun yönetmeliğiyle birebir uyuşmalıdır — standart dışı üniformayla öğrenci derse alınmayabilir.</li>
@@ -387,7 +403,7 @@
         <div class="cta-box">
           <b>Denizci kıyafetleri için teklif alın</b>
           <p>Okulunuzu, ihtiyacınız olan parçaları ve adetleri iletin; size özel teklif hazırlayalım.</p>
-          <a class="btn" href="https://wa.me/905374375280?text=Merhaba%2C%20denizci%20k%C4%B1yafetleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
+          <a class="btn" href="https://wa.me/905374375280" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
           <a class="btn ghost" href="tel:+905374375280">0 (537) 437 52 80</a>
         </div>
 
@@ -407,6 +423,7 @@
             <li>→ <a href="/rehberler">Tüm rehberler</a></li>
             <li>→ <a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
             <li>→ <a href="/denizcilik-fakultesi-uniformalari">Denizcilik Fakültesi ve MYO Üniformaları</a></li>
+            <li>→ <a href="/deniz-ve-liman-isletmeciligi-uniformasi">Deniz ve Liman İşletmeciliği Üniforma Giyer mi?</a></li>
             <li>→ <a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet</a></li>
             <li>→ <a href="/denizci-uniforma-fiyatlari">Denizci Üniforma Fiyatları</a></li>
             <li>→ <a href="/toplu-uniforma-dikimi">Toplu Üniforma Dikimi</a></li>
@@ -430,9 +447,10 @@
       </div>
       <div class="footer-col">
         <h4><a href="/rehberler">Rehberler</a></h4>
-        <ul>
+        <ul class="footer-links">
           <li><a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
           <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte &amp; MYO Üniformaları</a></li>
+          <li><a href="/deniz-ve-liman-isletmeciligi-uniformasi">Deniz ve Liman İşletmeciliği</a></li>
           <li><a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet</a></li>
           <li><a href="/denizci-kiyafetleri">Denizci Kıyafetleri</a></li>
           <li><a href="/denizci-uniforma-fiyatlari">Üniforma Fiyatları</a></li>

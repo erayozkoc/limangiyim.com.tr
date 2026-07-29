@@ -4,23 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google tag (gtag.js) — performans icin sayfa yuklendikten sonra calisir -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-Z3DKKLD43T');
-    window.addEventListener('load', function () {
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T';
-      document.head.appendChild(s);
-    });
   </script>
 
   <!-- ==== SEO: Temel ==== -->
   <title>Denizcilik Okulu Üniforması | Liman Üniforma</title>
-  <meta name="description" content="Denizcilik liseleri ve fakülteleri için üniforma, kep ve apolet üretimi. Okula özel dikim, yerinde ölçü. Referanslarımız arasında Piri Reis Üniversitesi var.">
+  <meta name="description" content="Denizcilik liseleri, fakülteleri ve MYO'lar için okula özel üniforma, kep ve apolet üretimi. Türkiye ve KKTC'de 13 denizcilik kurumuna tedarik. Yerinde ölçü, ücretsiz teklif.">
   <meta name="robots" content="index, follow">
   <meta name="yandex-verification" content="1d8fdc5c5ea9e334">
   <link rel="canonical" href="https://www.limangiyim.com.tr/">
@@ -34,7 +29,7 @@
 
   <!-- ==== SEO: Open Graph (Facebook, WhatsApp paylaşımları) ==== -->
   <meta property="og:title" content="Liman Üniforma — Denizcilik Okulları Üniforma Tedarikçisi">
-  <meta property="og:description" content="Denizcilik liseleri ve üniversiteler için üniforma, kep, apolet. Okula özel dikim, yerinde ölçü. Referans: Piri Reis Üniversitesi.">
+  <meta property="og:description" content="Denizcilik liseleri ve üniversiteler için okula özel üniforma, kep ve apolet. Türkiye ve KKTC'de 13 denizcilik kurumuna tedarik. Yerinde ölçü.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.limangiyim.com.tr/">
   <meta property="og:site_name" content="Liman Üniforma">
@@ -47,7 +42,7 @@
   <!-- ==== SEO: Twitter/X kartı ==== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Liman Üniforma — Denizcilik Okulları Üniforma Tedarikçisi">
-  <meta name="twitter:description" content="Denizcilik okulları için üniforma, kep, apolet. Referans: Piri Reis Üniversitesi.">
+  <meta name="twitter:description" content="Denizcilik okulları için okula özel üniforma, kep ve apolet. 13 denizcilik kurumuna tedarik.">
   <meta name="twitter:image" content="https://www.limangiyim.com.tr/og-image.jpg">
 
   <!-- ==== SEO: Yapılandırılmış veri (Google zengin sonuçlar) ==== -->
@@ -160,6 +155,11 @@
       },
       {
         "@type": "Question",
+        "name": "Deniz ve Liman İşletmeciliği bölümü üniforma giyer mi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Okula göre değişir. Program bir denizcilik fakültesi veya denizcilik meslek yüksekokulu bünyesindeyse üniformalı öğretim uygulanması yaygındır; işletme ve lojistik ağırlıklı açılan programlarda zorunlu olmayabilir. Kesin bilgi için okulun kendi kıyafet yönergesine bakılmalıdır." }
+      },
+      {
+        "@type": "Question",
         "name": "Toplu okul siparişleri için nasıl teklif alabiliriz?",
         "acceptedAnswer": { "@type": "Answer", "text": "İletişim bölümündeki telefon veya WhatsApp hattımızdan bize ulaşarak okulunuza özel teklif talep edebilirsiniz." }
       },
@@ -235,6 +235,11 @@
       font-weight: 700; text-decoration: none; border-radius: 0 0 6px 0;
     }
     .skip-link:focus { left: 0; }
+    /* Ekranda görünmez, ekran okuyucuda okunur (bölüm başlıkları için) */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
     a:focus-visible, button:focus-visible, summary:focus-visible {
       outline: 2px solid var(--gold); outline-offset: 2px;
     }
@@ -339,8 +344,11 @@
     }
     .sec-head p { color: var(--muted); }
 
+
     /* ---------- Ürünler (beyaz bant) ---------- */
-    #urunler { background: #fff; }
+    /* Beyaz bantlar — gri zeminli bölümlerle dönüşümlü ritim kurar.
+       SSS ve İletişim'e verilemez: ikisinin de içeriği beyaz kutuda. */
+    #urunler, #hakkimizda { background: #fff; }
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .card {
       background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
@@ -542,6 +550,15 @@
     /* Logolu satırlar: logo beyaz kutuda, ismin solunda */
 
     /* ---------- S.S.S. ---------- */
+    /* Üstteki beyaz Hakkımızda bandından gri zemine kıvrımlı geçiş.
+       Hero'nun dalgasıyla aynı path, 180° döndürülerek yukarı bakar. */
+    #sss { position: relative; padding-top: 104px; }
+    #sss .wave-top {
+      position: absolute; top: -1px; left: 0; width: 100%;
+      line-height: 0; transform: rotate(180deg);
+    }
+    #sss .wave-top svg { width: 100%; height: 70px; display: block; }
+
     .faq-item {
       background: #fff; border: 1px solid var(--line); border-radius: 10px;
       padding: 18px 22px; margin-bottom: 12px;
@@ -617,7 +634,7 @@
     footer b { color: #fff; }
     footer a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; }
     footer a:hover { color: var(--gold); }
-    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 36px; padding-bottom: 34px; }
+    .footer-grid { display: grid; grid-template-columns: 1.15fr 1.7fr 1.15fr; gap: 36px; padding-bottom: 34px; }
     .footer-brand { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 14px; text-decoration: none; }
     .footer-brand img { filter: brightness(0) invert(1); opacity: 0.92; }
     .footer-brand .fb-mark { height: 38px; width: auto; display: block; }
@@ -629,6 +646,10 @@
     .footer-col h4 a { color: var(--gold); }
     .footer-col p { margin: 0 0 8px; line-height: 1.65; }
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    /* Rehber listesi 8 maddeye çıkınca tek sütunda diğer sütunların iki katı
+       yükseklikte kalıyordu; iki sütuna bölünerek footer dengelendi. */
+    .footer-col ul.footer-links { columns: 2; column-gap: 26px; }
+    .footer-col ul.footer-links li { break-inside: avoid; margin-top: 0; }
     .footer-col li { margin: 8px 0; line-height: 1.5; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding: 16px 0; font-size: 0.8rem; }
     .fb-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
@@ -678,6 +699,9 @@
       html { scroll-padding-top: 76px; }
       .container { padding: 0 20px; }
       .cards { grid-template-columns: 1fr; gap: 14px; }
+      /* Dar ekranda kıvrım orantısız görünüyor — düz kenara dön */
+      #sss .wave-top { display: none; }
+      #sss { padding-top: 50px; }
       .ref-block + .ref-block { margin-top: 34px; }
       .ref-h3 { margin-bottom: 18px; }
       .ref-cards, .ref-cards--2 { grid-template-columns: repeat(2, 1fr); gap: 26px 12px; }
@@ -729,7 +753,10 @@
       .ref-stat span { font-size: 0.62rem; letter-spacing: 0.05em; margin-top: 7px; }
       section { padding: 42px 0; }
       .sec-head { margin-bottom: 36px; }
-      .hero { padding: 60px 0 120px; }
+      /* Dar ekranda dalga orantısız görünüyor — düz kenara dön,
+         dalganın kapladığı alt boşluk da geri alınır */
+      .hero .wave { display: none; }
+      .hero { padding: 60px 0 58px; }
       .hero p { font-size: 1.02rem; margin-bottom: 30px; }
       /* height:auto aspect-ratio'yu ezip CLS 0.188'e yol açıyordu:
          görsel yüklenene kadar yükseklik 0, yüklenince translateY(-55%) kayıyordu. */
@@ -738,6 +765,8 @@
       .contact-left { padding: 32px 24px; }
       .contact-right { padding: 32px 24px; }
       .footer-grid { grid-template-columns: 1fr; gap: 26px; }
+      /* Dar ekranda iki sütun sıkışıyor — tek sütuna dön */
+      .footer-col ul.footer-links { columns: 1; }
       .nav { padding-top: 13px; padding-bottom: 13px; }
       .nav-desktop { display: none; }
       .nav-mobile { display: block; background: #fff; border-bottom: 1px solid var(--line); }
@@ -760,7 +789,7 @@
       .brand-word { height: 19px; }
       .nav { padding-top: 12px; padding-bottom: 12px; }
       .nav-cta { font-size: 0.82rem; padding: 8px 15px; }
-      .hero { padding: 48px 0 110px; }
+      .hero { padding: 48px 0 50px; }
       .hero .eyebrow { font-size: 0.76rem; margin-bottom: 16px; }
       .hero h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); margin-bottom: 18px; }
       .hero p { font-size: 0.98rem; }
@@ -808,9 +837,9 @@
       </a>
       <nav class="nav-desktop" aria-label="Ana menü">
         <ul class="nav-links">
-          <li><a href="#hakkimizda">Hakkımızda</a></li>
           <li><a href="#urunler">Ürünler</a></li>
           <li><a href="#referanslar">Referanslar</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
           <li><a href="#sss">S.S.S.</a></li>
           <li><a href="/rehberler">Rehberler</a></li>
         </ul>
@@ -821,9 +850,9 @@
 
   <nav class="nav-mobile" aria-label="Bölüm menüsü">
     <ul class="nav-links">
-      <li><a href="#hakkimizda">Hakkımızda</a></li>
       <li><a href="#urunler">Ürünler</a></li>
       <li><a href="#referanslar">Referanslar</a></li>
+      <li><a href="#hakkimizda">Hakkımızda</a></li>
       <li><a href="#sss">S.S.S.</a></li>
       <li><a href="/rehberler">Rehberler</a></li>
     </ul>
@@ -836,9 +865,9 @@
     <div class="container hero-inner">
       <span class="eyebrow">Denizcilik Giyiminde Uzman</span>
       <h1>Denizcilik Okullarının <em>Üniforma Tedarikçisi</em></h1>
-      <p>Denizcilik liseleri ve üniversitelerin denizcilik fakülteleri için üniforma, kep ve kurumsal giyim üretiyoruz. Okulunuzun standartlarına uygun, dayanıklı ve şık.</p>
+      <p>Denizcilik liseleri ve üniversitelerin denizcilik fakülteleri için üniforma, kep ve kurumsal giyim üretiyoruz. Okulunuzun armasına ve kıyafet yönergesine göre üretim, okulda yerinde ölçü alımı ve kayıt dönemine teslimat.</p>
       <div class="hero-ctas">
-        <a class="btn btn-gold" href="#iletisim">İletişime Geçin</a>
+        <a class="btn btn-gold" href="https://wa.me/905374375280" target="_blank" rel="noopener">Ücretsiz Teklif Alın</a>
         <a class="btn btn-ghost" href="#referanslar">Referanslarımız</a>
       </div>
     </div>
@@ -846,23 +875,6 @@
       <svg aria-hidden="true" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,70 480,10 720,35 C960,60 1200,20 1440,45 L1440,70 L0,70 Z" fill="#ffffff"/></svg>
     </div>
   </div>
-
-  <!-- ============ HAKKIMIZDA ============ -->
-  <section id="hakkimizda">
-    <div class="container">
-      <div class="sec-head reveal">
-        <h2>Hakkımızda</h2>
-        <p>Denizcilik eğitim kurumlarına özel üniforma üretimi konusunda uzmanlaşmış bir giyim üreticisiyiz.</p>
-      </div>
-      <p class="reveal" style="max-width:760px;margin:0 auto;text-align:center;color:var(--muted);">
-        Liman Üniforma olarak denizcilik liseleri, üniversitelerin denizcilik fakülteleri ve meslek yüksekokulları için üniforma
-        üretimine odaklanıyoruz. Okulların yönetmeliklerine tam uyumlu kesim, kaliteli kumaş seçimi ve okula özel arma işlemeleriyle
-        öğrencilerin ihtiyaç duyduğu tüm üniforma kalemlerini tek elden karşılıyoruz. Tuzla / İstanbul merkezli olarak Türkiye
-        genelindeki denizcilik okullarına hizmet veriyor; yerinde ölçü alımından zamanında teslimata kadar tüm süreci okullarla
-        birlikte yönetiyoruz.
-      </p>
-    </div>
-  </section>
 
   <!-- ============ ÜRÜNLER ============ -->
   <section id="urunler">
@@ -1022,8 +1034,27 @@
     </div>
   </section>
 
+  <!-- ============ HAKKIMIZDA ============ -->
+  <section id="hakkimizda">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Hakkımızda</h2>
+        <p>Denizcilik eğitim kurumlarına özel üniforma üretimi konusunda uzmanlaşmış bir giyim üreticisiyiz.</p>
+      </div>
+      <p class="reveal" style="max-width:760px;margin:0 auto;text-align:center;color:var(--muted);">
+        Denizcilik liseleri, üniversitelerin denizcilik fakülteleri ve meslek yüksekokulları için çalışıyoruz. Okulun kendi kıyafet
+        yönergesine uygun kesim, kumaş ve okula özel arma işlemesiyle öğrencinin ihtiyaç duyduğu tüm üniforma kalemlerini tek elden
+        karşılıyoruz. Tuzla / İstanbul merkezli olarak Türkiye geneli ve KKTC'deki denizcilik okullarına hizmet veriyor; yerinde ölçü
+        alımından teslimata kadar tüm süreci okullarla birlikte yönetiyoruz.
+      </p>
+    </div>
+  </section>
+
   <!-- ============ S.S.S. ============ -->
   <section id="sss">
+    <div class="wave-top" aria-hidden="true">
+      <svg aria-hidden="true" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,70 480,10 720,35 C960,60 1200,20 1440,45 L1440,70 L0,70 Z" fill="#ffffff"/></svg>
+    </div>
     <div class="container">
       <div class="sec-head reveal">
         <h2>Sıkça Sorulan Sorular</h2>
@@ -1047,12 +1078,16 @@
           <p>Evet, kep, apolet, düğme, kravat ve fular gibi tamamlayıcı parçaları üniformadan bağımsız olarak da tedarik edebiliyoruz.</p>
         </details>
         <details class="faq-item reveal">
+          <summary>Deniz ve Liman İşletmeciliği bölümü üniforma giyer mi?</summary>
+          <p>Okula göre değişir. Program bir denizcilik fakültesi veya denizcilik meslek yüksekokulu bünyesindeyse üniformalı öğretim uygulanması yaygındır; işletme ve lojistik ağırlıklı açılan programlarda zorunlu olmayabilir. Ayrıntısını <a href="/deniz-ve-liman-isletmeciligi-uniformasi">bu rehberde</a> anlattık.</p>
+        </details>
+        <details class="faq-item reveal">
           <summary>Toplu okul siparişleri için nasıl teklif alabiliriz?</summary>
           <p>İletişim bölümündeki telefon veya WhatsApp hattımızdan bize ulaşarak okulunuza özel teklif talep edebilirsiniz.</p>
         </details>
         <details class="faq-item reveal">
           <summary>Denizcilik okulu üniforması fiyatları ne kadar?</summary>
-          <p>Fiyatlar okulun kıyafet yönetmeliğine, seçilen ürün kalemlerine ve öğrenci sayısına göre değişir. Toplu siparişlerde okul bütçesine uygun fiyatlandırma yapıyoruz; telefon veya WhatsApp üzerinden ücretsiz teklif alabilirsiniz.</p>
+          <p>Fiyatlar okulun kıyafet yönetmeliğine, seçilen ürün kalemlerine ve öğrenci sayısına göre değişir. Toplu siparişlerde okul bütçesine uygun fiyatlandırma yapıyoruz; telefon veya WhatsApp üzerinden ücretsiz teklif alabilirsiniz. Fiyatı belirleyen kalemleri <a href="/denizci-uniforma-fiyatlari">bu rehberde</a> ayrıntılı anlattık.</p>
         </details>
         <details class="faq-item reveal">
           <summary>Türkiye'nin her yerindeki okullara hizmet veriyor musunuz?</summary>
@@ -1117,9 +1152,10 @@
       </div>
       <div class="footer-col">
         <h4><a href="/rehberler">Rehberler</a></h4>
-        <ul>
+        <ul class="footer-links">
           <li><a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
           <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte &amp; MYO Üniformaları</a></li>
+          <li><a href="/deniz-ve-liman-isletmeciligi-uniformasi">Deniz ve Liman İşletmeciliği</a></li>
           <li><a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet</a></li>
           <li><a href="/denizci-kiyafetleri">Denizci Kıyafetleri</a></li>
           <li><a href="/denizci-uniforma-fiyatlari">Üniforma Fiyatları</a></li>

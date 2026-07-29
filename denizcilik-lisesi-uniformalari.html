@@ -9,21 +9,16 @@
   <link rel="preload" href="/fonts/playfair-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/playfair-700-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Google tag (gtag.js) — performans icin sayfa yuklendikten sonra calisir -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-Z3DKKLD43T');
-    window.addEventListener('load', function () {
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z3DKKLD43T';
-      document.head.appendChild(s);
-    });
   </script>
-  <title>Denizcilik Lisesi Üniformaları | Liman Üniforma</title>
-  <meta name="description" content="Denizcilik lisesi üniforması rehberi: yazlık ve kışlık takımlar, denizci kepi, apolet ve iş tulumu. Okul yönetmeliğine uygun toplu üretim ve yerinde ölçü.">
+  <title>Denizcilik Lisesi Üniformaları ve Kıyafetleri | Liman Üniforma</title>
+  <meta name="description" content="Denizcilik lisesi üniforması, kıyafetleri ve forması rehberi: yazlık–kışlık takımlar, denizci kepi, apolet ve iş tulumu. Okul yönetmeliğine uygun toplu üretim ve yerinde ölçü.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.limangiyim.com.tr/denizcilik-lisesi-uniformalari">
   <meta name="theme-color" content="#0b2545">
@@ -32,8 +27,8 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <meta property="og:title" content="Denizcilik Lisesi Üniformaları | Liman Üniforma">
-  <meta property="og:description" content="Denizcilik lisesi üniforması rehberi: takımlar, kep, apolet, iş tulumu. Okul yönetmeliğine uygun toplu üretim.">
+  <meta property="og:title" content="Denizcilik Lisesi Üniformaları ve Kıyafetleri | Liman Üniforma">
+  <meta property="og:description" content="Denizcilik lisesi üniforması ve kıyafetleri rehberi: takımlar, kep, apolet, iş tulumu. Okul yönetmeliğine uygun toplu üretim.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.limangiyim.com.tr/denizcilik-lisesi-uniformalari">
   <meta property="og:site_name" content="Liman Üniforma">
@@ -44,8 +39,8 @@
   <meta property="og:image:alt" content="Liman Üniforma — Denizcilik Okullarının Üniforma Tedarikçisi">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Denizcilik Lisesi Üniformaları | Liman Üniforma">
-  <meta name="twitter:description" content="Denizcilik lisesi üniforması rehberi: takımlar, kep, apolet, iş tulumu. Okul yönetmeliğine uygun toplu üretim.">
+  <meta name="twitter:title" content="Denizcilik Lisesi Üniformaları ve Kıyafetleri | Liman Üniforma">
+  <meta name="twitter:description" content="Denizcilik lisesi üniforması ve kıyafetleri rehberi: takımlar, kep, apolet, iş tulumu. Okul yönetmeliğine uygun toplu üretim.">
   <meta name="twitter:image" content="https://www.limangiyim.com.tr/og-image.jpg">
 
   <script type="application/ld+json">
@@ -70,7 +65,7 @@
     "author": { "@type": "Organization", "name": "Liman Üniforma", "url": "https://www.limangiyim.com.tr/" },
     "publisher": { "@type": "Organization", "name": "Liman Üniforma", "logo": { "@type": "ImageObject", "url": "https://www.limangiyim.com.tr/logo-amblem.png" } },
     "datePublished": "2026-07-13",
-    "dateModified": "2026-07-26",
+    "dateModified": "2026-07-29",
     "mainEntityOfPage": "https://www.limangiyim.com.tr/denizcilik-lisesi-uniformalari",
     "inLanguage": "tr"
   }
@@ -243,7 +238,7 @@
     footer p, footer li { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
     footer a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; }
     footer a:hover { color: var(--gold); }
-    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 36px; padding-bottom: 34px; }
+    .footer-grid { display: grid; grid-template-columns: 1.15fr 1.7fr 1.15fr; gap: 36px; padding-bottom: 34px; }
     .footer-brand { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 14px; text-decoration: none; }
     .footer-brand img { filter: brightness(0) invert(1); opacity: 0.92; }
     .footer-brand .fb-mark { height: 38px; width: auto; display: block; }
@@ -255,6 +250,10 @@
     .footer-col h4 a { color: var(--gold); }
     .footer-col p { margin: 0 0 8px; line-height: 1.65; }
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    /* Rehber listesi 8 maddeye çıkınca tek sütunda diğer sütunların iki katı
+       yükseklikte kalıyordu; iki sütuna bölünerek footer dengelendi. */
+    .footer-col ul.footer-links { columns: 2; column-gap: 26px; }
+    .footer-col ul.footer-links li { break-inside: avoid; margin-top: 0; }
     .footer-col li { margin: 8px 0; line-height: 1.5; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding: 16px 0; font-size: 0.8rem; }
     .fb-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
@@ -291,6 +290,8 @@
       }
       main { padding: 44px 0 70px; }
       .footer-grid { grid-template-columns: 1fr; gap: 26px; }
+      /* Dar ekranda iki sütun sıkışıyor — tek sütuna dön */
+      .footer-col ul.footer-links { columns: 1; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 18px; }
@@ -346,10 +347,14 @@
         <nav class="crumbs" aria-label="Sayfa yolu">
           <a href="/">Ana Sayfa</a><span class="sep">›</span><a href="/rehberler">Rehberler</a><span class="sep">›</span><span class="here">Denizcilik Lisesi Üniformaları</span>
         </nav>
-        <h1>Denizcilik Lisesi Üniformaları</h1>
+        <h1>Denizcilik Lisesi Üniformaları ve Kıyafetleri</h1>
         <p class="lead">Denizcilik Anadolu liseleri ve denizcilik meslek liseleri için üniforma tedariki hakkında bilmeniz gerekenler.</p>
 
         <p>Denizcilik liselerinde üniforma, sıradan bir okul kıyafeti değildir: köklü denizcilik geleneğinin, disiplinin ve okul kimliğinin görünen yüzüdür. Bu nedenle denizcilik liselerinin kıyafet yönetmelikleri diğer okullara göre çok daha ayrıntılıdır ve üniformanın her parçası — kumaşından düğmesine, armasından apoletine kadar — belirli standartlara uygun üretilmelidir.</p>
+
+        <h2>Üniforma, kıyafet, forma — hangisi doğru?</h2>
+        <p>Veliler ve öğrenciler bu üç kelimeyi çoğu zaman aynı anlamda kullanır, ancak aralarında ince farklar vardır. <b>Kıyafet</b>, mevzuatın kullandığı geniş terimdir; Millî Eğitim Bakanlığının düzenlemesi de "Millî Eğitim Bakanlığına Bağlı Okul Öğrencilerinin Kılık ve Kıyafetlerine Dair Yönetmelik" adını taşır ve öğrencinin okulda giydiği her şeyi kapsar. <b>Üniforma</b>, bu kıyafetin standartlaştırılmış, tüm öğrencilerde aynı olan hâlidir — denizcilik liselerinde kastedilen genellikle budur. <b>Forma</b> ise günlük konuşmada okul kıyafetinin yerine kullanılsa da asıl olarak spor formasını tanımlar.</p>
+        <p>Pratikte hepsi aynı şeye işaret eder: denizcilik lisesi öğrencisinin okul yönetmeliğine göre giymesi gereken standart takım ve tamamlayıcı parçalar. Bu sayfada bu takımın parçalarını ve okul yönetmeliğinin nelere baktığını anlatıyoruz. Parçaların maliyeti nasıl belirlenir sorusu için <a href="/denizci-uniforma-fiyatlari">üniforma fiyatlarını etkileyen kalemler</a> sayfasına bakabilirsiniz.</p>
 
         <h2>Denizcilik lisesi üniforması hangi parçalardan oluşur?</h2>
         <p>Okuldan okula değişmekle birlikte, bir denizcilik lisesi öğrencisinin üniforma listesi genellikle şu parçaları içerir:</p>
@@ -403,7 +408,7 @@
         <div class="cta-box">
           <b>Okulunuz için üniforma teklifi alın</b>
           <p>Öğrenci sayınızı ve ürün listenizi iletin, size özel teklif hazırlayalım.</p>
-          <a class="btn" href="https://wa.me/905374375280?text=Merhaba%2C%20denizcilik%20lisesi%20%C3%BCniformalar%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
+          <a class="btn" href="https://wa.me/905374375280" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
           <a class="btn ghost" href="tel:+905374375280">0 (537) 437 52 80</a>
         </div>
 
@@ -422,6 +427,7 @@
           <ul>
             <li>→ <a href="/rehberler">Tüm rehberler</a></li>
             <li>→ <a href="/denizcilik-fakultesi-uniformalari">Denizcilik Fakültesi ve MYO Üniformaları</a></li>
+            <li>→ <a href="/deniz-ve-liman-isletmeciligi-uniformasi">Deniz ve Liman İşletmeciliği Üniforma Giyer mi?</a></li>
             <li>→ <a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet Rehberi</a></li>
             <li>→ <a href="/denizci-kiyafetleri">Denizci Kıyafetleri</a></li>
             <li>→ <a href="/denizci-uniforma-fiyatlari">Denizci Üniforma Fiyatları</a></li>
@@ -446,9 +452,10 @@
       </div>
       <div class="footer-col">
         <h4><a href="/rehberler">Rehberler</a></h4>
-        <ul>
+        <ul class="footer-links">
           <li><a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
           <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte &amp; MYO Üniformaları</a></li>
+          <li><a href="/deniz-ve-liman-isletmeciligi-uniformasi">Deniz ve Liman İşletmeciliği</a></li>
           <li><a href="/denizci-kepi-ve-apolet">Denizci Kepi ve Apolet</a></li>
           <li><a href="/denizci-kiyafetleri">Denizci Kıyafetleri</a></li>
           <li><a href="/denizci-uniforma-fiyatlari">Üniforma Fiyatları</a></li>
