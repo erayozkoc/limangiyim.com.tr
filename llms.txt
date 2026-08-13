@@ -2,7 +2,7 @@
 
 > Denizcilik liseleri ve üniversitelerin denizcilik fakülteleri için okul üniforması, denizci kepi, apolet ve kurumsal giyim üretimi. Okula özel üretim, yerinde ölçü alımı ve zamanında teslimat. Tuzla / İstanbul merkezli; Türkiye geneli ve KKTC'deki denizcilik okullarına hizmet verir.
 
-Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğitim kurumlarına özel üniforma üretiminde uzmanlaşmış bir işletmedir. Her okulun arması, renk kodları ve kıyafet yönetmeliğine uygun özel üretim yapılır. Öğrenci gruplarına okulda yerinde ölçü hizmeti sunulur ve siparişler okul kayıt dönemine yetişecek şekilde teslim edilir. Türkiye ve KKTC'de 13 denizcilik kurumuna (5 üniversite, 2 meslek yüksekokulu, 6 denizcilik lisesi) üniforma üretilmektedir.
+Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğitim kurumlarına özel üniforma üretiminde uzmanlaşmış bir işletmedir. Her okulun arması, renk kodları ve kıyafet yönetmeliğine uygun özel üretim yapılır. Öğrenci gruplarına okulda yerinde ölçü hizmeti sunulur ve siparişler okul kayıt dönemine yetişecek şekilde teslim edilir. Türkiye ve KKTC'de 20 denizcilik kurumuna (5 üniversite, 2 meslek yüksekokulu, 13 denizcilik lisesi) üniforma üretilmektedir.
 
 ## Sayfalar
 
@@ -16,7 +16,7 @@ Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğ
 - [Denizci Üniforma Fiyatları](https://www.limangiyim.com.tr/denizci-uniforma-fiyatlari): Fiyatı belirleyen faktörler ve teklif alma rehberi
 - [Toplu Üniforma Dikimi](https://www.limangiyim.com.tr/toplu-uniforma-dikimi): Okullar ve kurumlar için toplu üniforma üretim süreci
 - [Denizcilik Üniforması Nereden Alınır?](https://www.limangiyim.com.tr/denizcilik-uniformasi-nereden-alinir): Hazır ürün ile okula özel üretim karşılaştırması ve doğru üretici seçimi rehberi
-- [Gizlilik ve KVKK Aydınlatma Metni](https://www.limangiyim.com.tr/gizlilik): Kişisel verilerin korunması ve çerez politikası
+- [Gizlilik ve KVKK Aydınlatma Metni](https://www.limangiyim.com.tr/gizlilik): Kişisel verilerin korunması ve KVKK aydınlatma metni
 
 ## Ürünler
 
@@ -29,7 +29,7 @@ Liman Üniforma, "Liman Giyim" ticari adıyla faaliyet gösteren, denizcilik eğ
 
 ## Referanslar
 
-Türkiye ve KKTC'de 13 denizcilik kurumuna üniforma üretilmektedir.
+Türkiye ve KKTC'de 20 denizcilik kurumuna üniforma üretilmektedir.
 
 ### Üniversiteler
 
@@ -52,10 +52,17 @@ Türkiye ve KKTC'de 13 denizcilik kurumuna üniforma üretilmektedir.
 - Beykoz Barbaros Hayrettin Paşa Mesleki ve Teknik Anadolu Lisesi (İstanbul) — https://denizcilik.meb.k12.tr/
 - Kumbağ Denizcilik Mesleki ve Teknik Anadolu Lisesi (Tekirdağ) — https://kumbagdenizcilikmtal.meb.k12.tr/
 - Kocaeli Denizcilik Anadolu Lisesi (Kocaeli)
+- Pendik Barbaros Hayrettin Paşa Denizcilik Mesleki ve Teknik Anadolu Lisesi (İstanbul) — https://pbhpmtal.meb.k12.tr/
+- Hereke Nuh Çimento Mesleki ve Teknik Anadolu Lisesi (Kocaeli) — https://herekenuhcimentomtal.meb.k12.tr/
+- Yalova Altınova Tersane Girişimcileri A.Ş. Denizcilik Mesleki ve Teknik Anadolu Lisesi (Yalova) — https://tgasaltinovadenizcilikmtal.meb.k12.tr/
+- Pakmaya Kenan Kaptan Denizcilik Mesleki ve Teknik Anadolu Lisesi (Balıkesir / Ayvalık) — https://pakmayadenizcilik.meb.k12.tr/
+- Karşıyaka Çok Programlı Anadolu Lisesi (Balıkesir / Erdek) — https://ekcpal.meb.k12.tr/
+- Çeşme Ulusoy Denizcilik Mesleki ve Teknik Anadolu Lisesi (İzmir / Çeşme) — https://ulusoydaml.meb.k12.tr/
+- Adviye-Ertuğrul Acun Denizcilik Mesleki ve Teknik Anadolu Lisesi (Aydın / Kuşadası) — https://adviyeertugrulacunmtal.meb.k12.tr/
 
 ### Hizmet Verilen Şehirler
 
-İstanbul, Tekirdağ, Kocaeli, Sakarya, Balıkesir, Ordu, Trabzon ve KKTC (Girne).
+İstanbul, Tekirdağ, Kocaeli, Yalova, Sakarya, Balıkesir, İzmir, Aydın, Ordu, Trabzon ve KKTC (Girne).
 
 ## Sık Sorulan Sorular
 
@@ -87,7 +94,7 @@ Evet. Kep, apolet, düğme, kravat ve fular gibi tamamlayıcı parçalar ünifor
 Okul kayıt dönemine yetişmesi için siparişlerin kayıt döneminden önce planlanması önerilir. Üretim süresi öğrenci sayısına ve ürün kalemlerine göre değişir.
 
 **Türkiye'nin her yerine hizmet veriliyor mu?**
-Evet. Tuzla / İstanbul merkezli olarak Türkiye geneli ve KKTC'deki denizcilik okullarına hizmet verilir. Hâlihazırda İstanbul, Tekirdağ, Kocaeli, Sakarya, Balıkesir, Ordu, Trabzon ve KKTC'de 13 kuruma üniforma üretilmektedir. Ölçü alımı ve teslimat süreci okul yönetimiyle birlikte planlanır.
+Evet. Tuzla / İstanbul merkezli olarak Türkiye geneli ve KKTC'deki denizcilik okullarına hizmet verilir. Hâlihazırda İstanbul, Tekirdağ, Kocaeli, Yalova, Sakarya, Balıkesir, İzmir, Aydın, Ordu, Trabzon ve KKTC'de 20 kuruma üniforma üretilmektedir. Ölçü alımı ve teslimat süreci okul yönetimiyle birlikte planlanır.
 
 ## İletişim
 
