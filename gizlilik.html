@@ -19,6 +19,7 @@
   </script>
   <title>Gizlilik ve KVKK Aydınlatma Metni | Liman Üniforma</title>
   <meta name="description" content="Liman Üniforma KVKK aydınlatma metni ve gizlilik politikası: kişisel verilerin işlenme amaçları, çerez kullanımı ve KVKK kapsamındaki haklarınız.">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.limangiyim.com.tr/gizlilik">
   <meta name="theme-color" content="#0b2545">
 
@@ -230,10 +231,10 @@
       position: fixed; z-index: 300;
       left: 50%; top: 50%;
       transform: translate(-50%, -46%);
-      width: calc(100% - 32px); max-width: 460px;
+      width: calc(100% - 32px);
       max-height: calc(100vh - 40px); overflow-y: auto;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
-      color: #fff; border-radius: 16px; padding: 32px 30px 28px;
+      color: #fff;
       text-align: center;
       box-shadow: 0 20px 60px rgba(11,37,69,0.4);
       opacity: 0;
@@ -242,17 +243,16 @@
     .season-pop.on { opacity: 1; transform: translate(-50%, -50%); }
 
     .season-pop .sp-tag {
-      display: inline-block; font-size: 0.72rem; font-weight: 800;
+      display: inline-block; font-weight: 800;
       letter-spacing: 0.07em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 12px;
+      color: var(--gold);
     }
     .season-pop b {
-      display: block; font-size: 1.22rem; line-height: 1.32;
-      margin: 0 auto 10px; max-width: 22ch;
+      display: block;
+      margin: 0 auto 10px;
     }
     .season-pop p {
-      font-size: 0.92rem; line-height: 1.62;
-      color: rgba(255,255,255,0.78); margin: 0 auto 20px; max-width: 40ch;
+      color: rgba(255,255,255,0.78); margin: 0 auto 20px;
     }
     .season-pop .sp-row {
       display: flex; flex-wrap: wrap; align-items: center;
@@ -260,22 +260,21 @@
     }
     .season-pop .sp-btn {
       display: inline-block; background: var(--gold); color: var(--navy);
-      font-weight: 700; font-size: 0.9rem; padding: 12px 26px;
+      font-weight: 700;
       border-radius: 9px; text-decoration: none; border-bottom: 0;
       transition: background 0.15s;
     }
     .season-pop .sp-btn:hover { background: var(--gold-hover); border-bottom: 0; }
     .season-pop .sp-tel {
-      color: rgba(255,255,255,0.85); font-weight: 700; font-size: 0.9rem;
+      color: rgba(255,255,255,0.85); font-weight: 700;
       text-decoration: none; border-bottom: 0;
     }
     .season-pop .sp-tel:hover { color: #fff; border-bottom: 0; }
 
     .season-pop .sp-close {
-      position: absolute; top: 12px; right: 14px;
-      width: 32px; height: 32px; padding: 0;
+      position: absolute; padding: 0;
       background: transparent; border: 0; cursor: pointer;
-      color: rgba(255,255,255,0.55); font-size: 1.7rem; line-height: 1;
+      color: rgba(255,255,255,0.55); line-height: 1;
       border-radius: 7px; transition: color 0.15s, background 0.15s;
     }
     .season-pop .sp-close:hover { color: #fff; background: rgba(255,255,255,0.12); }
@@ -295,9 +294,8 @@
     }
     .season-pop .sp-loc {
       display: flex; align-items: center; justify-content: center; gap: 6px;
-      margin: 18px 0 0; padding-top: 15px;
-      border-top: 1px solid rgba(255,255,255,0.14);
-      font-size: 0.79rem; color: rgba(255,255,255,0.6);
+      margin: 18px 0 0;
+      border-top: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.6);
     }
     .season-pop .sp-loc svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--gold); }
 
@@ -526,6 +524,10 @@
       var ovl = document.getElementById('spOverlay');
       if (!pop || !ovl) return;
 
+      // Ziyaretçi bu oturumda pencereyi bir kez kapattıysa, gezdiği diğer
+      // sayfalarda tekrar açılmaz.
+      try { if (sessionStorage.getItem('seasonPopKapali')) return; } catch (e) {}
+
       var acildi = false, oncekiOdak = null;
 
       function ac() {
@@ -541,6 +543,7 @@
         });
       }
       function kapat() {
+        try { sessionStorage.setItem('seasonPopKapali', '1'); } catch (e) {}
         pop.classList.remove('on'); ovl.classList.remove('on');
         setTimeout(function () {
           pop.hidden = true; ovl.hidden = true;
@@ -548,27 +551,22 @@
         }, 260);
       }
 
-      // Google kuralı: sayfa açılışında DEĞİL — kullanıcı bir şey yaptıktan sonra.
-      // Bu yüzden ilk gerçek etkileşimde açıyoruz: en hızlı güvenli an.
+      // Google kuralı: pencere sayfa açılışında açılmaz.
+      // Dokunma ve tıklama ile de açmıyoruz — mobilde ziyaretçi bir bağlantıya
+      // basmak isterken pencere önüne çıkıyordu. Tek tetikleyici: sayfayı
+      // gerçekten aşağı kaydırmış olmak.
       function kaydirma() {
         var y = window.scrollY || document.documentElement.scrollTop;
-        if (y > 60) ac();
+        if (y > 400) ac();
       }
-      function etkilesim() { ac(); }
 
       function temizle() {
         window.removeEventListener('scroll', kaydirma);
-        window.removeEventListener('touchstart', etkilesim);
-        window.removeEventListener('pointerdown', etkilesim);
-        window.removeEventListener('keydown', etkilesim);
         clearTimeout(sayac);
       }
 
       window.addEventListener('scroll', kaydirma, { passive: true });
-      window.addEventListener('touchstart', etkilesim, { passive: true, once: true });
-      window.addEventListener('pointerdown', etkilesim, { once: true });
-      window.addEventListener('keydown', etkilesim, { once: true });
-      var sayac = setTimeout(ac, 12000);
+      var sayac = setTimeout(ac, 25000);
 
       document.getElementById('seasonPopX').addEventListener('click', kapat);
       ovl.addEventListener('click', kapat);

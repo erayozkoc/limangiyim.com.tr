@@ -179,10 +179,6 @@
     .nav-cta:hover { transform: translateY(-1px); filter: brightness(1.08); }
     .nav-cta:active { background: var(--navy-2); }
     .nav-mobile { display: none; }
-
-    /* ---------- İçerik ---------- */
-    main { padding: 56px 0 90px; }
-    .doc { max-width: 820px; margin: 0 auto; }
     h1 {
       font-family: 'Playfair Display', Georgia, serif;
       color: var(--navy); font-size: clamp(1.4rem, 2.8vw, 1.85rem); font-weight: 700;
@@ -207,74 +203,45 @@
 
     /* ---------- CTA kutusu ---------- */
     .cta-box {
-      margin-top: 40px; padding: 30px 28px; border-radius: 12px;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
       color: #fff; text-align: center;
     }
-    .cta-box b { display: block; font-size: 1.1rem; margin-bottom: 6px; }
+    .cta-box b { display: block; margin-bottom: 6px; }
     .cta-box p { color: rgba(255,255,255,0.75); margin: 0 0 18px; }
     .cta-box .btn {
       display: inline-block; background: var(--gold); color: var(--navy);
-      font-weight: 700; font-size: 0.92rem; padding: 12px 26px;
-      border-radius: 8px; text-decoration: none; margin: 4px 6px;
+      font-weight: 700; text-decoration: none; margin: 4px 6px;
     }
     .cta-box .btn:hover { background: var(--gold-hover); }
     .cta-box .btn.ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
 
     /* ---------- Mini S.S.S. ---------- */
-    .faq-mini { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 15px 18px; margin: 10px 0; }
-    .faq-mini summary { cursor: pointer; font-weight: 700; color: var(--navy); font-size: 0.95rem; list-style: none; }
+    .faq-mini { background: #fff; border: 1px solid var(--line); }
+    .faq-mini summary { cursor: pointer; font-weight: 700; color: var(--navy); list-style: none; }
     .faq-mini summary::-webkit-details-marker { display: none; }
-    .faq-mini summary::after { content: "+"; float: right; color: var(--gold); font-weight: 800; }
+    .faq-mini summary::after { content: "+"; color: var(--gold); font-weight: 800; }
     .faq-mini[open] summary::after { content: "–"; }
     .faq-mini p { margin-top: 10px; }
 
-
-    /* ---------- Okuma deneyimi ---------- */
+/* ---------- Okuma deneyimi ---------- */
     .doc-meta {
-      display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center;
-      font-size: 0.78rem; color: var(--muted);
-      margin: 16px 0 0; padding-bottom: 14px; border-bottom: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; border-bottom: 1px solid var(--line);
     }
     .doc-meta span { display: inline-flex; align-items: center; gap: 5px; }
-    .doc-meta .dot { color: var(--gold); }
 
-
-    h2[id], h3[id] { scroll-margin-top: 86px; }
+h2[id], h3[id] { scroll-margin-top: 86px; }
     h2 { position: relative; padding-left: 14px; }
     h2::before {
       content: ""; position: absolute; left: 0; top: 0.28em;
-      width: 3px; height: 0.95em; background: var(--gold); border-radius: 2px;
+      width: 3px; height: 0.95em; border-radius: 2px;
     }
-    .guides h2, .toc-title { padding-left: 0; }
-    .guides h2::before { display: none; }
     h3 { color: var(--navy); font-size: 1rem; font-weight: 700; margin: 24px 0 8px; }
     p { line-height: 1.75; }
 
-
-    .callout b { color: var(--navy); display: block; margin-bottom: 4px; font-size: 0.92rem; }
+.callout b { color: var(--navy); display: block; margin-bottom: 4px; font-size: 0.92rem; }
     .callout p { margin: 0; font-size: 0.9rem; }
 
-    .mid-cta {
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-      gap: 12px; background: var(--bg); border: 1px solid var(--line);
-      border-radius: 10px; padding: 16px 20px; margin: 30px 0;
-    }
-    .mid-cta p { margin: 0; font-size: 0.9rem; color: var(--navy); font-weight: 600; }
-    .mid-cta a {
-      display: inline-block; background: var(--gold); color: var(--navy);
-      font-weight: 700; font-size: 0.86rem; padding: 9px 20px;
-      border-radius: 7px; text-decoration: none; white-space: nowrap;
-    }
-    .mid-cta a:hover { background: var(--gold-hover); }
-
-    @media (max-width: 640px) {
-      .mid-cta { flex-direction: column; align-items: stretch; text-align: center; }
-      .mid-cta a { text-align: center; }
-    }
-
-
-    /* ---------- Masaüstü: sol yapışkan içindekiler ---------- */
+/* ---------- Masaüstü: sol yapışkan içindekiler ---------- */
     @media (min-width: 1100px) {
       .doc {
         max-width: 1072px;
@@ -300,8 +267,7 @@
       }
     }
 
-
-    /* ---------- Listeler ve süreç adımları ---------- */
+/* ---------- Listeler ve süreç adımları ---------- */
     /* Sade varsayılan: altın nokta + kalın başlangıç */
     .spec-list { list-style: none; padding: 0; margin: 14px 0; }
     .spec-list li {
@@ -361,8 +327,7 @@
     .school-list li a { color: var(--navy); text-decoration: none; }
     .school-list li a:hover { color: var(--gold-hover); }
 
-
-    /* ---------- Renk rötuşları ---------- */
+/* ---------- Renk rötuşları ---------- */
 
     .faq-mini { transition: border-color 0.15s, box-shadow 0.15s; }
     .faq-mini:hover { border-color: var(--sea-line); }
@@ -371,19 +336,9 @@
       box-shadow: 0 2px 10px rgba(11,37,69,0.06);
     }
     .faq-mini[open] summary { color: var(--gold-hover); }
-    .mid-cta {
-      background: linear-gradient(135deg, var(--sea) 0%, #fff 100%);
-      border: 1px solid var(--sea-line);
-    }
     .doc-meta .dot { color: var(--gold); }
     h2::before { background: linear-gradient(180deg, var(--gold) 0%, var(--navy-2) 100%); }
     .doc-meta { color: var(--muted); }
-
-    /* ---------- Diğer rehberler ---------- */
-    .guides { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); }
-    .guides h2 { margin-top: 0; }
-    .guides ul { list-style: none; padding: 0; }
-    .guides li { margin: 6px 0; }
 
     /* ---------- Footer (ana sayfayla aynı) ---------- */
     footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 44px 0 0; font-size: 0.88rem; }
@@ -469,22 +424,13 @@
     }
     .doc h1::after { width: 62px; height: 3px; margin-top: 16px; border-radius: 2px; }
     .doc .lead {
-      font-size: 1.06rem; line-height: 1.65; color: var(--muted);
-      margin: 20px 0 4px; max-width: 62ch;
-    }
-    .doc h2 {
-      font-size: 1.26rem; letter-spacing: -0.005em;
-      margin: 44px 0 12px; padding-left: 16px; line-height: 1.35;
+      font-size: 1.06rem; line-height: 1.65; color: var(--muted); max-width: 62ch;
     }
     .doc h2::before { top: 0.2em; height: 1em; width: 3px; }
-    .doc h3 { font-size: 1.05rem; margin: 28px 0 8px; }
-    .doc p, .doc li { font-size: 0.97rem; }
-    .doc p { line-height: 1.78; margin: 13px 0; }
 
     /* --- Başlık alanı --- */
     .doc .crumbs { margin-bottom: 22px; }
-    .doc-meta {
-      margin: 20px 0 0; padding-bottom: 18px;
+    .doc-meta { padding-bottom: 18px;
       font-size: 0.8rem; letter-spacing: 0.01em;
     }
 
@@ -517,11 +463,6 @@
     .cta-box .btn.ghost { box-shadow: none; }
     .cta-box .btn.ghost:hover { background: rgba(255,255,255,0.10); border-color: var(--gold); }
 
-    /* --- Ara CTA --- */
-    .mid-cta { border-radius: 12px; padding: 18px 22px; }
-    .mid-cta a { transition: transform 0.15s, background 0.15s; }
-    .mid-cta a:hover { transform: translateY(-1px); }
-
     /* --- S.S.S. --- */
     .faq-mini { border-radius: 10px; padding: 16px 20px; margin: 9px 0; }
     .faq-mini summary { font-size: 0.97rem; line-height: 1.5; padding-right: 24px; position: relative; }
@@ -533,30 +474,12 @@
     .faq-mini[open] summary::after { transform: translateY(-50%) rotate(180deg); }
     .faq-mini p { font-size: 0.93rem; line-height: 1.72; color: var(--muted); }
 
-    /* --- Diğer rehberler: kart ızgarası --- */
-    .guides { margin-top: 48px; padding-top: 30px; }
-    .guides h2 { margin-bottom: 16px; padding-left: 0; font-size: 1.15rem; }
-    .guides ul { display: grid; gap: 8px; margin: 0; }
-    @media (min-width: 700px) { .guides ul { grid-template-columns: 1fr 1fr; } }
-    .guides li { margin: 0; }
-    .guides li a {
-      display: block; padding: 12px 15px;
-      background: #fff; border: 1px solid var(--line); border-radius: 9px;
-      color: var(--navy); text-decoration: none; font-size: 0.9rem; font-weight: 600;
-      transition: border-color 0.15s, background 0.15s, transform 0.15s;
-    }
-    .guides li a:hover {
-      border-color: var(--sea-line); background: var(--sea);
-      transform: translateX(2px); color: var(--gold-hover);
-    }
-
-    /* --- Genel dokunuşlar --- */
+/* --- Genel dokunuşlar --- */
     ::selection { background: rgba(212,168,67,0.28); color: var(--navy); }
     html { scroll-behavior: smooth; }
     a:focus-visible, summary:focus-visible, .btn:focus-visible {
       outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px;
     }
-    main { padding-bottom: 100px; }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -564,15 +487,14 @@
     }
 
     @media (max-width: 640px) {
-      .doc h2 { margin: 34px 0 10px; font-size: 1.16rem; }
+      .doc h2 { font-size: 1.16rem; }
       .cta-box { padding: 26px 20px; }
       .cta-box .btn { display: block; margin: 8px 0; }
     }
   
     /* ========== Görsel ögeler ========== */
 
-
-    /* İkonlu parça kartları */
+/* İkonlu parça kartları */
     .spec-list.cards li { display: flex; gap: 13px; align-items: flex-start; }
     .spec-list.cards .ic {
       flex: 0 0 34px; width: 34px; height: 34px; border-radius: 9px;
@@ -639,10 +561,6 @@
     .doc .doc-meta + p { margin-top: var(--sp4); }
     .doc .toc + h2,
     .doc .doc-meta + h2 { margin-top: var(--sp4); }
-
-    .doc h2 { margin: var(--sp6) 0 var(--sp2); }
-    .doc h3 { margin: var(--sp4) 0 var(--sp1); }
-    .doc p { margin: var(--sp2) 0; }
     .doc h2 + p, .doc h3 + p { margin-top: var(--sp1); }
 
     .doc .spec-list,
@@ -650,18 +568,10 @@
     .doc .school-list,
     .doc .cmp-wrap,
     .doc ul { margin: var(--sp2) 0; }
-    .doc .spec-list li { margin: 12px 0; }
-    .doc .spec-list.cards { gap: 12px; }
     .doc .spec-list.cards li { margin: 0; }
-    .doc .step-list li { padding-bottom: var(--sp3); }
 
     .doc .callout,
-    .doc .mid-cta,
     .doc .stats { margin: var(--sp3) 0; }
-
-    .doc .cta-box { margin: var(--sp6) 0 0; }
-    .doc .guides { margin-top: var(--sp6); padding-top: var(--sp4); }
-    .doc .faq-mini { margin: var(--sp1) 0; }
     .doc .faq-mini:first-of-type { margin-top: var(--sp2); }
 
     /* Son bölüm ile footer arası */
@@ -669,7 +579,7 @@
 
     @media (max-width: 640px) {
       .doc h2 { margin: var(--sp4) 0 var(--sp2); }
-      .doc .cta-box, .doc .guides { margin-top: var(--sp4); }
+      .doc .cta-box{ margin-top: var(--sp4); }
     }
 
     /* ================= YÖN C — Lacivert bant ================= */
@@ -714,8 +624,7 @@
       margin: 0 0 10px; letter-spacing: 0.01em; line-height: 1.22;
     }
     .doc-hero h1::after { display: none; }
-    .doc-hero .lead {
-      color: rgba(255,255,255,0.76); font-size: 1.02rem; line-height: 1.6;
+    .doc-hero .lead { font-size: 1.02rem; line-height: 1.6;
       margin: 0; max-width: 62ch;
     }
     .doc-hero .doc-meta {
@@ -745,8 +654,6 @@
       position: relative;
     }
     .doc .toc li::before { content: none; }
-    /* Maddeler arası boşluk + ortasına hizalı ayırıcı çizgi */
-    .doc .toc li + li { margin-top: 9px; }
     .doc .toc li + li::before {
       content: ""; position: absolute; top: -5px; left: 11px; right: 11px;
       height: 1px; background: var(--line);
@@ -760,9 +667,7 @@
     /* Hover ve aktif — birebir aynı: koyu mavi zemin, beyaz yazı, çizgi yok */
     .doc .toc li a:hover,
     .doc .toc li a:focus-visible,
-    .doc .toc li a.active {
-      color: #fff; background: var(--navy);
-      text-decoration: none; border-bottom: 0; outline: none;
+    .doc .toc li a.active { border-bottom: 0;
     }
     .doc .toc li a:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
 
@@ -784,33 +689,27 @@
     }
 
     /* Sıkı dikey ritim */
-    .doc h2 { font-size: 1.12rem; margin: 26px 0 8px; padding-left: 0; line-height: 1.32; }
+    .doc h2 { padding-left: 0; }
     .doc h2::before { display: none; }
-    .doc h3 { font-size: 1rem; margin: 20px 0 6px; }
     .doc p, .doc li { font-size: 0.93rem; }
-    .doc p { line-height: 1.62; margin: 8px 0; }
 
     /* Sınıfsız listeler — işaretler kutunun içinde kalsın */
-    .doc > ul, .doc > ol { padding-left: 0; margin: 10px 0; list-style-position: inside; }
-    .doc > ul li, .doc > ol li { margin: 5px 0; }
-
-    /* Listeler — kenarlık yok, gölge var */
-    .doc .spec-list { margin: 11px 0; }
-    .doc .spec-list li { padding-left: 36px; margin: 7px 0; line-height: 1.6; }
+    .doc > ul, .doc > ol { padding-left: 0; list-style-position: inside; }
+    .doc .spec-list li { padding-left: 36px; }
     .doc .spec-list li::before { width: 5px; height: 5px; top: 0.68em; left: 14px; background: var(--muted); }
-    .doc .spec-list.cards { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .doc .spec-list.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .doc .spec-list.cards li {
-      background: #fff; border: 0; border-radius: 9px; padding: 11px 14px;
+      background: #fff; border: 0; border-radius: 9px;
       box-shadow: 0 1px 2px rgba(11,37,69,0.09), 0 4px 12px rgba(11,37,69,0.05);
     }
     .doc .spec-list.cards li::before { content: none; }
     .doc .spec-list.cards li b a { border-bottom: 0; text-decoration: underline; }
-    .doc .step-list li { padding-left: 36px; padding-bottom: 15px; line-height: 1.6; }
+    .doc .step-list li { padding-left: 36px; }
     .doc .step-list li::before { width: 24px; height: 24px; left: 4px; }
 
     /* Kutular — kenarlık yerine gölge */
     .doc .faq-mini {
-      border: 0; border-radius: 10px; padding: 14px 17px; margin: 7px 0;
+      border: 0; border-radius: 10px;
       box-shadow: 0 1px 2px rgba(11,37,69,0.08), 0 3px 10px rgba(11,37,69,0.04);
     }
     .doc .faq-mini:hover { box-shadow: 0 2px 5px rgba(11,37,69,0.11), 0 6px 18px rgba(11,37,69,0.07); }
@@ -818,34 +717,21 @@
       border-radius: 10px; overflow: hidden;
       box-shadow: 0 1px 3px rgba(11,37,69,0.09), 0 5px 16px rgba(11,37,69,0.05);
     }
-    .doc .school-list li { border: 0; }
 
     /* ===== Renk tutarlığı — altın yalnızca CTA ve rütbe şeritlerinde ===== */
     .doc .step-list li::before { background: var(--navy); color: #fff; }
     .doc .faq-mini summary::after { color: var(--muted); }
     .doc .faq-mini[open] summary { color: var(--navy); }
-    .doc .school-list li a:hover { color: var(--navy); }
     .doc .cmp thead th:first-child { color: inherit; }
     .doc .cmp tbody td { color: var(--ink); }
     .doc-hero .lead { color: rgba(255,255,255,0.76); }
 
     /* ===== Uyarı kutusu, istatistikler ve okul listesi ===== */
     .doc .callout {
-      background: var(--sea); border: 0; border-radius: 10px;
-      padding: 16px 18px; margin: 20px 0; box-shadow: none;
+      background: var(--sea); border: 0; border-radius: 10px; box-shadow: none;
     }
     .doc .callout b { font-size: 0.95rem; margin-bottom: 5px; }
     .doc .callout p { font-size: 0.9rem; line-height: 1.6; color: var(--ink); }
-
-    .doc .stats { gap: 12px; margin: 22px 0; }
-    .doc .stats li {
-      background: #fff; border: 0; border-radius: 12px; padding: 20px 14px;
-      box-shadow: 0 1px 3px rgba(11,37,69,0.09), 0 5px 16px rgba(11,37,69,0.05);
-    }
-    .doc .stats .n { font-size: 2rem; letter-spacing: -0.01em; }
-    .doc .stats .t { font-size: 0.76rem; margin-top: 7px; line-height: 1.35; }
-
-    .doc .school-list li { padding: 12px 15px; font-size: 0.86rem; }
     @media (min-width: 640px) { .doc .school-list { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 1000px) { .doc .school-list { grid-template-columns: 1fr 1fr; } }
     /* ===== Tablo, okul listesi ve kutular: kenarlık yok, sakin yüzeyler ===== */
@@ -854,13 +740,8 @@
     .doc .cmp tbody tr:nth-child(even) { background: transparent; }
     .doc .cmp tbody tr:not(:last-child) td { border-bottom: 1px solid var(--line); }
     .doc .cmp tbody td { border-top: 0; }
-    .doc .school-list { gap: 8px; }
-    .doc .school-list li {
-      border: 0; box-shadow: 0 1px 2px rgba(11,37,69,0.08), 0 3px 10px rgba(11,37,69,0.04);
-      transition: box-shadow 0.15s, background 0.15s;
-    }
     .doc .school-list li:hover {
-      background: #fff; box-shadow: 0 2px 5px rgba(11,37,69,0.11), 0 6px 18px rgba(11,37,69,0.07);
+      background: #fff;
     }
 
     /* CTA — sayfada tek tasarım */
@@ -887,12 +768,10 @@
       margin: 0 auto 16px; max-width: 52ch;
     }
     .doc .cta-box .btn { font-size: 0.87rem; padding: 11px 22px; margin: 4px 5px 0; }
-    .doc .guides { margin-top: 30px; padding-top: 20px; }
 
     @media (max-width: 820px) {
       .doc-hero { padding: 22px 0 26px; }
       .doc { padding: 24px 0 0; }
-      .doc h2 { font-size: 1.06rem; margin: 22px 0 7px; }
       .doc .spec-list.cards { grid-template-columns: minmax(0, 1fr); }
       .doc .toc { margin-bottom: 18px; }
     }
@@ -910,40 +789,25 @@
     /* ================= İçerik okunabilirliği ================= */
     /* Başlık hiyerarşisi — bölümler ince çizgiyle ayrılsın */
     .doc h2 {
-      font-size: 1.24rem; margin: 42px 0 12px; line-height: 1.3;
-      letter-spacing: -0.01em; padding-top: 22px;
+      font-size: 1.24rem; line-height: 1.3;
+      letter-spacing: -0.01em;
       border-top: 1px solid var(--line);
     }
-    .doc h2:first-of-type { margin-top: 24px; }
-    .doc h3 { font-size: 1.02rem; margin: 26px 0 8px; color: var(--navy); }
+    .doc h3 { font-size: 1.02rem; color: var(--navy); }
 
     /* Gövde metni — ferah satır, okunur sütun */
-    .doc p { font-size: 0.97rem; line-height: 1.75; margin: 12px 0; }
-    /* Genislik sinirlamasi yok - TOC zaten sutunu daraltiyor */
-
-    /* Madde listeleri */
-    .doc .spec-list { margin: 14px 0; }
-    .doc .spec-list li { font-size: 0.95rem; line-height: 1.7; margin: 10px 0; }
+    .doc p { font-size: 0.97rem; }
+    .doc .spec-list li { font-size: 0.95rem; }
     .doc .spec-list li b { color: var(--navy); }
-
-    /* Parça kartları — nefes alsın */
-    .doc .spec-list.cards { gap: 10px; margin: 16px 0; }
-    .doc .spec-list.cards li { padding: 14px 16px; }
-
-    /* Adım listesi */
-    .doc .step-list { margin: 16px 0; }
-    .doc .step-list li { font-size: 0.95rem; line-height: 1.7; padding-bottom: 18px; }
-
-    /* S.S.S. */
-    .doc .faq-mini { padding: 15px 18px; margin: 8px 0; }
+    .doc .step-list li { font-size: 0.95rem; }
     .doc .faq-mini summary { font-size: 0.96rem; line-height: 1.5; }
-    .doc .faq-mini p { font-size: 0.93rem; line-height: 1.7; margin-top: 10px; max-width: none; }
+    .doc .faq-mini p { font-size: 0.93rem; max-width: none; }
 
     /* Tablo ve CTA tam genişlik kullansın */
     .doc .cmp-wrap, .doc .cta-box, .doc .stats, .doc .school-list { max-width: none; }
 
     @media (max-width: 820px) {
-      .doc h2 { font-size: 1.12rem; margin: 32px 0 10px; padding-top: 18px; }
+      .doc h2 { font-size: 1.12rem; }
       .doc p { font-size: 0.95rem; line-height: 1.72; }
     }
 
@@ -962,11 +826,7 @@
     .doc .step-list li { padding-bottom: 12px; line-height: 1.6; }
 
     .doc .callout { margin: 14px 0; padding: 14px 16px; }
-    .doc .stats { margin: 14px 0; gap: 10px; }
-    .doc .stats li { padding: 16px 12px; }
     .doc .cmp-wrap { margin: 12px 0; }
-    .doc .school-list { margin: 10px 0; gap: 7px; }
-    .doc .school-list li { padding: 10px 13px; }
 
     .doc .faq-mini { margin: 6px 0; padding: 13px 16px; }
     .doc .faq-mini p { margin-top: 8px; line-height: 1.6; }
@@ -978,20 +838,8 @@
       .doc h2 { margin: 22px 0 7px; padding-top: 12px; }
       .doc p { margin: 7px 0; }
     }
-
-    /* ===== İstatistikler — tek lacivert blok ===== */
-    .doc .stats {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 0; margin: 16px 0; padding: 0; list-style: none;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
-      border-radius: 12px; overflow: hidden;
-      box-shadow: 0 8px 22px rgba(11,37,69,0.18);
-    }
-    @media (min-width: 620px) { .doc .stats { grid-template-columns: repeat(4, 1fr); } }
-    .doc .stats li {
-      margin: 0; padding: 18px 14px; text-align: center;
-      background: transparent; border: 0; border-radius: 0; box-shadow: none;
-      position: relative;
+    @media (min-width: 620px) { }
+    .doc .stats li { border-radius: 0;
     }
     /* İnce ayırıcılar */
     .doc .stats li:not(:nth-child(2n))::after {
@@ -1007,52 +855,16 @@
       .doc .stats li:not(:last-child)::after { display: block; }
       .doc .stats li:nth-child(2)::after { display: block; }
     }
-    .doc .stats .n {
-      display: block; font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.95rem; font-weight: 700; color: #fff; line-height: 1;
-      font-variant-numeric: tabular-nums;
-    }
-    .doc .stats .t {
-      display: block; margin-top: 8px; font-size: 0.74rem; line-height: 1.35;
-      color: rgba(255,255,255,0.62); letter-spacing: 0.03em; text-transform: uppercase;
-    }
-
-    /* ===== Okul listesi — lacivert şeritli kartlar ===== */
-    .doc .school-list {
-      display: grid; grid-template-columns: 1fr; gap: 8px;
-      margin: 14px 0; padding: 0; list-style: none;
-    }
     @media (min-width: 700px) { .doc .school-list { grid-template-columns: 1fr 1fr; } }
-    .doc .school-list li {
-      margin: 0; padding: 13px 16px 13px 18px;
-      background: #fff; border: 0; border-radius: 10px;
-      font-size: 0.87rem; line-height: 1.5; color: var(--muted);
-      position: relative; overflow: hidden;
-      box-shadow: 0 1px 2px rgba(11,37,69,0.08), 0 3px 10px rgba(11,37,69,0.04);
-      transition: box-shadow 0.16s, transform 0.16s;
-    }
-    /* Sol şerit — okul kimliği */
-    .doc .school-list li::before {
-      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
-      background: var(--navy);
-    }
     .doc .school-list li:hover {
       transform: translateY(-1px);
-      box-shadow: 0 3px 6px rgba(11,37,69,0.11), 0 8px 22px rgba(11,37,69,0.09);
     }
-    .doc .school-list li a {
-      display: block; color: var(--navy); font-weight: 700;
-      text-decoration: none; border-bottom: 0; margin-bottom: 2px;
+    .doc .school-list li a { margin-bottom: 2px;
     }
-    .doc .school-list li a:hover { color: var(--navy); border-bottom: 0; }
 
     @media (prefers-reduced-motion: reduce) {
-      .doc .school-list li { transition: none; }
       .doc .school-list li:hover { transform: none; }
     }
-
-    /* ===== Kartlarda link tüm yüzeye yayılsın ===== */
-    .doc .school-list li { position: relative; }
     .doc .school-list li a::after {
       content: ""; position: absolute; inset: 0; z-index: 1;
     }
@@ -1065,8 +877,7 @@
     /* Parça kartlarında da aynı davranış */
     .doc .spec-list.cards li { position: relative; }
 
-
-    /* ===== TOC — son hâli: zemin yok, tek altın çizgi ===== */
+/* ===== TOC — son hâli: zemin yok, tek altın çizgi ===== */
     .doc .toc li + li { margin-top: 0; }
     .doc .toc li + li::before { display: none; }
 
@@ -1090,27 +901,9 @@
 
     /* ===== Stats — sade ===== */
     .doc .stats {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 0; margin: 16px 0; padding: 0; list-style: none;
-      background: transparent; border-radius: 0;
-      box-shadow: none; overflow: visible;
       border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
     }
-    @media (min-width: 620px) { .doc .stats { grid-template-columns: repeat(4, 1fr); } }
-    .doc .stats li {
-      margin: 0; padding: 16px 10px; text-align: left;
-      background: transparent; border: 0; box-shadow: none; position: static;
-    }
-    .doc .stats li::before, .doc .stats li::after { display: none; }
-    .doc .stats .n {
-      display: block; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      font-size: 1.5rem; font-weight: 800; color: var(--navy); line-height: 1;
-      font-variant-numeric: tabular-nums;
-    }
-    .doc .stats .t {
-      display: block; margin-top: 5px; font-size: 0.8rem; line-height: 1.4;
-      color: var(--muted); letter-spacing: 0; text-transform: none;
-    }
+    @media (min-width: 620px) { }
 
     /* ================= Okul listesi — temiz kartlar ================= */
     .doc .school-list {
@@ -1193,10 +986,10 @@
       position: fixed; z-index: 300;
       left: 50%; top: 50%;
       transform: translate(-50%, -46%);
-      width: calc(100% - 32px); max-width: 460px;
+      width: calc(100% - 32px);
       max-height: calc(100vh - 40px); overflow-y: auto;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
-      color: #fff; border-radius: 16px; padding: 32px 30px 28px;
+      color: #fff;
       text-align: center;
       box-shadow: 0 20px 60px rgba(11,37,69,0.4);
       opacity: 0;
@@ -1205,17 +998,16 @@
     .season-pop.on { opacity: 1; transform: translate(-50%, -50%); }
 
     .season-pop .sp-tag {
-      display: inline-block; font-size: 0.72rem; font-weight: 800;
+      display: inline-block; font-weight: 800;
       letter-spacing: 0.07em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 12px;
+      color: var(--gold);
     }
     .season-pop b {
-      display: block; font-size: 1.22rem; line-height: 1.32;
-      margin: 0 auto 10px; max-width: 22ch;
+      display: block;
+      margin: 0 auto 10px;
     }
     .season-pop p {
-      font-size: 0.92rem; line-height: 1.62;
-      color: rgba(255,255,255,0.78); margin: 0 auto 20px; max-width: 40ch;
+      color: rgba(255,255,255,0.78); margin: 0 auto 20px;
     }
     .season-pop .sp-row {
       display: flex; flex-wrap: wrap; align-items: center;
@@ -1223,22 +1015,21 @@
     }
     .season-pop .sp-btn {
       display: inline-block; background: var(--gold); color: var(--navy);
-      font-weight: 700; font-size: 0.9rem; padding: 12px 26px;
+      font-weight: 700;
       border-radius: 9px; text-decoration: none; border-bottom: 0;
       transition: background 0.15s;
     }
     .season-pop .sp-btn:hover { background: var(--gold-hover); border-bottom: 0; }
     .season-pop .sp-tel {
-      color: rgba(255,255,255,0.85); font-weight: 700; font-size: 0.9rem;
+      color: rgba(255,255,255,0.85); font-weight: 700;
       text-decoration: none; border-bottom: 0;
     }
     .season-pop .sp-tel:hover { color: #fff; border-bottom: 0; }
 
     .season-pop .sp-close {
-      position: absolute; top: 12px; right: 14px;
-      width: 32px; height: 32px; padding: 0;
+      position: absolute; padding: 0;
       background: transparent; border: 0; cursor: pointer;
-      color: rgba(255,255,255,0.55); font-size: 1.7rem; line-height: 1;
+      color: rgba(255,255,255,0.55); line-height: 1;
       border-radius: 7px; transition: color 0.15s, background 0.15s;
     }
     .season-pop .sp-close:hover { color: #fff; background: rgba(255,255,255,0.12); }
@@ -1258,9 +1049,8 @@
     }
     .season-pop .sp-loc {
       display: flex; align-items: center; justify-content: center; gap: 6px;
-      margin: 18px 0 0; padding-top: 15px;
-      border-top: 1px solid rgba(255,255,255,0.14);
-      font-size: 0.79rem; color: rgba(255,255,255,0.6);
+      margin: 18px 0 0;
+      border-top: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.6);
     }
     .season-pop .sp-loc svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--gold); }
 
@@ -1577,6 +1367,10 @@
       var ovl = document.getElementById('spOverlay');
       if (!pop || !ovl) return;
 
+      // Ziyaretçi bu oturumda pencereyi bir kez kapattıysa, gezdiği diğer
+      // sayfalarda tekrar açılmaz.
+      try { if (sessionStorage.getItem('seasonPopKapali')) return; } catch (e) {}
+
       var acildi = false, oncekiOdak = null;
 
       function ac() {
@@ -1592,6 +1386,7 @@
         });
       }
       function kapat() {
+        try { sessionStorage.setItem('seasonPopKapali', '1'); } catch (e) {}
         pop.classList.remove('on'); ovl.classList.remove('on');
         setTimeout(function () {
           pop.hidden = true; ovl.hidden = true;
@@ -1599,27 +1394,22 @@
         }, 260);
       }
 
-      // Google kuralı: sayfa açılışında DEĞİL — kullanıcı bir şey yaptıktan sonra.
-      // Bu yüzden ilk gerçek etkileşimde açıyoruz: en hızlı güvenli an.
+      // Google kuralı: pencere sayfa açılışında açılmaz.
+      // Dokunma ve tıklama ile de açmıyoruz — mobilde ziyaretçi bir bağlantıya
+      // basmak isterken pencere önüne çıkıyordu. Tek tetikleyici: sayfayı
+      // gerçekten aşağı kaydırmış olmak.
       function kaydirma() {
         var y = window.scrollY || document.documentElement.scrollTop;
-        if (y > 60) ac();
+        if (y > 400) ac();
       }
-      function etkilesim() { ac(); }
 
       function temizle() {
         window.removeEventListener('scroll', kaydirma);
-        window.removeEventListener('touchstart', etkilesim);
-        window.removeEventListener('pointerdown', etkilesim);
-        window.removeEventListener('keydown', etkilesim);
         clearTimeout(sayac);
       }
 
       window.addEventListener('scroll', kaydirma, { passive: true });
-      window.addEventListener('touchstart', etkilesim, { passive: true, once: true });
-      window.addEventListener('pointerdown', etkilesim, { once: true });
-      window.addEventListener('keydown', etkilesim, { once: true });
-      var sayac = setTimeout(ac, 12000);
+      var sayac = setTimeout(ac, 25000);
 
       document.getElementById('seasonPopX').addEventListener('click', kapat);
       ovl.addEventListener('click', kapat);

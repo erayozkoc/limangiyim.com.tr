@@ -351,8 +351,7 @@
     }
     .sec-head p { color: var(--muted); }
 
-
-    /* ---------- Ürünler (beyaz bant) ---------- */
+/* ---------- Ürünler (beyaz bant) ---------- */
     /* Beyaz bantlar — gri zeminli bölümlerle dönüşümlü ritim kurar.
        SSS ve İletişim'e verilemez: ikisinin de içeriği beyaz kutuda. */
     #urunler, #hakkimizda { background: #fff; }
@@ -535,8 +534,7 @@
     /* Pin balonu */
     /* Dokunmatikte hover yok: kart odakla (dokunma) açılır */
     /* Fareli cihazlarda ayrıca hover ile de açılır */
-    @media (hover: hover) {
-    }
+    
     .il-card .il-sehir {
       display: block; margin-bottom: 9px;
       /* gold-hover (#c19a35) beyaz zeminde 2.64:1 idi — WCAG AA altı.
@@ -1467,6 +1465,10 @@
       var ovl = document.getElementById('spOverlay');
       if (!pop || !ovl) return;
 
+      // Ziyaretçi bu oturumda pencereyi bir kez kapattıysa, gezdiği diğer
+      // sayfalarda tekrar açılmaz.
+      try { if (sessionStorage.getItem('seasonPopKapali')) return; } catch (e) {}
+
       var acildi = false, oncekiOdak = null;
 
       function ac() {
@@ -1482,6 +1484,7 @@
         });
       }
       function kapat() {
+        try { sessionStorage.setItem('seasonPopKapali', '1'); } catch (e) {}
         pop.classList.remove('on'); ovl.classList.remove('on');
         setTimeout(function () {
           pop.hidden = true; ovl.hidden = true;
@@ -1489,27 +1492,22 @@
         }, 260);
       }
 
-      // Google kuralı: sayfa açılışında DEĞİL — kullanıcı bir şey yaptıktan sonra.
-      // Bu yüzden ilk gerçek etkileşimde açıyoruz: en hızlı güvenli an.
+      // Google kuralı: pencere sayfa açılışında açılmaz.
+      // Dokunma ve tıklama ile de açmıyoruz — mobilde ziyaretçi bir bağlantıya
+      // basmak isterken pencere önüne çıkıyordu. Tek tetikleyici: sayfayı
+      // gerçekten aşağı kaydırmış olmak.
       function kaydirma() {
         var y = window.scrollY || document.documentElement.scrollTop;
-        if (y > 60) ac();
+        if (y > 400) ac();
       }
-      function etkilesim() { ac(); }
 
       function temizle() {
         window.removeEventListener('scroll', kaydirma);
-        window.removeEventListener('touchstart', etkilesim);
-        window.removeEventListener('pointerdown', etkilesim);
-        window.removeEventListener('keydown', etkilesim);
         clearTimeout(sayac);
       }
 
       window.addEventListener('scroll', kaydirma, { passive: true });
-      window.addEventListener('touchstart', etkilesim, { passive: true, once: true });
-      window.addEventListener('pointerdown', etkilesim, { once: true });
-      window.addEventListener('keydown', etkilesim, { once: true });
-      var sayac = setTimeout(ac, 12000);
+      var sayac = setTimeout(ac, 25000);
 
       document.getElementById('seasonPopX').addEventListener('click', kapat);
       ovl.addEventListener('click', kapat);
