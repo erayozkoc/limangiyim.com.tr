@@ -1,6 +1,4 @@
-# Liman Giyim — robots.txt
-
-User-agent: *
-Allow: /
+# Liman Giyim
+# Access rules come from Cloudflare Managed robots.txt.
 
 Sitemap: https://www.limangiyim.com.tr/sitemap.xml
