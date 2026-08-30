@@ -140,6 +140,7 @@
       --navy-2: #13315c;
       --gold: #d4a843;
       --gold-hover: #c19a35;
+      --gold-text: #8f7020;   /* metin için AA uyumlu koyu altın (beyaz zeminde 4.66:1) */
       --bg: #f7f8fa;
       --ink: #1c2836;
       --muted: #5d6b7c;
@@ -175,7 +176,7 @@
     }
     .nav-links a:hover { color: var(--navy); background: var(--bg); }
     /* Bu sayfa Rehberler bölümünde — menüde vurgula */
-    .nav-links a[href="/rehberler"] { color: var(--gold-hover); }
+    .nav-links a[href="/rehberler"] { color: var(--gold-text); }
     .nav-cta {
       display: inline-flex; align-items: center; gap: 7px;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
@@ -201,7 +202,7 @@
     .lead { color: var(--muted); font-size: 1.0rem; margin: 18px 0 6px; }
     .crumbs { font-size: 0.82rem; color: var(--muted); margin-bottom: 18px; }
     .crumbs a { color: var(--muted); text-decoration: none; }
-    .crumbs a:hover { color: var(--gold-hover); }
+    .crumbs a:hover { color: var(--gold-text); }
     .crumbs .sep { margin: 0 6px; color: var(--gold); }
     .crumbs .here { color: var(--navy); font-weight: 600; }
     h2 { color: var(--navy); font-size: 1.12rem; font-weight: 700; margin: 32px 0 10px; }
@@ -209,7 +210,7 @@
     p { margin: 10px 0; }
     ul { padding-left: 22px; margin: 8px 0; }
     li { margin: 4px 0; }
-    a { color: var(--gold-hover); }
+    a { color: var(--gold-text); }
 
     /* ---------- CTA kutusu ---------- */
     .cta-box {
@@ -335,7 +336,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
     }
     .school-list li:hover { border-color: var(--sea-line); background: var(--sea); }
     .school-list li a { color: var(--navy); text-decoration: none; }
-    .school-list li a:hover { color: var(--gold-hover); }
+    .school-list li a:hover { color: var(--gold-text); }
 
 /* ---------- Renk rötuşları ---------- */
 
@@ -345,7 +346,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
       border-color: var(--sea-line);
       box-shadow: 0 2px 10px rgba(11,37,69,0.06);
     }
-    .faq-mini[open] summary { color: var(--gold-hover); }
+    .faq-mini[open] summary { color: var(--gold-text); }
     .doc-meta .dot { color: var(--gold); }
     h2::before { background: linear-gradient(180deg, var(--gold) 0%, var(--navy-2) 100%); }
     .doc-meta { color: var(--muted); }
@@ -361,11 +362,11 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
     .footer-brand img { filter: brightness(0) invert(1); opacity: 0.92; }
     .footer-brand .fb-mark { height: 38px; width: auto; display: block; }
     .footer-brand .fb-word { height: 20px; width: auto; display: block; }
-    .footer-col h4 {
+    .footer-col h3 {
       color: var(--gold); font-size: 0.78rem; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 13px;
     }
-    .footer-col h4 a { color: var(--gold); }
+    .footer-col h3 a { color: var(--gold); }
     .footer-col p { margin: 0 0 8px; line-height: 1.65; }
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
     /* Rehber listesi 8 maddeye çıkınca tek sütunda diğer sütunların iki katı
@@ -451,7 +452,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
       transition: border-color 0.15s, color 0.15s;
     }
     .doc p a:hover, .doc li a:not(.btn):hover {
-      color: var(--gold-hover); border-bottom-color: var(--gold);
+      color: var(--gold-text); border-bottom-color: var(--gold);
     }
 
     /* --- CTA kutusu --- */
@@ -732,7 +733,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
     .doc .step-list li::before { background: var(--navy); color: #fff; }
     .doc .faq-mini summary::after { color: var(--muted); }
     .doc .faq-mini[open] summary { color: var(--navy); }
-    .doc .cmp thead th:first-child { color: inherit; }
+    .doc .cmp thead th:first-child { color: var(--gold); }
     .doc .cmp tbody td { color: var(--ink); }
     .doc-hero .lead { color: rgba(255,255,255,0.76); }
 
@@ -1069,7 +1070,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
       transition: color 0.15s;
     }
     .season-pop a.sp-loc:hover { color: #fff; border-bottom: 0; }
-    .season-pop a.sp-loc:hover svg { color: var(--gold-hover); }
+    .season-pop a.sp-loc:hover svg { color: var(--gold-text); }
     .season-pop a.sp-loc:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
 
     /* Metin genislik sinirlari kaldirildi */
@@ -1116,7 +1117,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
     .season-pop .sp-ic { width: 18px; height: 18px; flex-shrink: 0; }
     .season-pop .sp-tel .sp-ic { width: 16px; height: 16px; color: var(--gold); }
 
-    .nav-links a[aria-current="page"] { color: var(--gold-hover); }
+    .nav-links a[aria-current="page"] { color: var(--gold-text); }
 
   </style>
   <script async src="https://widget.oorly.com/widget.js?c=2288fae8"></script>
@@ -1293,7 +1294,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
         <p>Denizcilik okullarının üniforma üreticisi. Tuzla / İstanbul merkezli; Türkiye genelindeki denizcilik liseleri, fakülteleri ve meslek yüksekokullarına hizmet veriyoruz.</p>
       </div>
       <div class="footer-col">
-        <h4><a href="/rehberler">Rehberler</a></h4>
+        <h3><a href="/rehberler">Rehberler</a></h3>
         <ul class="footer-links">
           <li><a href="/denizcilik-lisesi-uniformalari">Denizcilik Lisesi Üniformaları</a></li>
           <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte &amp; MYO Üniformaları</a></li>
@@ -1306,7 +1307,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
         </ul>
       </div>
       <div class="footer-col">
-        <h4>İletişim</h4>
+        <h3>İletişim</h3>
         <ul>
           <li>İstasyon Mah. Memba Sk. No: 18 İç Kapı: 1, Tuzla / İstanbul</li>
           <li><a href="tel:+905374375280">0 (537) 437 52 80</a></li>
@@ -1324,9 +1325,11 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
   </footer>
 
   <!-- Sabit WhatsApp balonu -->
-  <a class="wa-float" href="https://wa.me/905374375280" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+  <aside class="wa-sarmal" aria-label="Hızlı iletişim">
+    <a class="wa-float" href="https://wa.me/905374375280" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
+  </aside>
 
 
   <script>
