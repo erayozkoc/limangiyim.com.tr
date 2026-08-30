@@ -910,6 +910,10 @@
       /* Dar ekranda iki sütun sıkışıyor — tek sütuna dön */
       .footer-col ul.footer-links { columns: 1; }
       .nav { padding-top: 13px; padding-bottom: 13px; }
+    }
+    /* Menü eşiği: 1023px altında yatay kayan şerit menü.
+       820-1023px arasında masaüstü menüsü 2 satıra sarıyordu. */
+    @media (max-width: 1023px) {
       .nav-desktop { display: none; }
       .nav-mobile { display: block; background: #fff; border-bottom: 1px solid var(--line); }
       .nav-mobile .nav-links {

@@ -421,6 +421,14 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
     @media (max-width: 820px) {
       .container { padding: 0 20px; }
       .nav { padding-top: 13px; padding-bottom: 13px; }
+      main { padding: 44px 0 70px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 26px; }
+      /* Dar ekranda iki sütun sıkışıyor — tek sütuna dön */
+      .footer-col ul.footer-links { columns: 1; }
+    }
+    /* Menü eşiği: 1023px altında yatay kayan şerit menü.
+       820-1023px arasında masaüstü menüsü 2 satıra sarıyordu. */
+    @media (max-width: 1023px) {
       .nav-desktop { display: none; }
       .nav-mobile { display: block; background: #fff; border-bottom: 1px solid var(--line); }
       .nav-mobile .nav-links {
@@ -434,10 +442,6 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
         display: block; padding: 10px clamp(4px, 1.6vw, 11px);
         font-size: clamp(0.78rem, 3.2vw, 0.9rem); white-space: nowrap;
       }
-      main { padding: 44px 0 70px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 26px; }
-      /* Dar ekranda iki sütun sıkışıyor — tek sütuna dön */
-      .footer-col ul.footer-links { columns: 1; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 18px; }
