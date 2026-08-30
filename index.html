@@ -66,7 +66,15 @@
     "name": "Liman Üniforma",
     "alternateName": "Liman Giyim",
     "url": "https://www.limangiyim.com.tr/",
-    "image": "https://www.limangiyim.com.tr/og-image.jpg",
+    "image": [
+      "https://www.limangiyim.com.tr/og-image.jpg",
+      "https://www.limangiyim.com.tr/foto/buyuk/piri-reis-universitesi-denizcilik-uniformasi.webp",
+      "https://www.limangiyim.com.tr/foto/buyuk/denizci-uniformasi-kep-ayakkabi.webp",
+      "https://www.limangiyim.com.tr/foto/buyuk/okul-uniforma-teslimati.webp",
+      "https://www.limangiyim.com.tr/foto/buyuk/okul-teslimat-gunu-beden-olcusu.webp",
+      "https://www.limangiyim.com.tr/foto/buyuk/sakarya-denizcilik-myo-uniforma.webp",
+      "https://www.limangiyim.com.tr/foto/buyuk/kaptani-derya-denizcilik-lisesi-uniforma.webp"
+    ],
     "logo": "https://www.limangiyim.com.tr/logo-amblem.png",
     "description": "Denizcilik liseleri ve üniversitelerin denizcilik bölümleri için üniforma, kep, apolet ve kurumsal giyim üreticisi. Türkiye ve KKTC'de 20 kuruma üniforma üretiyoruz. Referansları arasında Piri Reis Üniversitesi, Piri Reis Denizcilik Mesleki ve Teknik Anadolu Lisesi, Girne Üniversitesi, Girne Amerikan Üniversitesi, Bandırma Onyedi Eylül Üniversitesi ve Karadeniz Teknik Üniversitesi bulunur.",
     "telephone": "+90-537-437-52-80",
@@ -288,10 +296,8 @@
     }
     .nav-links a:hover { color: var(--navy); background: var(--bg); }
     /* Tıklanan bölümün menü linkini vurgula (JS'siz, :target tabanlı) */
-    body:has(#hakkimizda:target) .nav-links a[href="#hakkimizda"],
-    body:has(#urunler:target) .nav-links a[href="#urunler"],
     body:has(#referanslar:target) .nav-links a[href="#referanslar"],
-    body:has(#sss:target) .nav-links a[href="#sss"] { color: var(--gold-hover); }
+    body:has(#galeri:target) .nav-links a[href="#galeri"] { color: var(--gold-hover); }
     .nav-cta {
       display: inline-flex; align-items: center; gap: 7px;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
@@ -364,7 +370,7 @@
 /* ---------- Ürünler (beyaz bant) ---------- */
     /* Beyaz bantlar — gri zeminli bölümlerle dönüşümlü ritim kurar.
        SSS ve İletişim'e verilemez: ikisinin de içeriği beyaz kutuda. */
-    #urunler, #hakkimizda { background: #fff; }
+    #hakkimizda { background: #fff; }
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .card {
       background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
@@ -386,6 +392,130 @@
       text-decoration: none;
     }
     .card .card-link:hover { text-decoration: underline; }
+
+    /* ---------- Galeri (slider + lightbox) ---------- */
+    #galeri { background: #fff; }
+    #galeri .container { max-width: 1240px; }
+    .gal { position: relative; }
+    .gal-track {
+      display: grid; grid-auto-flow: column;
+      grid-auto-columns: calc((100% - 40px) / 3);
+      gap: 20px;
+      overflow-x: auto; overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory; scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch; scroll-padding-left: 4px;
+      scrollbar-width: none; -ms-overflow-style: none;
+      padding: 4px; margin: -4px;
+    }
+    .gal-track::-webkit-scrollbar { display: none; }
+    .gal-track:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 10px; }
+    .gal-slide {
+      scroll-snap-align: start; scroll-snap-stop: always;
+      margin: 0; position: relative;
+      border-radius: 10px; overflow: hidden; background: #e9edf2;
+    }
+    .gal-ac {
+      display: block; position: relative; width: 100%; padding: 0;
+      border: 0; background: none; cursor: zoom-in; overflow: hidden;
+      line-height: 0;
+    }
+    .gal-ac img {
+      display: block; width: 100%; height: auto; aspect-ratio: 3 / 4;
+      object-fit: cover; background: #e9edf2;
+      user-select: none; -webkit-user-drag: none;
+      transition: transform 0.5s ease;
+    }
+    .gal-slide:hover .gal-ac img { transform: scale(1.05); }
+    .gal-ac .gal-zoom {
+      position: absolute; right: 12px; top: 12px; z-index: 2;
+      width: 38px; height: 38px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.94); color: var(--navy);
+      display: grid; place-items: center;
+      opacity: 0; transform: scale(0.85);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .gal-slide:hover .gal-zoom, .gal-ac:focus-visible .gal-zoom { opacity: 1; transform: scale(1); }
+    .gal-ac .gal-zoom svg { width: 18px; height: 18px; }
+    .gal-ac:focus-visible { outline: 2px solid var(--gold); outline-offset: -3px; }
+    .gal-cap {
+      position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+      padding: 58px 16px 16px; color: #fff; pointer-events: none;
+      background: linear-gradient(to top,
+        rgba(11, 37, 69, 0.94) 0%,
+        rgba(11, 37, 69, 0.72) 40%,
+        rgba(11, 37, 69, 0.3) 70%,
+        rgba(11, 37, 69, 0) 100%);
+      opacity: 1;
+    }
+    .gal-cap strong {
+      display: block; font-weight: 700; font-size: 0.98rem;
+      line-height: 1.3; letter-spacing: -0.01em;
+    }
+    .gal-cap span {
+      display: block; margin-top: 4px;
+      font-size: 0.82rem; line-height: 1.42;
+      color: rgba(255, 255, 255, 0.86);
+    }
+    @media (hover: none) {
+      .gal-ac .gal-zoom { opacity: 1; transform: scale(1); }
+    }
+    .gal-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 46px; height: 46px; border-radius: 50%;
+      background: #fff; border: 1px solid var(--line); color: var(--navy);
+      display: grid; place-items: center; cursor: pointer; z-index: 2;
+      box-shadow: var(--shadow-lg); transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+    }
+    .gal-btn:hover:not(:disabled) { background: var(--gold); color: var(--navy); }
+    .gal-btn:disabled { opacity: 0.28; cursor: default; }
+    .gal-btn svg { width: 21px; height: 21px; }
+    .gal-btn.prev { left: -20px; }
+    .gal-btn.next { right: -20px; }
+    .gal-dots { display: flex; justify-content: center; gap: 9px; margin-top: 26px; }
+    .gal-dot {
+      position: relative;
+      width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%;
+      background: #c3ccd8; cursor: pointer;
+      transition: background 0.2s ease, width 0.2s ease;
+    }
+    .gal-dot.on { background: var(--gold); width: 24px; border-radius: 5px; }
+    .gal-dot::after { content: ""; position: absolute; inset: -13px; }
+
+    /* ---- Lightbox: PhotoSwipe 5 (MIT). CSS gömülü, JS CDN'den ---- */
+    /*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */.pswp{--pswp-bg:#000;--pswp-placeholder-bg:#222;--pswp-root-z-index:100000;--pswp-preloader-color:rgba(79, 79, 79, 0.4);--pswp-preloader-color-secondary:rgba(255, 255, 255, 0.9);--pswp-icon-color:#fff;--pswp-icon-color-secondary:#4f4f4f;--pswp-icon-stroke-color:#4f4f4f;--pswp-icon-stroke-width:2px;--pswp-error-text-color:var(--pswp-icon-color)}.pswp{position:fixed;top:0;left:0;width:100%;height:100%;z-index:var(--pswp-root-z-index);display:none;touch-action:none;outline:0;opacity:.003;contain:layout style size;-webkit-tap-highlight-color:transparent}.pswp:focus{outline:0}.pswp *{box-sizing:border-box}.pswp img{max-width:none}.pswp--open{display:block}.pswp,.pswp__bg{transform:translateZ(0);will-change:opacity}.pswp__bg{opacity:.005;background:var(--pswp-bg)}.pswp,.pswp__scroll-wrap{overflow:hidden}.pswp__bg,.pswp__container,.pswp__content,.pswp__img,.pswp__item,.pswp__scroll-wrap,.pswp__zoom-wrap{position:absolute;top:0;left:0;width:100%;height:100%}.pswp__img,.pswp__zoom-wrap{width:auto;height:auto}.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img{cursor:-webkit-zoom-in;cursor:-moz-zoom-in;cursor:zoom-in}.pswp--click-to-zoom.pswp--zoomed-in .pswp__img{cursor:move;cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.pswp--click-to-zoom.pswp--zoomed-in .pswp__img:active{cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.pswp--no-mouse-drag.pswp--zoomed-in .pswp__img,.pswp--no-mouse-drag.pswp--zoomed-in .pswp__img:active,.pswp__img{cursor:-webkit-zoom-out;cursor:-moz-zoom-out;cursor:zoom-out}.pswp__button,.pswp__container,.pswp__counter,.pswp__img{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.pswp__item{z-index:1;overflow:hidden}.pswp__hidden{display:none!important}.pswp__content{pointer-events:none}.pswp__content>*{pointer-events:auto}.pswp__error-msg-container{display:grid}.pswp__error-msg{margin:auto;font-size:1em;line-height:1;color:var(--pswp-error-text-color)}.pswp .pswp__hide-on-close{opacity:.005;will-change:opacity;transition:opacity var(--pswp-transition-duration) cubic-bezier(.4,0,.22,1);z-index:10;pointer-events:none}.pswp--ui-visible .pswp__hide-on-close{opacity:1;pointer-events:auto}.pswp__button{position:relative;display:block;width:50px;height:60px;padding:0;margin:0;overflow:hidden;cursor:pointer;background:0 0;border:0;box-shadow:none;opacity:.85;-webkit-appearance:none;-webkit-touch-callout:none}.pswp__button:active,.pswp__button:focus,.pswp__button:hover{transition:none;padding:0;background:0 0;border:0;box-shadow:none;opacity:1}.pswp__button:disabled{opacity:.3;cursor:auto}.pswp__icn{fill:var(--pswp-icon-color);color:var(--pswp-icon-color-secondary)}.pswp__icn{position:absolute;top:14px;left:9px;width:32px;height:32px;overflow:hidden;pointer-events:none}.pswp__icn-shadow{stroke:var(--pswp-icon-stroke-color);stroke-width:var(--pswp-icon-stroke-width);fill:none}.pswp__icn:focus{outline:0}.pswp__img--with-bg,div.pswp__img--placeholder{background:var(--pswp-placeholder-bg)}.pswp__top-bar{position:absolute;left:0;top:0;width:100%;height:60px;display:flex;flex-direction:row;justify-content:flex-end;z-index:10;pointer-events:none!important}.pswp__top-bar>*{pointer-events:auto;will-change:opacity}.pswp__button--close{margin-right:6px}.pswp__button--arrow{position:absolute;top:0;width:75px;height:100px;top:50%;margin-top:-50px}.pswp__button--arrow:disabled{display:none;cursor:default}.pswp__button--arrow .pswp__icn{top:50%;margin-top:-30px;width:60px;height:60px;background:0 0;border-radius:0}.pswp--one-slide .pswp__button--arrow{display:none}.pswp--touch .pswp__button--arrow{visibility:hidden}.pswp--has_mouse .pswp__button--arrow{visibility:visible}.pswp__button--arrow--prev{right:auto;left:0}.pswp__button--arrow--next{right:0}.pswp__button--arrow--next .pswp__icn{left:auto;right:14px;transform:scale(-1,1)}.pswp__button--zoom{display:none}.pswp--zoom-allowed .pswp__button--zoom{display:block}.pswp--zoomed-in .pswp__zoom-icn-bar-v{display:none}.pswp__preloader{position:relative;overflow:hidden;width:50px;height:60px;margin-right:auto}.pswp__preloader .pswp__icn{opacity:0;transition:opacity .2s linear;animation:pswp-clockwise .6s linear infinite}.pswp__preloader--active .pswp__icn{opacity:.85}@keyframes pswp-clockwise{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.pswp__counter{height:30px;margin-top:15px;margin-inline-start:20px;font-size:14px;line-height:30px;color:var(--pswp-icon-color);text-shadow:1px 1px 3px var(--pswp-icon-color-secondary);opacity:.85}.pswp--one-slide .pswp__counter{display:none}
+    .pswp { --pswp-bg: #081426; }
+    .pswp-aciklama {
+      position: absolute; left: 0; right: 0; bottom: 0; z-index: 10;
+      padding: 34px 22px 20px; text-align: center; color: #fff;
+      font-size: 0.9rem; line-height: 1.5; pointer-events: none;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    .pswp-aciklama strong {
+      display: block; font-size: 1.03rem; font-weight: 700; margin-bottom: 3px;
+    }
+    @media (max-width: 620px) {
+      .pswp-aciklama { padding: 28px 14px 16px; font-size: 0.83rem; }
+      .pswp-aciklama strong { font-size: 0.94rem; }
+    }
+
+    @media (max-width: 900px) {
+      .gal-track { grid-auto-columns: calc((100% - 16px) / 2); gap: 16px; }
+      .gal-btn.prev { left: -6px; }
+      .gal-btn.next { right: -6px; }
+    }
+    @media (max-width: 620px) {
+      .gal-track { grid-auto-columns: 86%; gap: 10px; }
+      .gal-btn { display: none; }
+      .gal-cap { padding: 46px 13px 13px; }
+      .gal-cap strong { font-size: 0.9rem; }
+      .gal-cap span { font-size: 0.77rem; }
+      .gal-dots { margin-top: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gal-track { scroll-behavior: auto; }
+      .gal-ac img, .gal-slide { transition: none; }
+      .gal-ac:hover img { transform: none; }
+    }
 
     /* ---------- Referanslar (lacivert bant) ---------- */
     #referanslar { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); }
@@ -711,6 +841,7 @@
       .ref-card:hover .rc-logo, .ref-card:focus-visible .rc-logo { transform: none; box-shadow: none; }
       .ref-lise a:hover::before, .ref-lise a:focus-visible::before { transform: none; }
     }
+    .nav-links a[aria-current="page"] { color: var(--gold-hover); }
   </style>
   <noscript>
     <style>.reveal { opacity: 1; transform: none; }</style>
@@ -982,11 +1113,11 @@
       </a>
       <nav class="nav-desktop" aria-label="Ana menü">
         <ul class="nav-links">
-          <li><a href="#urunler">Ürünler</a></li>
+          <li><a href="/denizcilik-lisesi-uniformalari">Lise Üniformaları</a></li>
+          <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte &amp; MYO</a></li>
+          <li><a href="/denizci-kepi-ve-apolet">Kep ve Apolet</a></li>
+          <li><a href="#galeri">Galeri</a></li>
           <li><a href="#referanslar">Referanslar</a></li>
-          <li><a href="#hakkimizda">Hakkımızda</a></li>
-          <li><a href="#sss">S.S.S.</a></li>
-          <li><a href="/rehberler">Rehberler</a></li>
         </ul>
       </nav>
       <a class="nav-cta" href="#iletisim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>İletişim</a>
@@ -995,11 +1126,11 @@
 
   <nav class="nav-mobile" aria-label="Bölüm menüsü">
     <ul class="nav-links">
-      <li><a href="#urunler">Ürünler</a></li>
+      <li><a href="/denizcilik-lisesi-uniformalari">Lise</a></li>
+      <li><a href="/denizcilik-fakultesi-uniformalari">Fakülte</a></li>
+      <li><a href="/denizci-kepi-ve-apolet">Kep &amp; Apolet</a></li>
+      <li><a href="#galeri">Galeri</a></li>
       <li><a href="#referanslar">Referanslar</a></li>
-      <li><a href="#hakkimizda">Hakkımızda</a></li>
-      <li><a href="#sss">S.S.S.</a></li>
-      <li><a href="/rehberler">Rehberler</a></li>
     </ul>
   </nav>
 
@@ -1020,6 +1151,80 @@
       <svg aria-hidden="true" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,70 480,10 720,35 C960,60 1200,20 1440,45 L1440,70 L0,70 Z" fill="#ffffff"/></svg>
     </div>
   </div>
+
+  <!-- ============ GALERİ ============ -->
+  <section id="galeri">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2>Denizcilik Üniformalarımız</h2>
+        <p>Denizcilik liseleri ve denizcilik fakülteleri için ürettiğimiz üniformalar, denizci kepleri ve okullara yaptığımız teslimatlardan fotoğraflar.</p>
+      </div>
+
+      <div class="gal reveal">
+        <button class="gal-btn prev" type="button" aria-label="Önceki görsel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+
+        <div class="gal-track" id="galTrack" tabindex="0" role="group" aria-label="Ürün ve teslimat fotoğrafları galerisi">
+
+          <figure class="gal-slide">
+            <a class="gal-ac" href="foto/buyuk/piri-reis-universitesi-denizcilik-uniformasi.webp" data-pswp-width="1050" data-pswp-height="1400" target="_blank" rel="noreferrer">
+              <img src="foto/piri-reis-universitesi-denizcilik-uniformasi.webp" srcset="foto/piri-reis-universitesi-denizcilik-uniformasi-400.webp 400w, foto/piri-reis-universitesi-denizcilik-uniformasi.webp 800w" sizes="(max-width: 620px) 90vw, (max-width: 900px) 45vw, 384px" alt="Piri Reis Üniversitesi'nde sergilenen erkek ve kadın denizcilik üniforması: lacivert ceket, denizci kepi, beyaz gömlek, pantolon ve ayakkabı" width="800" height="1067" decoding="async">
+              <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </a>
+            <figcaption class="gal-cap"><strong>Erkek ve Kadın Denizcilik Üniforması</strong><span>Piri Reis Üniversitesi'nde sergilenen tam takımımız.</span></figcaption>
+          </figure>
+
+          <figure class="gal-slide">
+            <a class="gal-ac" href="foto/buyuk/sakarya-denizcilik-myo-uniforma.webp" data-pswp-width="1050" data-pswp-height="1400" target="_blank" rel="noreferrer">
+              <img src="foto/sakarya-denizcilik-myo-uniforma.webp" srcset="foto/sakarya-denizcilik-myo-uniforma-400.webp 400w, foto/sakarya-denizcilik-myo-uniforma.webp 800w" sizes="(max-width: 620px) 90vw, (max-width: 900px) 45vw, 384px" alt="Sakarya Uygulamalı Bilimler Üniversitesi Denizcilik Meslek Yüksekokulu binasının girişi" width="800" height="1067" loading="lazy" decoding="async">
+              <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </a>
+            <figcaption class="gal-cap"><strong>Sakarya Uygulamalı Bilimler Üniversitesi</strong><span>Üniforma teslimatımızı tamamladık. 2026-2027 eğitim-öğretim yılı hayırlı olsun.</span></figcaption>
+          </figure>
+
+          <figure class="gal-slide">
+            <a class="gal-ac" href="foto/buyuk/kaptani-derya-denizcilik-lisesi-uniforma.webp" data-pswp-width="788" data-pswp-height="1400" target="_blank" rel="noreferrer">
+              <img src="foto/kaptani-derya-denizcilik-lisesi-uniforma.webp" srcset="foto/kaptani-derya-denizcilik-lisesi-uniforma-400.webp 400w, foto/kaptani-derya-denizcilik-lisesi-uniforma.webp 800w" sizes="(max-width: 620px) 90vw, (max-width: 900px) 45vw, 384px" alt="İstanbul Büyükçekmece Kaptanı Derya Denizcilik Mesleki ve Teknik Anadolu Lisesi binasının girişi" width="800" height="1067" loading="lazy" decoding="async">
+              <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </a>
+            <figcaption class="gal-cap"><strong>Kaptanı Derya Denizcilik Lisesi</strong><span>Üniforma teslimatımızı tamamladık. 2026-2027 eğitim-öğretim yılı hayırlı olsun.</span></figcaption>
+          </figure>
+
+          <figure class="gal-slide">
+            <a class="gal-ac" href="foto/buyuk/denizci-uniformasi-kep-ayakkabi.webp" data-pswp-width="1050" data-pswp-height="1400" target="_blank" rel="noreferrer">
+              <img src="foto/denizci-uniformasi-kep-ayakkabi.webp" srcset="foto/denizci-uniformasi-kep-ayakkabi-400.webp 400w, foto/denizci-uniformasi-kep-ayakkabi.webp 800w" sizes="(max-width: 620px) 90vw, (max-width: 900px) 45vw, 384px" alt="Teslimat öncesi hazırlanmış lacivert denizci ceketleri, beyaz denizci kepleri ve ayakkabı kutuları" width="800" height="1067" loading="lazy" decoding="async">
+              <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </a>
+            <figcaption class="gal-cap"><strong>Teslimata Hazır Üniforma ve Denizci Kepleri</strong><span>Bedenlere ayrılmış ceket, denizci kepi ve ayakkabılar.</span></figcaption>
+          </figure>
+
+          <figure class="gal-slide">
+            <a class="gal-ac" href="foto/buyuk/okul-uniforma-teslimati.webp" data-pswp-width="1400" data-pswp-height="1050" target="_blank" rel="noreferrer">
+              <img src="foto/okul-uniforma-teslimati.webp" srcset="foto/okul-uniforma-teslimati-400.webp 400w, foto/okul-uniforma-teslimati.webp 800w" sizes="(max-width: 620px) 90vw, (max-width: 900px) 45vw, 384px" alt="Okul sınıfında sıralara dizilmiş denizcilik üniformaları, beyaz denizci kepleri ve ayakkabı kutuları" width="800" height="1067" loading="lazy" decoding="async">
+              <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </a>
+            <figcaption class="gal-cap"><strong>Okulda Üniforma Dağıtımı</strong><span>Öğrencilere dağıtılmak üzere okulda hazır.</span></figcaption>
+          </figure>
+
+          <figure class="gal-slide">
+            <a class="gal-ac" href="foto/buyuk/okul-teslimat-gunu-beden-olcusu.webp" data-pswp-width="1050" data-pswp-height="1400" target="_blank" rel="noreferrer">
+              <img src="foto/okul-teslimat-gunu-beden-olcusu.webp" srcset="foto/okul-teslimat-gunu-beden-olcusu-400.webp 400w, foto/okul-teslimat-gunu-beden-olcusu.webp 800w" sizes="(max-width: 620px) 90vw, (max-width: 900px) 45vw, 384px" alt="Okul konferans salonunda üniforma teslimat günü; koltuklara dizilmiş poşetli üniformalar ve ayakkabı kutuları" width="800" height="1067" loading="lazy" decoding="async">
+              <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+            </a>
+            <figcaption class="gal-cap"><strong>Beden Ölçüsü ve Teslim</strong><span>Okulda beden eşleştirme ve teslim.</span></figcaption>
+          </figure>
+
+        </div>
+
+        <button class="gal-btn next" type="button" aria-label="Sonraki görsel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="gal-dots" aria-label="Galeri sayfaları"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ ÜRÜNLER ============ -->
   <section id="urunler">
@@ -1526,6 +1731,178 @@
       });
     })();
   </script>
+
+  <script>
+    // Galeri slider: yatay kaydırma, ok butonları, noktalar
+    (function () {
+      var gal = document.querySelector(".gal");
+      if (!gal) return;
+
+      var track  = gal.querySelector(".gal-track");
+      var slides = Array.prototype.slice.call(track.querySelectorAll(".gal-slide"));
+      var prev   = gal.querySelector(".gal-btn.prev");
+      var next   = gal.querySelector(".gal-btn.next");
+      var dotlar = gal.querySelector(".gal-dots");
+      if (!slides.length) return;
+
+      function adim() {
+        if (slides.length < 2) return track.clientWidth;
+        return slides[1].offsetLeft - slides[0].offsetLeft;
+      }
+
+      var noktalar = [];
+      function noktalariKur() {
+        dotlar.innerHTML = "";
+        noktalar = [];
+        var adet = Math.max(1, Math.ceil((track.scrollWidth - track.clientWidth) / adim()) + 1);
+        for (var i = 0; i < adet; i++) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "gal-dot";
+          b.setAttribute("aria-label", (i + 1) + ". görsele git");
+          b.dataset.i = i;
+          dotlar.appendChild(b);
+          noktalar.push(b);
+        }
+        durumuGuncelle();
+      }
+
+      function durumuGuncelle() {
+        var x = track.scrollLeft;
+        var son = track.scrollWidth - track.clientWidth;
+        prev.disabled = x < 4;
+        next.disabled = x > son - 4;
+        var aktif = Math.round(x / adim());
+        noktalar.forEach(function (b, i) {
+          var acik = i === Math.min(aktif, noktalar.length - 1);
+          b.classList.toggle("on", acik);
+          b.setAttribute("aria-current", acik ? "true" : "false");
+        });
+      }
+
+      function kaydir(yon) { track.scrollBy({ left: yon * adim(), behavior: "smooth" }); }
+
+      prev.addEventListener("click", function () { kaydir(-1); });
+      next.addEventListener("click", function () { kaydir(1); });
+
+      dotlar.addEventListener("click", function (e) {
+        var b = e.target.closest(".gal-dot");
+        if (!b) return;
+        track.scrollTo({ left: b.dataset.i * adim(), behavior: "smooth" });
+      });
+
+      track.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") { e.preventDefault(); kaydir(1); }
+        if (e.key === "ArrowLeft")  { e.preventDefault(); kaydir(-1); }
+      });
+
+      var bekle;
+      track.addEventListener("scroll", function () {
+        clearTimeout(bekle);
+        bekle = setTimeout(durumuGuncelle, 60);
+      }, { passive: true });
+
+      window.addEventListener("resize", function () {
+        clearTimeout(bekle);
+        bekle = setTimeout(noktalariKur, 150);
+      });
+
+      noktalariKur();
+
+      // Masaüstünde fareyle sürükleyerek kaydırma (dokunmatikte tarayıcının kendi kaydırması kalsın)
+      var basili = false, baslangicX = 0, baslangicKaydirma = 0, hareket = 0;
+
+      track.addEventListener("pointerdown", function (e) {
+        if (e.pointerType !== "mouse" || e.button !== 0) return;
+        basili = true;
+        hareket = 0;
+        baslangicX = e.clientX;
+        baslangicKaydirma = track.scrollLeft;
+        track.style.scrollSnapType = "none";
+        track.style.scrollBehavior = "auto";
+      });
+
+      track.addEventListener("pointermove", function (e) {
+        if (!basili) return;
+        var fark = e.clientX - baslangicX;
+        if (Math.abs(fark) > hareket) hareket = Math.abs(fark);
+        if (hareket > 4) {
+          e.preventDefault();
+          track.scrollLeft = baslangicKaydirma - fark;
+        }
+      });
+
+      function surukleBitti() {
+        if (!basili) return;
+        basili = false;
+        track.style.scrollSnapType = "";
+        track.style.scrollBehavior = "";
+        // en yakın slayta otur
+        var hedef = Math.round(track.scrollLeft / adim()) * adim();
+        track.scrollTo({ left: hedef, behavior: "smooth" });
+      }
+
+      track.addEventListener("pointerup", surukleBitti);
+      track.addEventListener("pointercancel", surukleBitti);
+      track.addEventListener("pointerleave", surukleBitti);
+
+      // sürükledikten sonra parmağı/fareyi kaldırınca lightbox açılmasın
+      track.addEventListener("click", function (e) {
+        if (hareket > 6) { e.preventDefault(); e.stopPropagation(); hareket = 0; }
+      }, true);
+    })();
+  </script>
+
+  <script type="module">
+    // Lightbox: PhotoSwipe 5 (MIT) — CDN'den, ana modül ilk tıklamada yükleniyor
+    import PhotoSwipeLightbox from "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe-lightbox.esm.min.js";
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#galTrack",
+      children: "a.gal-ac",
+      pswpModule: () => import("https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.esm.min.js"),
+      bgOpacity: 0.96,
+      showHideAnimationType: "zoom",
+      closeTitle: "Kapat",
+      zoomTitle: "Yakınlaştır",
+      arrowPrevTitle: "Önceki fotoğraf",
+      arrowNextTitle: "Sonraki fotoğraf",
+      errorMsg: "Fotoğraf yüklenemedi"
+    });
+
+    // Fotoğrafın altına başlık + açıklama
+    lightbox.on("uiRegister", () => {
+      lightbox.pswp.ui.registerElement({
+        name: "aciklama",
+        order: 9,
+        isButton: false,
+        appendTo: "root",
+        onInit: (el, pswp) => {
+          el.className = "pswp-aciklama";
+          pswp.on("change", () => {
+            const kutu = pswp.currSlide.data.element.closest(".gal-slide");
+            const yazi = kutu ? kutu.querySelector(".gal-cap") : null;
+            el.innerHTML = yazi ? yazi.innerHTML : "";
+          });
+        }
+      });
+    });
+
+    lightbox.init();
+
+    // Galeri ekrana yaklaşınca ana modülü sessizce indir; ilk dokunuş anında açılsın
+    const galeriEl = document.getElementById("galTrack");
+    if (galeriEl && "IntersectionObserver" in window) {
+      const gozlemci = new IntersectionObserver((girisler, g) => {
+        if (girisler.some(x => x.isIntersecting)) {
+          g.disconnect();
+          import("https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.esm.min.js");
+        }
+      }, { rootMargin: "400px" });
+      gozlemci.observe(galeriEl);
+    }
+  </script>
+
 
 </body>
 </html>

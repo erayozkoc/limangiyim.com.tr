@@ -2,12 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.limangiyim.com.tr/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.limangiyim.com.tr/og-image.jpg</image:loc>
       <image:title>Liman Üniforma — Denizcilik Okullarının Üniforma Üreticisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/piri-reis-universitesi-denizcilik-uniformasi.webp</image:loc>
+      <image:title>Erkek ve kadın denizcilik üniforması — ceket, denizci kepi, gömlek, pantolon ve ayakkabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/denizci-uniformasi-kep-ayakkabi.webp</image:loc>
+      <image:title>Teslimata hazır denizci üniformaları, kepler ve ayakkabılar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-uniforma-teslimati.webp</image:loc>
+      <image:title>Okulda denizcilik üniforması dağıtımı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-teslimat-gunu-beden-olcusu.webp</image:loc>
+      <image:title>Okulda üniforma teslimat günü ve beden ölçüsü</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/sakarya-denizcilik-myo-uniforma.webp</image:loc>
+      <image:title>Sakarya Uygulamalı Bilimler Üniversitesi Denizcilik Meslek Yüksekokulu üniforma teslimatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/kaptani-derya-denizcilik-lisesi-uniforma.webp</image:loc>
+      <image:title>Kaptanı Derya Denizcilik Lisesi üniforma teslimatı</image:title>
     </image:image>
   </url>
   <url>
@@ -18,15 +42,51 @@
   </url>
   <url>
     <loc>https://www.limangiyim.com.tr/denizcilik-lisesi-uniformalari</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/kaptani-derya-denizcilik-lisesi-uniforma.webp</image:loc>
+      <image:title>Kaptanı Derya Denizcilik Mesleki ve Teknik Anadolu Lisesi — üniforma teslimatı yaptığımız denizcilik lisesi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/piri-reis-universitesi-denizcilik-uniformasi.webp</image:loc>
+      <image:title>Denizcilik üniforması tam takım — lacivert ceket, denizci kepi, beyaz gömlek, kravat, pantolon ve ayakkabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/denizci-uniformasi-kep-ayakkabi.webp</image:loc>
+      <image:title>Denizcilik lisesi için hazırlanmış lacivert üniforma ceketleri, beyaz denizci kepleri ve ayakkabılar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-uniforma-teslimati.webp</image:loc>
+      <image:title>Okul sınıfında öğrencilere dağıtılmak üzere hazırlanmış denizcilik lisesi üniformaları, kepler ve ayakkabılar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-teslimat-gunu-beden-olcusu.webp</image:loc>
+      <image:title>Denizcilik lisesinde üniforma teslimat günü; koltuklara dizilmiş poşetli üniformalar ve beden eşleştirme</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.limangiyim.com.tr/denizcilik-fakultesi-uniformalari</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/piri-reis-universitesi-denizcilik-uniformasi.webp</image:loc>
+      <image:title>Piri Reis Üniversitesi'nde sergilenen erkek ve kadın denizcilik fakültesi üniforması: ceket, kep, gömlek, kravat, pantolon ve ayakkabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/sakarya-denizcilik-myo-uniforma.webp</image:loc>
+      <image:title>Sakarya Uygulamalı Bilimler Üniversitesi Denizcilik Meslek Yüksekokulu binası — üniforma teslimatı yaptığımız fakülte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/denizci-uniformasi-kep-ayakkabi.webp</image:loc>
+      <image:title>Denizcilik fakültesi için hazırlanmış lacivert üniforma ceketleri, beyaz kepler ve ayakkabılar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-teslimat-gunu-beden-olcusu.webp</image:loc>
+      <image:title>Denizcilik fakültesinde üniforma teslimat günü; beden eşleştirme ve teslim</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.limangiyim.com.tr/deniz-ve-liman-isletmeciligi-uniformasi</loc>
@@ -48,9 +108,25 @@
   </url>
   <url>
     <loc>https://www.limangiyim.com.tr/denizci-uniforma-fiyatlari</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/piri-reis-universitesi-denizcilik-uniformasi.webp</image:loc>
+      <image:title>Denizci üniforması tam takım — ceket, gömlek, kravat, pantolon, denizci kepi ve ayakkabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/denizci-uniformasi-kep-ayakkabi.webp</image:loc>
+      <image:title>Denizci üniforması parçaları: lacivert ceketler, beyaz denizci kepleri ve ayakkabılar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-uniforma-teslimati.webp</image:loc>
+      <image:title>Okula toplu üretilen denizci üniformaları, kepler ve ayakkabılar dağıtıma hazır</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-teslimat-gunu-beden-olcusu.webp</image:loc>
+      <image:title>Üniforma teslimat günü; okulda beden eşleştirme ve teslim</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.limangiyim.com.tr/toplu-uniforma-dikimi</loc>
@@ -60,9 +136,29 @@
   </url>
   <url>
     <loc>https://www.limangiyim.com.tr/denizcilik-uniformasi-nereden-alinir</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/piri-reis-universitesi-denizcilik-uniformasi.webp</image:loc>
+      <image:title>Okula özel üretilmiş denizcilik üniforması tam takım — lacivert ceket, denizci kepi, gömlek, kravat, pantolon ve ayakkabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/denizci-uniformasi-kep-ayakkabi.webp</image:loc>
+      <image:title>Denizcilik üniforması siparişi teslimat öncesi bedenlere ayrılmış hâlde: ceketler, denizci kepleri ve ayakkabılar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-uniforma-teslimati.webp</image:loc>
+      <image:title>Okulda öğrencilere dağıtılmak üzere hazırlanmış denizcilik üniformaları, kepler ve ayakkabılar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/okul-teslimat-gunu-beden-olcusu.webp</image:loc>
+      <image:title>Denizcilik üniforması teslimat günü; okulda kurulan dağıtım noktasında beden eşleştirme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.limangiyim.com.tr/foto/buyuk/sakarya-denizcilik-myo-uniforma.webp</image:loc>
+      <image:title>Sakarya Uygulamalı Bilimler Üniversitesi Denizcilik Meslek Yüksekokulu — üniforma teslimatı yaptığımız kurum</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.limangiyim.com.tr/gizlilik</loc>
