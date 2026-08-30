@@ -108,7 +108,7 @@
     }
     .brand-mark { height: 41px; width: auto; display: block; }
     .brand-word { height: 22px; width: auto; display: block; }
-    .nav-links { display: flex; gap: 6px; list-style: none; align-items: center; }
+    .nav-links { display: flex; gap: 6px; margin: 0; padding: 0; list-style: none; align-items: center; }
     .nav-links a {
       text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--navy);
       padding: 8px 14px; border-radius: 8px; transition: color 0.2s, background 0.2s;
@@ -198,17 +198,49 @@
        820-1023px arasında masaüstü menüsü 2 satıra sarıyordu. */
     @media (max-width: 1023px) {
       .nav-desktop { display: none; }
-      .nav-mobile { display: block; background: #fff; border-bottom: 1px solid var(--line); }
+      .nav-mobile {
+        display: block; position: relative;
+        background: #fff; border-bottom: 1px solid var(--line);
+        box-shadow: 0 2px 6px rgba(11, 37, 69, 0.045);
+      }
+      /* kenarlarda yumuşak geçiş: şerit kayıyorsa devamı olduğu belli olsun */
+      .nav-mobile::before, .nav-mobile::after {
+        content: ""; position: absolute; top: 0; bottom: 1px; width: 20px;
+        pointer-events: none; z-index: 1;
+      }
+      .nav-mobile::before { left: 0; background: linear-gradient(90deg, #fff 25%, rgba(255,255,255,0)); }
+      .nav-mobile::after { right: 0; background: linear-gradient(270deg, #fff 25%, rgba(255,255,255,0)); }
       .nav-mobile .nav-links {
-        gap: 0; overflow-x: auto; padding: 2px 8px;
+        gap: 0; height: 48px; align-items: stretch;
+        overflow-x: auto; overflow-y: hidden; padding: 0 10px;
         -ms-overflow-style: none; scrollbar-width: none;
       }
+      .nav-mobile .nav-links li { display: flex; }
       .nav-mobile .nav-links::-webkit-scrollbar { display: none; }
       .nav-mobile .nav-links li:first-child { margin-left: auto; }
       .nav-mobile .nav-links li:last-child { margin-right: auto; }
       .nav-mobile .nav-links a {
-        display: block; padding: 10px clamp(4px, 1.6vw, 11px);
-        font-size: clamp(0.78rem, 3.2vw, 0.9rem); white-space: nowrap;
+        display: flex; align-items: center; position: relative; border-radius: 0;
+        padding: 0 clamp(7px, 2.1vw, 14px);
+        font-size: clamp(0.78rem, 3.2vw, 0.9rem); line-height: 1;
+        font-weight: 700; letter-spacing: 0.005em;
+        color: var(--navy); white-space: nowrap;
+        transition: color 0.2s ease;
+      }
+      /* bulunduğun sayfa: altın sekme çizgisi */
+      .nav-mobile .nav-links a[aria-current="page"] { color: var(--gold-text); }
+      .nav-mobile .nav-links a[aria-current="page"]::after {
+        content: ""; position: absolute; bottom: 0;
+        left: clamp(7px, 2.1vw, 14px); right: clamp(7px, 2.1vw, 14px);
+        height: 3px; border-radius: 3px 3px 0 0; background: var(--gold);
+      }
+      .nav-mobile .nav-links a:active { background: var(--bg); color: var(--navy-2); }
+      .nav-mobile .nav-links a:focus-visible { outline: 2px solid var(--gold); outline-offset: -3px; border-radius: 6px; }
+      /* 380px alti: 5 madde kaydirmasiz sigsin */
+      @media (max-width: 380px) {
+        .nav-mobile .nav-links { padding: 0 4px; }
+        .nav-mobile .nav-links a { padding: 0 6px; font-size: 0.72rem; letter-spacing: 0; }
+        .nav-mobile .nav-links a[aria-current="page"]::after { left: 6px; right: 6px; }
       }
     }
     @media (max-width: 480px) {
