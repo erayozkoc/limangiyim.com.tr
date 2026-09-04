@@ -1165,6 +1165,121 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
 
     .nav-links a[aria-current="page"] { color: var(--gold-text); }
 
+    /* ---------- Sayfa içi galeri (slider) ---------- */
+    .gal { position: relative; margin: 30px 0 34px; }
+    .gal-track {
+      display: grid; grid-auto-flow: column;
+      grid-auto-columns: calc((100% - 20px) / 2);
+      gap: 20px;
+      overflow-x: auto; overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory; scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch; scroll-padding-left: 4px;
+      scrollbar-width: none; -ms-overflow-style: none;
+      padding: 4px; margin: -4px;
+    }
+    .gal-track::-webkit-scrollbar { display: none; }
+    .gal-track:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 10px; }
+    .gal-slide {
+      scroll-snap-align: start; scroll-snap-stop: always;
+      margin: 0; position: relative;
+      border-radius: 10px; overflow: hidden; background: #e9edf2;
+    }
+    .gal-ac {
+      display: block; position: relative; width: 100%; padding: 0;
+      border: 0; background: none; cursor: zoom-in; overflow: hidden; line-height: 0;
+    }
+    .gal-ac img {
+      display: block; width: 100%; height: auto; aspect-ratio: 3 / 4;
+      object-fit: cover; background: #e9edf2;
+      user-select: none; -webkit-user-drag: none;
+      transition: transform 0.5s ease;
+    }
+    .gal-slide:hover .gal-ac img { transform: scale(1.05); }
+    .gal-ac .gal-zoom {
+      position: absolute; right: 12px; top: 12px; z-index: 2;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.94); color: var(--navy);
+      display: grid; place-items: center;
+      opacity: 0; transform: scale(0.85);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .gal-slide:hover .gal-zoom, .gal-ac:focus-visible .gal-zoom { opacity: 1; transform: scale(1); }
+    .gal-ac .gal-zoom svg { width: 17px; height: 17px; }
+    .gal-ac:focus-visible { outline: 2px solid var(--gold); outline-offset: -3px; }
+    .gal-cap {
+      position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+      padding: 52px 15px 14px; color: #fff; pointer-events: none;
+      background: linear-gradient(to top,
+        rgba(11, 37, 69, 0.94) 0%,
+        rgba(11, 37, 69, 0.72) 40%,
+        rgba(11, 37, 69, 0.3) 70%,
+        rgba(11, 37, 69, 0) 100%);
+    }
+    .gal-cap strong {
+      display: block; font-weight: 700; font-size: 0.95rem;
+      line-height: 1.3; letter-spacing: -0.01em;
+    }
+    .gal-cap span {
+      display: block; margin-top: 3px;
+      font-size: 0.8rem; line-height: 1.4;
+      color: rgba(255, 255, 255, 0.86);
+    }
+    .gal-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 42px; height: 42px; border-radius: 50%;
+      background: #fff; border: 1px solid var(--line); color: var(--navy);
+      display: grid; place-items: center; cursor: pointer; z-index: 2;
+      box-shadow: 0 8px 26px rgba(11, 37, 69, 0.16);
+      transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+    }
+    .gal-btn:hover:not(:disabled) { background: var(--gold); color: var(--navy); }
+    .gal-btn:disabled { opacity: 0.28; cursor: default; }
+    .gal-btn svg { width: 19px; height: 19px; }
+    .gal-btn.prev { left: -18px; }
+    .gal-btn.next { right: -18px; }
+    .gal-dots { display: flex; justify-content: center; gap: 9px; margin-top: 20px; }
+    .gal-dot {
+      position: relative;
+      width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%;
+      background: #c3ccd8; cursor: pointer;
+      transition: background 0.2s ease, width 0.2s ease;
+    }
+    .gal-dot.on { background: var(--gold); width: 24px; border-radius: 5px; }
+    .gal-dot::after { content: ""; position: absolute; inset: -13px; }
+
+    @media (max-width: 620px) {
+      .gal-track { grid-auto-columns: 88%; gap: 12px; }
+      .gal-btn { display: none; }
+      .gal-cap { padding: 44px 13px 12px; }
+      .gal-cap strong { font-size: 0.88rem; }
+      .gal-cap span { font-size: 0.76rem; }
+      .gal-dots { margin-top: 16px; }
+    }
+    @media (hover: none) {
+      .gal-ac .gal-zoom { opacity: 1; transform: scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gal-track { scroll-behavior: auto; }
+      .gal-ac img { transition: none; }
+      .gal-slide:hover .gal-ac img { transform: none; }
+    }
+
+    /* ---- Lightbox: PhotoSwipe 5 (MIT). CSS gömülü, JS CDN'den ---- */
+    /*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */.pswp{--pswp-bg:#000;--pswp-placeholder-bg:#222;--pswp-root-z-index:100000;--pswp-preloader-color:rgba(79, 79, 79, 0.4);--pswp-preloader-color-secondary:rgba(255, 255, 255, 0.9);--pswp-icon-color:#fff;--pswp-icon-color-secondary:#4f4f4f;--pswp-icon-stroke-color:#4f4f4f;--pswp-icon-stroke-width:2px;--pswp-error-text-color:var(--pswp-icon-color)}.pswp{position:fixed;top:0;left:0;width:100%;height:100%;z-index:var(--pswp-root-z-index);display:none;touch-action:none;outline:0;opacity:.003;contain:layout style size;-webkit-tap-highlight-color:transparent}.pswp:focus{outline:0}.pswp *{box-sizing:border-box}.pswp img{max-width:none}.pswp--open{display:block}.pswp,.pswp__bg{transform:translateZ(0);will-change:opacity}.pswp__bg{opacity:.005;background:var(--pswp-bg)}.pswp,.pswp__scroll-wrap{overflow:hidden}.pswp__bg,.pswp__container,.pswp__content,.pswp__img,.pswp__item,.pswp__scroll-wrap,.pswp__zoom-wrap{position:absolute;top:0;left:0;width:100%;height:100%}.pswp__img,.pswp__zoom-wrap{width:auto;height:auto}.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img{cursor:-webkit-zoom-in;cursor:-moz-zoom-in;cursor:zoom-in}.pswp--click-to-zoom.pswp--zoomed-in .pswp__img{cursor:move;cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.pswp--click-to-zoom.pswp--zoomed-in .pswp__img:active{cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.pswp--no-mouse-drag.pswp--zoomed-in .pswp__img,.pswp--no-mouse-drag.pswp--zoomed-in .pswp__img:active,.pswp__img{cursor:-webkit-zoom-out;cursor:-moz-zoom-out;cursor:zoom-out}.pswp__button,.pswp__container,.pswp__counter,.pswp__img{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.pswp__item{z-index:1;overflow:hidden}.pswp__hidden{display:none!important}.pswp__content{pointer-events:none}.pswp__content>*{pointer-events:auto}.pswp__error-msg-container{display:grid}.pswp__error-msg{margin:auto;font-size:1em;line-height:1;color:var(--pswp-error-text-color)}.pswp .pswp__hide-on-close{opacity:.005;will-change:opacity;transition:opacity var(--pswp-transition-duration) cubic-bezier(.4,0,.22,1);z-index:10;pointer-events:none}.pswp--ui-visible .pswp__hide-on-close{opacity:1;pointer-events:auto}.pswp__button{position:relative;display:block;width:50px;height:60px;padding:0;margin:0;overflow:hidden;cursor:pointer;background:0 0;border:0;box-shadow:none;opacity:.85;-webkit-appearance:none;-webkit-touch-callout:none}.pswp__button:active,.pswp__button:focus,.pswp__button:hover{transition:none;padding:0;background:0 0;border:0;box-shadow:none;opacity:1}.pswp__button:disabled{opacity:.3;cursor:auto}.pswp__icn{fill:var(--pswp-icon-color);color:var(--pswp-icon-color-secondary)}.pswp__icn{position:absolute;top:14px;left:9px;width:32px;height:32px;overflow:hidden;pointer-events:none}.pswp__icn-shadow{stroke:var(--pswp-icon-stroke-color);stroke-width:var(--pswp-icon-stroke-width);fill:none}.pswp__icn:focus{outline:0}.pswp__img--with-bg,div.pswp__img--placeholder{background:var(--pswp-placeholder-bg)}.pswp__top-bar{position:absolute;left:0;top:0;width:100%;height:60px;display:flex;flex-direction:row;justify-content:flex-end;z-index:10;pointer-events:none!important}.pswp__top-bar>*{pointer-events:auto;will-change:opacity}.pswp__button--close{margin-right:6px}.pswp__button--arrow{position:absolute;top:0;width:75px;height:100px;top:50%;margin-top:-50px}.pswp__button--arrow:disabled{display:none;cursor:default}.pswp__button--arrow .pswp__icn{top:50%;margin-top:-30px;width:60px;height:60px;background:0 0;border-radius:0}.pswp--one-slide .pswp__button--arrow{display:none}.pswp--touch .pswp__button--arrow{visibility:hidden}.pswp--has_mouse .pswp__button--arrow{visibility:visible}.pswp__button--arrow--prev{right:auto;left:0}.pswp__button--arrow--next{right:0}.pswp__button--arrow--next .pswp__icn{left:auto;right:14px;transform:scale(-1,1)}.pswp__button--zoom{display:none}.pswp--zoom-allowed .pswp__button--zoom{display:block}.pswp--zoomed-in .pswp__zoom-icn-bar-v{display:none}.pswp__preloader{position:relative;overflow:hidden;width:50px;height:60px;margin-right:auto}.pswp__preloader .pswp__icn{opacity:0;transition:opacity .2s linear;animation:pswp-clockwise .6s linear infinite}.pswp__preloader--active .pswp__icn{opacity:.85}@keyframes pswp-clockwise{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.pswp__counter{height:30px;margin-top:15px;margin-inline-start:20px;font-size:14px;line-height:30px;color:var(--pswp-icon-color);text-shadow:1px 1px 3px var(--pswp-icon-color-secondary);opacity:.85}.pswp--one-slide .pswp__counter{display:none}
+    .pswp { --pswp-bg: #081426; }
+    .pswp-aciklama {
+      position: absolute; left: 0; right: 0; bottom: 0; z-index: 10;
+      padding: 34px 22px 20px; text-align: center; color: #fff;
+      font-size: 0.9rem; line-height: 1.5; pointer-events: none;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    .pswp-aciklama strong {
+      display: block; font-size: 1.03rem; font-weight: 700; margin-bottom: 3px;
+    }
+    @media (max-width: 620px) {
+      .pswp-aciklama { padding: 28px 14px 16px; font-size: 0.83rem; }
+      .pswp-aciklama strong { font-size: 0.94rem; }
+    }
   </style>
 </head>
 <body>
@@ -1243,6 +1358,62 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
 
         <p>Denizci kıyafetleri; denizcilik okullarında okuyan öğrencilerin, gemide görev yapan güverte ve makine personelinin ve denizcilik kurumlarında çalışanların giydiği, standartları yönetmeliklerle belirlenmiş kıyafetlerin genel adıdır. <b>Denizci üniforması</b>, <b>denizci forması</b> ve <b>denizcilik kıyafeti</b> ifadeleri de günlük kullanımda aynı anlama gelir. Türkiye'de sivil denizcilerin kıyafetleri Denizcilere Mahsus Kıyafet Yönetmeliği'ne, öğrenci üniformaları ise her okulun kendi kıyafet yönetmeliğine göre üretilir.</p>
         <p>Liman Üniforma olarak <b>denizcilik lisesi ve denizcilik fakültesi öğrencilerinin üniformalarını</b> üretiyoruz. Aşağıdaki bölümlerde bir denizci kıyafetinin hangi parçalardan oluştuğunu, yazlık ve kışlık takımların farkını ve öğrenci üniforması alırken nelere dikkat edilmesi gerektiğini bulacaksınız.</p>
+
+        <div class="gal">
+          <button class="gal-btn prev" type="button" aria-label="Önceki fotoğraf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+
+          <div class="gal-track" id="galTrack" tabindex="0" role="group" aria-label="Denizcilik üniforması üretim ve teslimat fotoğrafları">
+
+            <figure class="gal-slide">
+              <a class="gal-ac" href="foto/buyuk/piri-reis-universitesi-denizcilik-uniformasi.webp" data-pswp-width="1050" data-pswp-height="1400" target="_blank" rel="noreferrer">
+                <img src="foto/piri-reis-universitesi-denizcilik-uniformasi.webp" srcset="foto/piri-reis-universitesi-denizcilik-uniformasi-400.webp 400w, foto/piri-reis-universitesi-denizcilik-uniformasi.webp 800w" sizes="(max-width: 620px) 88vw, 384px" alt="Okula özel üretilmiş denizcilik üniforması tam takım — lacivert ceket, denizci kepi, gömlek, kravat, pantolon ve ayakkabı" width="800" height="1067" loading="lazy" decoding="async">
+                <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+              </a>
+              <figcaption class="gal-cap"><strong>Okula Özel Üretim</strong><span>Ceket, gömlek, kravat, pantolon, kep ve ayakkabıdan oluşan tam takım.</span></figcaption>
+            </figure>
+
+            <figure class="gal-slide">
+              <a class="gal-ac" href="foto/buyuk/denizci-uniformasi-kep-ayakkabi.webp" data-pswp-width="1050" data-pswp-height="1400" target="_blank" rel="noreferrer">
+                <img src="foto/denizci-uniformasi-kep-ayakkabi.webp" srcset="foto/denizci-uniformasi-kep-ayakkabi-400.webp 400w, foto/denizci-uniformasi-kep-ayakkabi.webp 800w" sizes="(max-width: 620px) 88vw, 384px" alt="Denizcilik üniforması siparişi teslimat öncesi bedenlere ayrılmış hâlde: ceketler, denizci kepleri ve ayakkabılar" width="800" height="1067" loading="lazy" decoding="async">
+                <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+              </a>
+              <figcaption class="gal-cap"><strong>Teslimata Hazır Takımlar</strong><span>Bedenlere ayrılmış ceket, denizci kepi ve ayakkabılar.</span></figcaption>
+            </figure>
+
+            <figure class="gal-slide">
+              <a class="gal-ac" href="foto/buyuk/okul-uniforma-teslimati.webp" data-pswp-width="1400" data-pswp-height="1050" target="_blank" rel="noreferrer">
+                <img src="foto/okul-uniforma-teslimati.webp" srcset="foto/okul-uniforma-teslimati-400.webp 400w, foto/okul-uniforma-teslimati.webp 800w" sizes="(max-width: 620px) 88vw, 384px" alt="Okulda öğrencilere dağıtılmak üzere hazırlanmış denizcilik üniformaları, kepler ve ayakkabılar" width="800" height="1067" loading="lazy" decoding="async">
+                <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+              </a>
+              <figcaption class="gal-cap"><strong>Okulda Dağıtım</strong><span>Öğrencilere dağıtılmak üzere okulda hazır.</span></figcaption>
+            </figure>
+
+            <figure class="gal-slide">
+              <a class="gal-ac" href="foto/buyuk/okul-teslimat-gunu-beden-olcusu.webp" data-pswp-width="1050" data-pswp-height="1400" target="_blank" rel="noreferrer">
+                <img src="foto/okul-teslimat-gunu-beden-olcusu.webp" srcset="foto/okul-teslimat-gunu-beden-olcusu-400.webp 400w, foto/okul-teslimat-gunu-beden-olcusu.webp 800w" sizes="(max-width: 620px) 88vw, 384px" alt="Denizcilik üniforması teslimat günü; okulda kurulan dağıtım noktasında beden eşleştirme" width="800" height="1067" loading="lazy" decoding="async">
+                <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+              </a>
+              <figcaption class="gal-cap"><strong>Beden Ölçüsü ve Teslim</strong><span>Okulda kurulan dağıtım noktasında beden eşleştirme.</span></figcaption>
+            </figure>
+
+            <figure class="gal-slide">
+              <a class="gal-ac" href="foto/buyuk/sakarya-denizcilik-myo-uniforma.webp" data-pswp-width="1050" data-pswp-height="1400" target="_blank" rel="noreferrer">
+                <img src="foto/sakarya-denizcilik-myo-uniforma.webp" srcset="foto/sakarya-denizcilik-myo-uniforma-400.webp 400w, foto/sakarya-denizcilik-myo-uniforma.webp 800w" sizes="(max-width: 620px) 88vw, 384px" alt="Sakarya Uygulamalı Bilimler Üniversitesi Denizcilik Meslek Yüksekokulu — üniforma teslimatı yaptığımız kurum" width="800" height="1067" loading="lazy" decoding="async">
+                <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.2" y1="16.2" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+              </a>
+              <figcaption class="gal-cap"><strong>Sakarya Uygulamalı Bilimler Üniversitesi</strong><span>Denizcilik Meslek Yüksekokulu teslimatımızı tamamladık.</span></figcaption>
+            </figure>
+
+          </div>
+
+          <button class="gal-btn next" type="button" aria-label="Sonraki fotoğraf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <div class="gal-dots" aria-label="Galeri sayfaları"></div>
+        </div>
 
         <h2 id="denizci-kiyafetini-kimler-giyer">Denizci kıyafetini kimler giyer?</h2>
         <ul class="spec-list">
@@ -1505,5 +1676,175 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
     })();
   </script>
 
+  <script>
+    // Galeri slider: yatay kaydırma, ok butonları, noktalar
+    (function () {
+      var gal = document.querySelector(".gal");
+      if (!gal) return;
+
+      var track  = gal.querySelector(".gal-track");
+      var slides = Array.prototype.slice.call(track.querySelectorAll(".gal-slide"));
+      var prev   = gal.querySelector(".gal-btn.prev");
+      var next   = gal.querySelector(".gal-btn.next");
+      var dotlar = gal.querySelector(".gal-dots");
+      if (!slides.length) return;
+
+      function adim() {
+        if (slides.length < 2) return track.clientWidth;
+        return slides[1].offsetLeft - slides[0].offsetLeft;
+      }
+
+      var noktalar = [];
+      function noktalariKur() {
+        dotlar.innerHTML = "";
+        noktalar = [];
+        var adet = Math.max(1, Math.ceil((track.scrollWidth - track.clientWidth) / adim()) + 1);
+        for (var i = 0; i < adet; i++) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "gal-dot";
+          b.setAttribute("aria-label", (i + 1) + ". görsele git");
+          b.dataset.i = i;
+          dotlar.appendChild(b);
+          noktalar.push(b);
+        }
+        durumuGuncelle();
+      }
+
+      function durumuGuncelle() {
+        var x = track.scrollLeft;
+        var son = track.scrollWidth - track.clientWidth;
+        prev.disabled = x < 4;
+        next.disabled = x > son - 4;
+        var aktif = Math.round(x / adim());
+        noktalar.forEach(function (b, i) {
+          var acik = i === Math.min(aktif, noktalar.length - 1);
+          b.classList.toggle("on", acik);
+          b.setAttribute("aria-current", acik ? "true" : "false");
+        });
+      }
+
+      function kaydir(yon) { track.scrollBy({ left: yon * adim(), behavior: "smooth" }); }
+
+      prev.addEventListener("click", function () { kaydir(-1); });
+      next.addEventListener("click", function () { kaydir(1); });
+
+      dotlar.addEventListener("click", function (e) {
+        var b = e.target.closest(".gal-dot");
+        if (!b) return;
+        track.scrollTo({ left: b.dataset.i * adim(), behavior: "smooth" });
+      });
+
+      track.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") { e.preventDefault(); kaydir(1); }
+        if (e.key === "ArrowLeft")  { e.preventDefault(); kaydir(-1); }
+      });
+
+      var bekle;
+      track.addEventListener("scroll", function () {
+        clearTimeout(bekle);
+        bekle = setTimeout(durumuGuncelle, 60);
+      }, { passive: true });
+
+      window.addEventListener("resize", function () {
+        clearTimeout(bekle);
+        bekle = setTimeout(noktalariKur, 150);
+      });
+
+      noktalariKur();
+
+      // Masaüstünde fareyle sürükleyerek kaydırma (dokunmatikte tarayıcının kendi kaydırması kalsın)
+      var basili = false, baslangicX = 0, baslangicKaydirma = 0, hareket = 0;
+
+      track.addEventListener("pointerdown", function (e) {
+        if (e.pointerType !== "mouse" || e.button !== 0) return;
+        basili = true;
+        hareket = 0;
+        baslangicX = e.clientX;
+        baslangicKaydirma = track.scrollLeft;
+        track.style.scrollSnapType = "none";
+        track.style.scrollBehavior = "auto";
+      });
+
+      track.addEventListener("pointermove", function (e) {
+        if (!basili) return;
+        var fark = e.clientX - baslangicX;
+        if (Math.abs(fark) > hareket) hareket = Math.abs(fark);
+        if (hareket > 4) {
+          e.preventDefault();
+          track.scrollLeft = baslangicKaydirma - fark;
+        }
+      });
+
+      function surukleBitti() {
+        if (!basili) return;
+        basili = false;
+        track.style.scrollSnapType = "";
+        track.style.scrollBehavior = "";
+        // en yakın slayta otur
+        var hedef = Math.round(track.scrollLeft / adim()) * adim();
+        track.scrollTo({ left: hedef, behavior: "smooth" });
+      }
+
+      track.addEventListener("pointerup", surukleBitti);
+      track.addEventListener("pointercancel", surukleBitti);
+      track.addEventListener("pointerleave", surukleBitti);
+
+      // sürükledikten sonra parmağı/fareyi kaldırınca lightbox açılmasın
+      track.addEventListener("click", function (e) {
+        if (hareket > 6) { e.preventDefault(); e.stopPropagation(); hareket = 0; }
+      }, true);
+    })();
+  </script>
+
+  <script type="module">
+    // Lightbox: PhotoSwipe 5 (MIT) — CDN'den, ana modül ilk tıklamada yükleniyor
+    import PhotoSwipeLightbox from "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe-lightbox.esm.min.js";
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#galTrack",
+      children: "a.gal-ac",
+      pswpModule: () => import("https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.esm.min.js"),
+      bgOpacity: 0.96,
+      showHideAnimationType: "zoom",
+      closeTitle: "Kapat",
+      zoomTitle: "Yakınlaştır",
+      arrowPrevTitle: "Önceki fotoğraf",
+      arrowNextTitle: "Sonraki fotoğraf",
+      errorMsg: "Fotoğraf yüklenemedi"
+    });
+
+    // Fotoğrafın altına başlık + açıklama
+    lightbox.on("uiRegister", () => {
+      lightbox.pswp.ui.registerElement({
+        name: "aciklama",
+        order: 9,
+        isButton: false,
+        appendTo: "root",
+        onInit: (el, pswp) => {
+          el.className = "pswp-aciklama";
+          pswp.on("change", () => {
+            const kutu = pswp.currSlide.data.element.closest(".gal-slide");
+            const yazi = kutu ? kutu.querySelector(".gal-cap") : null;
+            el.innerHTML = yazi ? yazi.innerHTML : "";
+          });
+        }
+      });
+    });
+
+    lightbox.init();
+
+    // Galeri ekrana yaklaşınca ana modülü sessizce indir; ilk dokunuş anında açılsın
+    const galeriEl = document.getElementById("galTrack");
+    if (galeriEl && "IntersectionObserver" in window) {
+      const gozlemci = new IntersectionObserver((girisler, g) => {
+        if (girisler.some(x => x.isIntersecting)) {
+          g.disconnect();
+          import("https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.esm.min.js");
+        }
+      }, { rootMargin: "400px" });
+      gozlemci.observe(galeriEl);
+    }
+  </script>
 </body>
 </html>
