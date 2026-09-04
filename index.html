@@ -810,9 +810,11 @@
     .footer-bottom a { text-decoration: underline; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 2px; }
 
     /* ---------- WhatsApp butonu (iletişim kartı içi) ---------- */
+    /* Marka yeşili #25d366 üzerinde beyaz yazı 1.98:1 kontrast veriyordu (WCAG
+       1.4.3 AA için 4.5:1 gerekli). Yazılı buton koyu yeşile alındı: 5.4:1. */
     .wa-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      background: #25d366; color: #fff;
+      background: #167a3d; color: #fff;
       padding: 13px 28px; border-radius: 8px;
       text-decoration: none; font-weight: 700; font-size: 0.93rem;
       transition: transform 0.15s, filter 0.2s;
@@ -1137,7 +1139,6 @@
     .season-pop .sp-tel .sp-ic { width: 16px; height: 16px; color: var(--gold); }
 
   </style>
-  <script async src="https://widget.oorly.com/widget.js?c=2288fae8"></script>
 </head>
 <body>
   <a class="skip-link" href="#hakkimizda">İçeriğe atla</a>
