@@ -480,7 +480,9 @@
       transition: background 0.2s ease, width 0.2s ease;
     }
     .gal-dot.on { background: var(--gold); width: 24px; border-radius: 5px; }
-    .gal-dot::after { content: ""; position: absolute; inset: -13px; }
+    /* Gorunmez dokunma alani: dikeyde 45px yuksekliğe cikar, yatayda
+       bosluk yarisini gecmez ki komsu noktanin alaniyla cakismasin. */
+    .gal-dot::after { content: ""; position: absolute; inset: -18px -4px; }
 
     /* ---- Lightbox: PhotoSwipe 5 (MIT). CSS gömülü, JS CDN'den ---- */
     /*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */.pswp{--pswp-bg:#000;--pswp-placeholder-bg:#222;--pswp-root-z-index:100000;--pswp-preloader-color:rgba(79, 79, 79, 0.4);--pswp-preloader-color-secondary:rgba(255, 255, 255, 0.9);--pswp-icon-color:#fff;--pswp-icon-color-secondary:#4f4f4f;--pswp-icon-stroke-color:#4f4f4f;--pswp-icon-stroke-width:2px;--pswp-error-text-color:var(--pswp-icon-color)}.pswp{position:fixed;top:0;left:0;width:100%;height:100%;z-index:var(--pswp-root-z-index);display:none;touch-action:none;outline:0;opacity:.003;contain:layout style size;-webkit-tap-highlight-color:transparent}.pswp:focus{outline:0}.pswp *{box-sizing:border-box}.pswp img{max-width:none}.pswp--open{display:block}.pswp,.pswp__bg{transform:translateZ(0);will-change:opacity}.pswp__bg{opacity:.005;background:var(--pswp-bg)}.pswp,.pswp__scroll-wrap{overflow:hidden}.pswp__bg,.pswp__container,.pswp__content,.pswp__img,.pswp__item,.pswp__scroll-wrap,.pswp__zoom-wrap{position:absolute;top:0;left:0;width:100%;height:100%}.pswp__img,.pswp__zoom-wrap{width:auto;height:auto}.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img{cursor:-webkit-zoom-in;cursor:-moz-zoom-in;cursor:zoom-in}.pswp--click-to-zoom.pswp--zoomed-in .pswp__img{cursor:move;cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.pswp--click-to-zoom.pswp--zoomed-in .pswp__img:active{cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.pswp--no-mouse-drag.pswp--zoomed-in .pswp__img,.pswp--no-mouse-drag.pswp--zoomed-in .pswp__img:active,.pswp__img{cursor:-webkit-zoom-out;cursor:-moz-zoom-out;cursor:zoom-out}.pswp__button,.pswp__container,.pswp__counter,.pswp__img{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.pswp__item{z-index:1;overflow:hidden}.pswp__hidden{display:none!important}.pswp__content{pointer-events:none}.pswp__content>*{pointer-events:auto}.pswp__error-msg-container{display:grid}.pswp__error-msg{margin:auto;font-size:1em;line-height:1;color:var(--pswp-error-text-color)}.pswp .pswp__hide-on-close{opacity:.005;will-change:opacity;transition:opacity var(--pswp-transition-duration) cubic-bezier(.4,0,.22,1);z-index:10;pointer-events:none}.pswp--ui-visible .pswp__hide-on-close{opacity:1;pointer-events:auto}.pswp__button{position:relative;display:block;width:50px;height:60px;padding:0;margin:0;overflow:hidden;cursor:pointer;background:0 0;border:0;box-shadow:none;opacity:.85;-webkit-appearance:none;-webkit-touch-callout:none}.pswp__button:active,.pswp__button:focus,.pswp__button:hover{transition:none;padding:0;background:0 0;border:0;box-shadow:none;opacity:1}.pswp__button:disabled{opacity:.3;cursor:auto}.pswp__icn{fill:var(--pswp-icon-color);color:var(--pswp-icon-color-secondary)}.pswp__icn{position:absolute;top:14px;left:9px;width:32px;height:32px;overflow:hidden;pointer-events:none}.pswp__icn-shadow{stroke:var(--pswp-icon-stroke-color);stroke-width:var(--pswp-icon-stroke-width);fill:none}.pswp__icn:focus{outline:0}.pswp__img--with-bg,div.pswp__img--placeholder{background:var(--pswp-placeholder-bg)}.pswp__top-bar{position:absolute;left:0;top:0;width:100%;height:60px;display:flex;flex-direction:row;justify-content:flex-end;z-index:10;pointer-events:none!important}.pswp__top-bar>*{pointer-events:auto;will-change:opacity}.pswp__button--close{margin-right:6px}.pswp__button--arrow{position:absolute;top:0;width:75px;height:100px;top:50%;margin-top:-50px}.pswp__button--arrow:disabled{display:none;cursor:default}.pswp__button--arrow .pswp__icn{top:50%;margin-top:-30px;width:60px;height:60px;background:0 0;border-radius:0}.pswp--one-slide .pswp__button--arrow{display:none}.pswp--touch .pswp__button--arrow{visibility:hidden}.pswp--has_mouse .pswp__button--arrow{visibility:visible}.pswp__button--arrow--prev{right:auto;left:0}.pswp__button--arrow--next{right:0}.pswp__button--arrow--next .pswp__icn{left:auto;right:14px;transform:scale(-1,1)}.pswp__button--zoom{display:none}.pswp--zoom-allowed .pswp__button--zoom{display:block}.pswp--zoomed-in .pswp__zoom-icn-bar-v{display:none}.pswp__preloader{position:relative;overflow:hidden;width:50px;height:60px;margin-right:auto}.pswp__preloader .pswp__icn{opacity:0;transition:opacity .2s linear;animation:pswp-clockwise .6s linear infinite}.pswp__preloader--active .pswp__icn{opacity:.85}@keyframes pswp-clockwise{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.pswp__counter{height:30px;margin-top:15px;margin-inline-start:20px;font-size:14px;line-height:30px;color:var(--pswp-icon-color);text-shadow:1px 1px 3px var(--pswp-icon-color-secondary);opacity:.85}.pswp--one-slide .pswp__counter{display:none}
@@ -511,6 +513,12 @@
       .gal-cap strong { font-size: 0.9rem; }
       .gal-cap span { font-size: 0.77rem; }
       .gal-dots { margin-top: 18px; }
+      /* Yorumlar: baslik ortalanir, Google seridi kuculur */
+      .yr-bar { gap: 6px 12px; margin-bottom: 18px; }
+      .yr-brand, .yr-score { font-size: 1.05rem; }
+      /* "Devamini oku" parmakla rahat basilsin: gorunmez genis dokunma alani */
+      .yr-read { position: relative; }
+      .yr-read::after { content: ""; position: absolute; inset: -13px -18px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .gal-track { scroll-behavior: auto; }
@@ -632,6 +640,113 @@
       color: rgba(255,255,255,0.58); font-size: 0.7rem; font-weight: 600;
       letter-spacing: 0.04em;
     }
+    /* ---------- Google yorumları ---------- */
+    /* Not: Review/AggregateRating schema BILEREK eklenmedi. Google, kendi
+       platformundaki yorumların işletmenin kendi sitesinde yıldız zengin
+       sonucu için işaretlenmesini yasaklıyor (self-serving review markup). */
+    #yorumlar { background: var(--bg); }
+
+    /* Google seridi: marka, puan, degerlendirme sayisi. Baslik ortali
+       oldugu icin serit de ortalandi; panel kaldirildi. */
+    .yr-bar {
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 8px 16px; margin-bottom: 24px;
+    }
+    .yr-brand { font-size: 1.22rem; font-weight: 800; letter-spacing: -0.01em; }
+    .yr-brand i { font-style: normal; }
+    .yr-rate { display: flex; align-items: center; gap: 8px; }
+    .yr-score { font-size: 1.22rem; font-weight: 800; color: var(--ink); }
+    /* Kesin sayi degil: yorum sayisi sadece artacagi icin "60+" hic eskimez */
+    .yr-count { color: var(--muted); font-size: 0.85rem; }
+
+    /* Yıldız şeridi: altın dolu yıldızlar, ekran okuyucuya metinle aktarılır */
+    .yr-stars { display: inline-flex; gap: 2px; }
+    .yr-stars svg { width: 16px; height: 16px; fill: #fbbc05; flex: none; }
+
+    /* Kartlar galerinin .gal slider yapısını kullanır.
+       padding: kart gölgesi yatay kaydırmada kırpılmasın */
+    /* scroll-padding iz dolgusuyla ayni olmali, yoksa kartlar snap sirasinda
+       2px kayik oturuyor */
+    #yorumlar .gal-track {
+      list-style: none; align-items: stretch;
+      padding: 6px 6px 22px; margin: -6px -6px -22px;
+      scroll-padding-left: 6px;
+    }
+    .yr-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 10px;
+      /* Ustteki altin cizgi: kartlara marka rengi katar, siniri belirginlestirir */
+      border-top: 3px solid var(--gold);
+      padding: 18px 18px 16px;
+      /* Gri bolum zemininde duruyor, normal golge */
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: 9px;
+    }
+
+    /* Üst satır: harf avatarı + Google rozeti, ad, tarih */
+    .yr-head { display: flex; align-items: center; gap: 10px; }
+    .yr-av {
+      position: relative; flex: none; width: 38px; height: 38px;
+      border-radius: 50%; display: grid; place-items: center;
+      color: #fff; font-weight: 700; font-size: 0.95rem; line-height: 1;
+      user-select: none;
+    }
+    /* Google Haritalar'ın kendi harf avatarlarına yakın bir palet */
+    .yr-av.c1 { background: #1e5aa8; }
+    .yr-av.c2 { background: #8a6b1e; }
+    .yr-av.c3 { background: #2e6b5e; }
+    .yr-av.c4 { background: #8c3b3b; }
+    .yr-av.c5 { background: #4a4a7d; }
+    .yr-av.c6 { background: #13315c; }
+    .yr-av.c7 { background: #6b4a86; }
+    .yr-av.c8 { background: #2a6b8a; }
+    .yr-who { min-width: 0; }
+    .yr-who b {
+      display: block; font-size: 0.86rem; font-weight: 700; line-height: 1.3;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .yr-who time { color: var(--muted); font-size: 0.75rem; }
+
+    /* Metin 6 satirda kesilir; tasan yorumlarda "Devamini oku" butonu
+       cikar ve tiklayinca kartin icinde acilir (yr-slider.js). */
+    .yr-card blockquote {
+      margin: 0; color: var(--ink); font-size: 0.88rem; line-height: 1.6;
+      border-left: 3px solid rgba(212, 168, 67, 0.45); padding-left: 12px;
+      display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6;
+      overflow: hidden;
+    }
+    .yr-card.acik blockquote { display: block; }
+    .yr-read {
+      align-self: flex-start; margin-top: -2px; padding: 0;
+      border: 0; background: none; cursor: pointer;
+      font: inherit; font-size: 0.83rem; font-weight: 700;
+      color: var(--gold-text);
+    }
+    .yr-read:hover { text-decoration: underline; }
+    .yr-read:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 3px; }
+
+    /* Kart altindaki kaynak butonu: yorumun Google'daki aslina gider.
+       margin-top:auto ile hep kartin en altina oturur, kartlar hizalanir. */
+    .yr-src {
+      margin-top: auto; align-self: flex-start;
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 13px; border: 1px solid var(--line); border-radius: 999px;
+      color: var(--ink); font-size: 0.78rem; font-weight: 600;
+      text-decoration: none; background: #fff;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    /* Resmi Google Maps ikonu 256x367 oranında — genişlik ona göre */
+    .yr-src svg { width: 11px; height: 16px; flex: none; }
+    .yr-src:hover, .yr-src:focus-visible { border-color: var(--gold); background: var(--bg); }
+
+    /* Google'a giden bağlantı — yorumların kaynağını şeffaf biçimde gösterir */
+    .yr-more { text-align: center; margin-top: 26px; }
+    .yr-more a {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gold-text); font-weight: 700; font-size: 0.92rem;
+      text-decoration: none; border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+    }
+    .yr-more a:hover, .yr-more a:focus-visible { color: var(--ink); }
     /* ---------- Harita bölümü ---------- */
 
     .ref-map { position: relative; max-width: 980px; margin: 22px auto 0; }
@@ -967,6 +1082,8 @@
     @media (max-width: 480px) {
       .container { padding: 0 18px; }
       section { padding: 36px 0; }
+      .yr-card { padding: 16px 16px 15px; }
+      .yr-bar { margin-bottom: 15px; }
       .brand-mark { height: 36px; }
       .brand-word { height: 19px; }
       .nav { padding-top: 12px; padding-bottom: 12px; }
@@ -1449,6 +1566,220 @@
     </div>
   </section>
 
+
+  <!-- ============ GOOGLE YORUMLARI ============ -->
+  <!-- Yorumlar Google Haritalar'dan birebir alindi (20 Eyl 2026).
+       Sadece bariz yazim hatalari duzeltildi, ifadeler degistirilmedi.
+       Review/AggregateRating schema BILEREK eklenmedi: Google, kendi
+       platformundaki yorumlarin isletmenin kendi sitesinde yildiz zengin
+       sonucu icin isaretlenmesini yasakliyor. Eklemeyin. -->
+  <section id="yorumlar">
+    <div class="container">
+      <!-- Resmi Google Maps ikonu: sayfada bir kez tanimlanir, 8 kart <use> ile
+           cagirir. Boylece ayni yol verisi 8 kez tekrarlanmaz. -->
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="gmaps-pin" viewBox="0 0 256 367">
+          <path fill="#34a853" d="M70.5853976,271.865254 C81.1995596,285.391378 90.8598594,299.639537 99.4963338,314.50654 C106.870174,328.489419 109.94381,337.97007 115.333495,354.817346 C118.638014,364.124835 121.625069,366.902652 128.046515,366.902652 C135.045169,366.902652 138.219816,362.176756 140.672953,354.867852 C145.766819,338.95854 149.763988,326.815514 156.069992,315.343493 C168.443902,293.193112 183.819296,273.510299 198.927732,254.592287 C203.018698,249.238677 229.462067,218.047767 241.366994,193.437035 C241.366994,193.437035 255.999233,166.402027 255.999233,128.645368 C255.999233,93.3274168 241.569017,68.8321265 241.569017,68.8321265 L200.024428,79.9578224 L174.793197,146.408963 L168.552129,155.57215 L167.303915,157.231625 L165.64444,159.309576 L162.729537,162.628525 L158.56642,166.791642 L136.098575,185.09637 L79.928962,217.528279 L70.5853976,271.865254 Z"/>
+          <path fill="#fbbc04" d="M12.6120081,188.891517 C26.3207125,220.205084 52.7568668,247.730719 70.6431185,271.8869 L165.64444,159.352866 C165.64444,159.352866 152.260416,176.856717 127.981579,176.856717 C100.939355,176.856717 79.0920095,155.2619 79.0920095,128.032084 C79.0920095,109.359386 90.325932,96.5309245 90.325932,96.5309245 L25.8373003,113.811107 L12.6120081,188.891517 Z"/>
+          <path fill="#4285f4" d="M166.705061,5.78651629 C198.256727,15.959818 225.262874,37.3165365 241.597878,68.8104812 L165.673301,159.28793 C165.673301,159.28793 176.907223,146.228586 176.907223,127.671329 C176.907223,99.8065834 153.443693,78.990998 128.09702,78.990998 C104.128433,78.990998 90.3620076,96.4659886 90.3620076,96.4659886 L90.3620076,39.4666386 L166.705061,5.78651629 Z"/>
+          <path fill="#1a73e8" d="M30.0148476,45.7654275 C48.8607087,23.2182162 82.0213432,0 127.736265,0 C149.915506,0 166.625695,5.82259183 166.625695,5.82259183 L90.2898565,96.5164943 L36.2054099,96.5164943 L30.0148476,45.7654275 Z"/>
+          <path fill="#ea4335" d="M12.6120081,188.891517 C12.6120081,188.891517 0,164.194204 0,128.414485 C0,94.5972757 13.145926,65.0369799 30.0148476,45.7654275 L90.3331471,96.5237094 L12.6120081,188.891517 Z"/>
+        </symbol>
+      </svg>
+      <div class="sec-head reveal">
+        <h2>Müşterilerimiz Ne Diyor?</h2>
+      </div>
+
+      <div class="yr-bar reveal">
+        <span class="yr-brand"><i style="color:#4285f4">G</i><i style="color:#ea4335">o</i><i style="color:#fbbc05">o</i><i style="color:#4285f4">g</i><i style="color:#34a853">l</i><i style="color:#ea4335">e</i> Yorumları</span>
+        <span class="yr-rate">
+          <b class="yr-score">4,8</b>
+          <span class="yr-stars" role="img" aria-label="5 üzerinden 4,8 puan">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <span class="yr-count">60+ değerlendirme</span>
+        </span>
+      </div>
+
+      <div class="gal reveal">
+        <ul class="gal-track" id="yorumTrack" tabindex="0" aria-label="Google müşteri yorumları">
+        <li class="gal-slide yr-card">
+          <div class="yr-head">
+            <span class="yr-av c1" aria-hidden="true">Ü</span>
+            <span class="yr-who"><b>Ümran Ece Ünal</b><time datetime="2026-08">Ağustos 2026</time></span>
+          </div>
+          <span class="yr-stars" role="img" aria-label="5 yıldız">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <blockquote>Üretilen üniformalar çok kaliteliydi. Özellikle ürünlerin kumaş ve dikimi açısından özenle üretimi gerçekleştirildiği çok açık. 3 senedir her dönem düzenli olarak üniforma satın alan birisi olarak alışveriş yaptığım 7 mağaza arasında ilk sırada. Kargo ile hazırlayıp gönderebiliyorlar. Ayrıca mağaza yetkilileri çok ilgiliydi, mevzuat ile yönetmeliğe uygunluk açısından da çok titiz bir tutum sergiliyorlar, işlerine hâkim oldukları çok bariz.</blockquote>
+          <button type="button" class="yr-read" aria-expanded="false" hidden>Devamını oku</button>
+          <a class="yr-src" href="https://maps.app.goo.gl/JoSXrfvhKg7kHrMTA" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#gmaps-pin"/></svg>
+            Google'da gör
+          </a>
+        </li>
+        <li class="gal-slide yr-card">
+          <div class="yr-head">
+            <span class="yr-av c2" aria-hidden="true">A</span>
+            <span class="yr-who"><b>AKKAYA</b><time datetime="2026-09">Eylül 2026</time></span>
+          </div>
+          <span class="yr-stars" role="img" aria-label="5 yıldız">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <blockquote>Bugün oğlum için buradan elbise aldı, gemi makine mühendisliği için istenen elbiseleri temin etti. Çok güzel ilgilenmişler. Saliha Hanım çok yardımcı olmuş, birebir ilgilendiği için oğlum kendisine çok teşekkür ediyor. Elbise güzel olsun diye tek tek denemiş. Ayrıca oğlum ve arkadaşlarını arabayla okula kadar bırakmışlar, gerçekten çok memnun kalmış.</blockquote>
+          <button type="button" class="yr-read" aria-expanded="false" hidden>Devamını oku</button>
+          <a class="yr-src" href="https://maps.app.goo.gl/UVuVMSW5nqooPmys9" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#gmaps-pin"/></svg>
+            Google'da gör
+          </a>
+        </li>
+        <li class="gal-slide yr-card">
+          <div class="yr-head">
+            <span class="yr-av c3" aria-hidden="true">B</span>
+            <span class="yr-who"><b>Berken Şahin</b><time datetime="2026-09">Eylül 2026</time></span>
+          </div>
+          <span class="yr-stars" role="img" aria-label="5 yıldız">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <blockquote>O kadar iyi insanlar tarafından işletilen bir yer ki size tarif dahi edemem; her konuda size yardımcı oluyorlar ve ilgileniyorlar. Özellikle sizlerle ilgilenen ablalar dünyalar tatlısı insanlar. İstanbul'da bu kadar samimi, dürüst ve iyi bir işletme yok.</blockquote>
+          <button type="button" class="yr-read" aria-expanded="false" hidden>Devamını oku</button>
+          <a class="yr-src" href="https://maps.app.goo.gl/wGzcm8JV4LiGubqz9" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#gmaps-pin"/></svg>
+            Google'da gör
+          </a>
+        </li>
+        <li class="gal-slide yr-card">
+          <div class="yr-head">
+            <span class="yr-av c4" aria-hidden="true">B</span>
+            <span class="yr-who"><b>Berdan Anar Şahin</b><time datetime="2026-09">Eylül 2026</time></span>
+          </div>
+          <span class="yr-stars" role="img" aria-label="5 yıldız">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <blockquote>İstanbul'da asla karşınıza çıkmayacak türden bir samimi işletme. Müşteri memnuniyeti için ellerinden geleni yapıyorlar, fiyatları gayet uygun. Bundan sonra ihtiyaçlarımın tek adresi olacaklar.</blockquote>
+          <button type="button" class="yr-read" aria-expanded="false" hidden>Devamını oku</button>
+          <a class="yr-src" href="https://maps.app.goo.gl/Nv4j89cspav3BJX89" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#gmaps-pin"/></svg>
+            Google'da gör
+          </a>
+        </li>
+        <li class="gal-slide yr-card">
+          <div class="yr-head">
+            <span class="yr-av c5" aria-hidden="true">N</span>
+            <span class="yr-who"><b>Nesrin Canlı</b><time datetime="2026-09">Eylül 2026</time></span>
+          </div>
+          <span class="yr-stars" role="img" aria-label="5 yıldız">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <blockquote>Güler yüzlü, yardımcı ve misafirperverlikleri için çok teşekkür ederim. Hem uygun hem kaliteli, başka yer aramaya gerek yok. Kargo bile yapıyorlar. Allah bol kazançlar versin.</blockquote>
+          <button type="button" class="yr-read" aria-expanded="false" hidden>Devamını oku</button>
+          <a class="yr-src" href="https://maps.app.goo.gl/WzfzQh4YiCEs3FMA7" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#gmaps-pin"/></svg>
+            Google'da gör
+          </a>
+        </li>
+        <li class="gal-slide yr-card">
+          <div class="yr-head">
+            <span class="yr-av c6" aria-hidden="true">D</span>
+            <span class="yr-who"><b>Dilber Kamze</b><time datetime="2026-09">Eylül 2026</time></span>
+          </div>
+          <span class="yr-stars" role="img" aria-label="5 yıldız">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <blockquote>Piri Reis Lisesi için alışveriş yaptık. Çok ilgililer ve bizim hatamız yüzünden oluşan bir durumda bize hemen yardımcı oldular. Sizin gibi insanlarla karşılaştığımız için çok şanslıyız.</blockquote>
+          <button type="button" class="yr-read" aria-expanded="false" hidden>Devamını oku</button>
+          <a class="yr-src" href="https://maps.app.goo.gl/5qqTASAyKLWpnNWK7" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#gmaps-pin"/></svg>
+            Google'da gör
+          </a>
+        </li>
+        <li class="gal-slide yr-card">
+          <div class="yr-head">
+            <span class="yr-av c7" aria-hidden="true">E</span>
+            <span class="yr-who"><b>Efe Çelik</b><time datetime="2026-09">Eylül 2026</time></span>
+          </div>
+          <span class="yr-stars" role="img" aria-label="5 yıldız">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <blockquote>Üniforma seçiminde ve nasıl giyileceğini anlatırken çok yardımcı oldular. Güler yüzlü ve samimi insanlar. Gayet güvenilir bir yer.</blockquote>
+          <button type="button" class="yr-read" aria-expanded="false" hidden>Devamını oku</button>
+          <a class="yr-src" href="https://maps.app.goo.gl/Gqjm5ewZ8JDYtYF76" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#gmaps-pin"/></svg>
+            Google'da gör
+          </a>
+        </li>
+        <li class="gal-slide yr-card">
+          <div class="yr-head">
+            <span class="yr-av c8" aria-hidden="true">M</span>
+            <span class="yr-who"><b>Mustafa Çelebi</b><time datetime="2026-08">Ağustos 2026</time></span>
+          </div>
+          <span class="yr-stars" role="img" aria-label="5 yıldız">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </span>
+          <blockquote>Ürün kalitesi gayet güzel ve rahat. Alışveriş esnasında çok ilgililerdi, sonrasında da ürünün arkasında durdular.</blockquote>
+          <button type="button" class="yr-read" aria-expanded="false" hidden>Devamını oku</button>
+          <a class="yr-src" href="https://maps.app.goo.gl/73g5bbB86XVnBVkZ6" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#gmaps-pin"/></svg>
+            Google'da gör
+          </a>
+        </li>
+        </ul>
+
+        <button type="button" class="gal-btn prev" aria-label="Önceki yorumlar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button type="button" class="gal-btn next" aria-label="Sonraki yorumlar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+
+        <div class="gal-dots" aria-label="Yorum sayfaları"></div>
+      </div>
+
+      <p class="yr-more">
+        <a href="https://www.google.com/maps?cid=16178223671983847747" target="_blank" rel="noopener">
+          Tüm yorumları Google'da okuyun
+          <span aria-hidden="true">&#8599;</span>
+        </a>
+      </p>
+    </div>
+  </section>
+
   <!-- ============ HAKKIMIZDA ============ -->
   <section id="hakkimizda">
     <div class="container">
@@ -1776,10 +2107,40 @@
   </script>
 
   <script>
-    // Galeri slider: yatay kaydırma, ok butonları, noktalar
-    (function () {
-      var gal = document.querySelector(".gal");
-      if (!gal) return;
+    // Yorum kartları: metin 6 satırı aşıyorsa "Devamını oku" butonu görünür,
+    // tıklanınca yorumun tamamı kartın içinde açılır.
+    document.querySelectorAll("#yorumlar .yr-card").forEach(function (kart) {
+      var metin = kart.querySelector("blockquote");
+      var dugme = kart.querySelector(".yr-read");
+      if (!metin || !dugme) return;
+
+      function gorunurlugunuAyarla() {
+        // Kart açıkken ölçüm anlamsız: scrollHeight ile clientHeight eşitlenir
+        if (kart.classList.contains("acik")) return;
+        dugme.hidden = metin.scrollHeight <= metin.clientHeight + 1;
+      }
+
+      dugme.addEventListener("click", function () {
+        var acik = kart.classList.toggle("acik");
+        dugme.setAttribute("aria-expanded", acik ? "true" : "false");
+        dugme.textContent = acik ? "Daha az göster" : "Devamını oku";
+        if (!acik) gorunurlugunuAyarla();
+      });
+
+      gorunurlugunuAyarla();
+
+      var bekle;
+      window.addEventListener("resize", function () {
+        clearTimeout(bekle);
+        bekle = setTimeout(gorunurlugunuAyarla, 150);
+      });
+    });
+  </script>
+
+  <script>
+    // Slider: yatay kaydırma, ok butonları, noktalar
+    // Sayfadaki her ".gal" bloğu için ayrı ayrı kurulur (galeri + yorumlar)
+    document.querySelectorAll(".gal").forEach(function (gal) {
 
       var track  = gal.querySelector(".gal-track");
       var slides = Array.prototype.slice.call(track.querySelectorAll(".gal-slide"));
@@ -1893,7 +2254,7 @@
       track.addEventListener("click", function (e) {
         if (hareket > 6) { e.preventDefault(); e.stopPropagation(); hareket = 0; }
       }, true);
-    })();
+    });
   </script>
 
   <script type="module">
