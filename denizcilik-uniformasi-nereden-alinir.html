@@ -849,8 +849,82 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
       .doc { padding: 20px 0 0; }
       .doc .cta-box { padding: 22px 18px; }
     }
-    /* Mobilde içindekiler gizli — ilk ekranı içerik alsın */
-    @media (max-width: 999px) { .doc .toc { display: none; } }
+    /* Mobilde içindekiler açılır kapanır kutu. Trafiğin %88'i mobil ve sayfa
+       2.000 kelimeye varıyor; kapalı dururken ilk ekranı işgal etmiyor, tek
+       dokunuşla tüm bölümler görünüyor. */
+    .doc .toc .toc-btn { display: none; }
+    @media (max-width: 999px) {
+      .doc .toc {
+        display: block; background: #fff;
+        border: 1px solid var(--line); border-radius: 10px;
+        margin: 0 0 18px; overflow: hidden;
+      }
+      .doc .toc .toc-btn {
+        display: flex; align-items: center; gap: 9px; width: 100%;
+        padding: 13px 14px; background: none; border: 0; cursor: pointer;
+        font: inherit; font-size: 0.93rem; font-weight: 700;
+        color: var(--navy); text-align: left;
+      }
+      .doc .toc .toc-btn .toc-ico { width: 17px; height: 17px; flex: none; color: var(--gold-text); }
+      .doc .toc .toc-btn .toc-n { margin-left: auto; font-size: 0.78rem; font-weight: 600; color: var(--muted); }
+      .doc .toc .toc-btn .toc-ok { width: 15px; height: 15px; flex: none; color: var(--muted); transition: transform 0.2s; }
+      .doc .toc .toc-btn[aria-expanded="true"] .toc-ok { transform: rotate(180deg); }
+      .doc .toc .toc-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+      .doc .toc ol { display: none; padding: 5px 8px 10px; border-top: 1px solid var(--line); }
+      .doc .toc.acik ol { display: block; }
+      .doc .toc li a { font-size: 0.88rem; padding: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .doc .toc .toc-btn .toc-ok { transition: none; }
+    }
+
+    /* ---------- Google yorumları (kısa blok) ---------- */
+    /* Not: Review/AggregateRating schema BILEREK eklenmedi — Google, kendi
+       platformundaki yorumların işletmenin kendi sitesinde yıldız zengin
+       sonucu için işaretlenmesini yasaklıyor (self-serving review markup).
+       Ana sayfadaki blokla aynı kural. */
+    .yrm-bar {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px;
+      padding-bottom: 13px; border-bottom: 1px solid var(--line); margin-bottom: 16px;
+    }
+    .yrm-brand { font-weight: 800; font-size: 0.93rem; color: var(--navy); }
+    .yrm-brand i { font-style: normal; }
+    .yrm-rate { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; }
+    .yrm-rate b { font-size: 1.02rem; color: var(--navy); }
+    .yrm-stars { display: inline-flex; gap: 1px; }
+    .yrm-s { width: 15px; height: 15px; fill: #e8a317; }
+    .yrm-n { font-size: 0.79rem; color: var(--muted); }
+    .yrm-list {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px; margin: 0; padding: 0; list-style: none;
+    }
+    .doc .yrm-list li {
+      margin: 0; padding: 16px 16px 15px;
+      background: #fff; border: 1px solid var(--line); border-radius: 10px;
+    }
+    .yrm-top { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+    .yrm-av {
+      width: 34px; height: 34px; flex: none; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 0.88rem;
+    }
+    .yrm-av.a1 { background: #1a73e8; }
+    .yrm-av.a2 { background: #0f9d58; }
+    .yrm-av.a3 { background: #a4508b; }
+    .yrm-who { display: flex; flex-direction: column; min-width: 0; }
+    .yrm-who b { font-size: 0.88rem; color: var(--ink); }
+    .yrm-who time { font-size: 0.75rem; color: var(--muted); }
+    .doc .yrm-list blockquote {
+      margin: 0; font-size: 0.87rem; line-height: 1.62; color: var(--muted);
+    }
+    .yrm-all {
+      display: inline-block; margin-top: 14px;
+      font-size: 0.86rem; font-weight: 600; color: var(--navy);
+    }
+    @media (max-width: 860px) {
+      .yrm-list { grid-template-columns: minmax(0, 1fr); gap: 11px; }
+      .yrm-rate { margin-left: 0; }
+    }
     /* Mobilde dalga yok — düz kenar */
     @media (max-width: 820px) {
       .doc-hero .wave { display: none; }
@@ -1355,7 +1429,8 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
     <div class="container">
       <article class="doc">
 <nav class="toc" aria-label="İçindekiler">
-          <ol>
+          <button class="toc-btn" type="button" aria-expanded="false" aria-controls="toc-liste"><svg class="toc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>İçindekiler<span class="toc-n">9 bölüm</span><svg class="toc-ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <ol id="toc-liste">
             <li><a href="#denizcilik-uniformasi-neden-farkli">Denizcilik üniforması neden farklıdır?</a></li>
             <li><a href="#1-hazir-urun-magaza-ve-e-ticaret">1. Hazır ürün (mağaza ve e-ticaret)</a></li>
             <li><a href="#2-okula-ozel-uretim">2. Okula özel üretim</a></li>
@@ -1364,6 +1439,7 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
             <li><a href="#okul-turune-gore-ayrintilar">Okul türüne göre ayrıntılar</a></li>
             <li><a href="#neden-liman-uniforma">Neden Liman Üniforma?</a></li>
             <li><a href="#sikca-sorulan-sorular">Sıkça Sorulan Sorular</a></li>
+            <li><a href="#musteri-yorumlari">Müşterilerimiz ne diyor?</a></li>
           </ol>
         </nav>
 
@@ -1492,6 +1568,46 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
         <h2 id="neden-liman-uniforma">Neden Liman Üniforma?</h2>
         <p><a href="/">Liman Üniforma</a>, denizcilik okulları üniformalarında uzmanlaşmış, Tuzla / İstanbul merkezli bir üreticidir. Türkiye ve KKTC'de <a href="/#referanslar">20 denizcilik kurumuna</a> — aralarında Piri Reis Üniversitesi, Karadeniz Teknik Üniversitesi ve İstanbul'daki denizcilik liseleri — üniforma üretiyoruz. Türkiye genelindeki okullara yerinde ölçü ve kargolu teslimatla hizmet veriyoruz.</p>
 
+        <h2 id="musteri-yorumlari">Müşterilerimiz ne diyor?</h2>
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+          <symbol id="yrm-yildiz" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+        </svg>
+        <div class="yrm-bar">
+          <span class="yrm-brand"><i style="color:#4285f4">G</i><i style="color:#ea4335">o</i><i style="color:#fbbc05">o</i><i style="color:#4285f4">g</i><i style="color:#34a853">l</i><i style="color:#ea4335">e</i> Yorumları</span>
+          <span class="yrm-rate">
+            <b>4,8</b>
+            <span class="yrm-stars" role="img" aria-label="5 üzerinden 4,8 puan"><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg></span>
+            <span class="yrm-n">60+ değerlendirme</span>
+          </span>
+        </div>
+        <ul class="yrm-list">
+            <li>
+              <div class="yrm-top">
+                <span class="yrm-av a1" aria-hidden="true">Ü</span>
+                <span class="yrm-who"><b>Ümran Ece Ünal</b><time datetime="2026-08">Ağustos 2026</time></span>
+              </div>
+              <span class="yrm-stars" role="img" aria-label="5 yıldız"><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg></span>
+              <blockquote>Üretilen üniformalar çok kaliteliydi. Özellikle ürünlerin kumaş ve dikimi açısından özenle üretimi gerçekleştirildiği çok açık. 3 senedir her dönem düzenli olarak üniforma satın alan birisi olarak alışveriş yaptığım 7 mağaza arasında ilk sırada. Kargo ile hazırlayıp gönderebiliyorlar. Ayrıca mağaza yetkilileri çok ilgiliydi, mevzuat ile yönetmeliğe uygunluk açısından da çok titiz bir tutum sergiliyorlar, işlerine hâkim oldukları çok bariz.</blockquote>
+            </li>
+            <li>
+              <div class="yrm-top">
+                <span class="yrm-av a2" aria-hidden="true">E</span>
+                <span class="yrm-who"><b>Efe Çelik</b><time datetime="2026-09">Eylül 2026</time></span>
+              </div>
+              <span class="yrm-stars" role="img" aria-label="5 yıldız"><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg></span>
+              <blockquote>Üniforma seçiminde ve nasıl giyileceğini anlatırken çok yardımcı oldular. Güler yüzlü ve samimi insanlar. Gayet güvenilir bir yer.</blockquote>
+            </li>
+            <li>
+              <div class="yrm-top">
+                <span class="yrm-av a3" aria-hidden="true">M</span>
+                <span class="yrm-who"><b>Mustafa Çelebi</b><time datetime="2026-08">Ağustos 2026</time></span>
+              </div>
+              <span class="yrm-stars" role="img" aria-label="5 yıldız"><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg><svg class="yrm-s" aria-hidden="true"><use href="#yrm-yildiz"/></svg></span>
+              <blockquote>Ürün kalitesi gayet güzel ve rahat. Alışveriş esnasında çok ilgililerdi, sonrasında da ürünün arkasında durdular.</blockquote>
+            </li>
+        </ul>
+        <a class="yrm-all" href="https://www.google.com/maps?cid=16178223671983847747" target="_blank" rel="noopener">Tüm yorumları Google'da okuyun</a>
+
         <div class="cta-box">
           <b>Size uygun üniformayı birlikte belirleyelim</b>
           <p>Tek öğrenci için de, okul geneli toplu alım için de yönetmeliğe uygun üretim yapıyoruz. Okulunuzu ve ihtiyacınızı iletin; seçenekleri değerlendirelim.</p>
@@ -1610,6 +1726,26 @@ h2[id], h3[id] { scroll-margin-top: 86px; }
         });
       }, { rootMargin: '-92px 0px -68% 0px', threshold: 0 });
       ids.forEach(function (id) { io.observe(document.getElementById(id)); });
+    })();
+  </script>
+
+  <script>
+    /* Mobilde içindekiler kutusunu aç/kapat */
+    (function () {
+      var toc = document.querySelector('.doc .toc');
+      if (!toc) return;
+      var btn = toc.querySelector('.toc-btn');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var acik = toc.classList.toggle('acik');
+        btn.setAttribute('aria-expanded', acik ? 'true' : 'false');
+      });
+      toc.addEventListener('click', function (e) {
+        if (e.target.closest('ol a') && window.matchMedia('(max-width: 999px)').matches) {
+          toc.classList.remove('acik');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
     })();
   </script>
 
